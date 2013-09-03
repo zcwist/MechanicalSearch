@@ -1,0 +1,179 @@
+\begin{thebibliography}{10}
+
+\bibitem{1}
+J.R. Marsh.
+\newblock The capture and utilization of experience in engineering design.
+
+\bibitem{2}
+舒慧林, 刘继红, and 钟毅芳.
+\newblock 计算机辅助机械产品概念设计研究综述.
+\newblock {\em 计算机辅助设计与图形学学报}, 12(12):947--954, 2000.
+
+\bibitem{5}
+Fabian~M Suchanek, Gjergji Kasneci, and Gerhard Weikum.
+\newblock Yago: A large ontology from wikipedia and wordnet.
+\newblock {\em Web Semantics: Science, Services and Agents on the World Wide
+  Web}, 6(3):203--217, 2008.
+
+\bibitem{6}
+Michael Ashburner, Catherine~A Ball, Judith~A Blake, David Botstein, Heather
+  Butler, J~Michael Cherry, Allan~P Davis, Kara Dolinski, Selina~S Dwight,
+  Janan~T Eppig, et~al.
+\newblock Gene ontology: tool for the unification of biology.
+\newblock {\em Nature genetics}, 25(1):25--29, 2000.
+
+\bibitem{7}
+Alexander Maedche and Steffen Staab.
+\newblock Ontology learning for the semantic web.
+\newblock {\em Intelligent Systems, IEEE}, 16(2):72--79, 2001.
+
+\bibitem{8}
+Deborah~L McGuinness, Frank Van~Harmelen, et~al.
+\newblock Owl web ontology language overview.
+\newblock {\em W3C recommendation}, 10(2004-03):10, 2004.
+
+\bibitem{9}
+王英林, 王卫东, 王宗江, 佟平, 许萌, 张申生, and 张亚莉.
+\newblock 基于本体的可重构知识管理平台.
+\newblock {\em 计算机集成制造系统}, 9(12), 2003.
+
+\bibitem{10}
+金芝 et~al.
+\newblock 基于本体的需求自动获取.
+\newblock {\em 计算机学报}, 23(5):486--492, 2000.
+
+\bibitem{11}
+李景 and 孟连生.
+\newblock 构建知识本体方法体系的比较研究.
+\newblock {\em 现代图书情报技术}, 7:17--22, 2004.
+
+\bibitem{12}
+Ramanathan Guha, Rob McCool, and Eric Miller.
+\newblock Semantic search.
+\newblock In {\em Proceedings of the 12th international conference on World
+  Wide Web}, pages 700--709. ACM, 2003.
+
+\bibitem{13}
+Thanh Tran, Philipp Cimiano, Sebastian Rudolph, and Rudi Studer.
+\newblock Ontology-based interpretation of keywords for semantic search.
+\newblock In {\em The Semantic Web}, pages 523--536. Springer, 2007.
+
+\bibitem{14}
+Qi~Zhou, Chong Wang, Miao Xiong, Haofen Wang, and Yong Yu.
+\newblock Spark: adapting keyword query to semantic search.
+\newblock In {\em The Semantic Web}, pages 694--707. Springer, 2007.
+
+\bibitem{15}
+Li~Ding, Tim Finin, Anupam Joshi, Rong Pan, R~Scott Cost, Yun Peng, Pavan
+  Reddivari, Vishal Doshi, and Joel Sachs.
+\newblock Swoogle: a search and metadata engine for the semantic web.
+\newblock In {\em Proceedings of the thirteenth ACM international conference on
+  Information and knowledge management}, pages 652--659. ACM, 2004.
+
+\bibitem{16}
+David Vallet, Miriam Fern{\'a}ndez, and Pablo Castells.
+\newblock An ontology-based information retrieval model.
+\newblock In {\em The Semantic Web: Research and Applications}, pages 455--470.
+  Springer, 2005.
+
+\bibitem{17}
+Sugato Chakrabarty, Rahul Chougule, and Ronald~M Lesperance.
+\newblock Ontology-guided knowledge retrieval in an automobile assembly
+  environment.
+\newblock {\em The International Journal of Advanced Manufacturing Technology},
+  44(11-12):1237--1249, 2009.
+
+\bibitem{18}
+Zhanjun Li, Victor Raskin, and Karthik Ramani.
+\newblock Developing ontologies for engineering information retrieval.
+\newblock In {\em Proceedings of the ASME}, pages 4--7, 2007.
+
+\bibitem{19}
+Hsien-Tang Lin, Nai-Wen Chi, and Shang-Hsien Hsieh.
+\newblock A concept-based information retrieval approach for engineering
+  domain-specific technical documents.
+\newblock {\em Advanced Engineering Informatics}, 26(2):349--360, 2012.
+
+\bibitem{20}
+Anjian Ren, Xiaoyong Du, and Puwei Wang.
+\newblock Ontology-based categorization of web search results using yago.
+\newblock In {\em Computational Sciences and Optimization, 2009. CSO 2009.
+  International Joint Conference on}, volume~1, pages 800--804. IEEE, 2009.
+
+\bibitem{21}
+Dong Yang, Ming Dong, and Rui Miao.
+\newblock Development of a product configuration system with an ontology-based
+  approach.
+\newblock {\em Computer-Aided Design}, 40(8):863--878, 2008.
+
+\bibitem{22}
+郭剑锋, 顾新建, 祁国宁, 王生发, and 马军.
+\newblock 零件库中基于本体的智能搜索引擎的研究与实现.
+\newblock {\em 浙江大学学报: 工学版}, 41(4):639--645, 2007.
+
+\bibitem{23}
+Christopher~D Manning, Prabhakar Raghavan, and Hinrich Schutze.
+\newblock 信息检索导论, 2010.
+
+\bibitem{24}
+A.Grossman David and Frieder Ophir.
+\newblock 信息检索：算法与启发式方法, 2010.
+
+\bibitem{25}
+李成刚.
+\newblock {\em
+  基于内容的三维模型搜索引擎技术研究与系统开发}.
+\newblock PhD thesis, 北京: 清华大学, 2011.
+
+\bibitem{salton1970}
+Gerald Salton.
+\newblock Automatic text processing.
+\newblock {\em Science}, 168(3929):335--343, 1970.
+
+\bibitem{salton1975}
+Gerard Salton, Anita Wong, and Chung-Shu Yang.
+\newblock A vector space model for automatic indexing.
+\newblock {\em Communications of the ACM}, 18(11):613--620, 1975.
+
+\bibitem{robertson1976}
+Stephen~E Robertson and K~Sparck Jones.
+\newblock Relevance weighting of search terms.
+\newblock {\em Journal of the American Society for Information science},
+  27(3):129--146, 1976.
+
+\bibitem{ponte1998}
+Jay~M Ponte and W~Bruce Croft.
+\newblock A language modeling approach to information retrieval.
+\newblock In {\em Proceedings of the 21st annual international ACM SIGIR
+  conference on Research and development in information retrieval}, pages
+  275--281. ACM, 1998.
+
+\bibitem{Chen2010}
+陈文伟 and 陈晟.
+\newblock {\em 知识工程与知识管理}.
+\newblock 计算机科学与技术学科前沿丛书. 清华大学出版社,
+  2010.
+
+\bibitem{gruber1993}
+Tom Gruber.
+\newblock What is an ontology?
+\newblock {\em Knowledge Acquisition}, 5(2):199--220, 1993.
+
+\bibitem{w3c}
+Graham Klyne, Jeremy~J Carroll, and Brian McBride.
+\newblock Resource description framework (rdf): Concepts and abstract syntax.
+\newblock {\em W3C recommendation}, 10, 2004.
+
+\bibitem{buttcher2010information}
+Stefan B{\"u}ttcher, Charles Clarke, and Gordon~V Cormack.
+\newblock {\em Information retrieval: Implementing and evaluating search
+  engines}.
+\newblock The MIT Press, 2010.
+
+\bibitem{li2008}
+李刚.
+\newblock {\em 轻量级 Java EE 企业应用实战: Struts 2+ Spring+
+  Hibernate 整合开发}.
+\newblock 电子工业出版社, 2008.
+
+\end{thebibliography}

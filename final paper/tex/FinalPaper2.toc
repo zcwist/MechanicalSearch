@@ -1,0 +1,73 @@
+\contentsline {section}{\numberline {1}引言}{1}
+\contentsline {subsection}{\numberline {1.1}研究背景}{1}
+\contentsline {subsection}{\numberline {1.2}发展现状}{2}
+\contentsline {subsubsection}{\numberline {1.2.1}本体}{3}
+\contentsline {subsubsection}{\numberline {1.2.2}语义性搜索}{3}
+\contentsline {subsection}{\numberline {1.3}论文主要研究内容}{5}
+\contentsline {subsection}{\numberline {1.4}论文结构}{6}
+\contentsline {section}{\numberline {2}总体设计与关键技术}{8}
+\contentsline {subsection}{\numberline {2.1}搜索引擎简介}{8}
+\contentsline {subsubsection}{\numberline {2.1.1}搜索引擎本质}{8}
+\contentsline {subsubsection}{\numberline {2.1.2}检索模型}{9}
+\contentsline {subsubsection}{\numberline {2.1.3}搜索引擎基本架构}{9}
+\contentsline {subsection}{\numberline {2.2}总体设计}{10}
+\contentsline {subsubsection}{\numberline {2.2.1}知识的表达}{10}
+\contentsline {subsubsection}{\numberline {2.2.2}系统体系结构}{13}
+\contentsline {subsection}{\numberline {2.3}关键技术概述}{15}
+\contentsline {subsubsection}{\numberline {2.3.1}本体的构建}{15}
+\contentsline {subsubsection}{\numberline {2.3.2}扩展性语义搜索算法}{16}
+\contentsline {section}{\numberline {3}本体的构建}{18}
+\contentsline {subsection}{\numberline {3.1}准备知识}{18}
+\contentsline {subsection}{\numberline {3.2}建立本体的雏形}{18}
+\contentsline {subsection}{\numberline {3.3}建立关系}{19}
+\contentsline {subsection}{\numberline {3.4}关系特性}{21}
+\contentsline {subsubsection}{\numberline {3.4.1}函数属性}{21}
+\contentsline {subsubsection}{\numberline {3.4.2}反函数属性}{22}
+\contentsline {subsubsection}{\numberline {3.4.3}传递性}{22}
+\contentsline {subsubsection}{\numberline {3.4.4}对称性}{22}
+\contentsline {subsubsection}{\numberline {3.4.5}其他属性}{24}
+\contentsline {subsection}{\numberline {3.5}本体推理}{24}
+\contentsline {subsection}{\numberline {3.6}本体的读取}{25}
+\contentsline {subsubsection}{\numberline {3.6.1}本体的描述方式}{25}
+\contentsline {subsubsection}{\numberline {3.6.2}Jena的应用}{26}
+\contentsline {subsection}{\numberline {3.7}Prot{\'e}g{\'e}介绍}{29}
+\contentsline {section}{\numberline {4}扩展性语义搜索算法}{30}
+\contentsline {subsection}{\numberline {4.1}原理}{30}
+\contentsline {subsection}{\numberline {4.2}实现}{30}
+\contentsline {subsubsection}{\numberline {4.2.1}Lucene}{30}
+\contentsline {subsubsection}{\numberline {4.2.2}索引}{31}
+\contentsline {subsubsection}{\numberline {4.2.3}搜索}{34}
+\contentsline {subsubsection}{\numberline {4.2.4}排序依据}{37}
+\contentsline {subsection}{\numberline {4.3}评估指标}{38}
+\contentsline {subsubsection}{\numberline {4.3.1}查准率及查全率}{39}
+\contentsline {section}{\numberline {5}其他系统实施技术}{42}
+\contentsline {subsection}{\numberline {5.1}数据库技术}{42}
+\contentsline {subsubsection}{\numberline {5.1.1}文档库建立}{42}
+\contentsline {subsubsection}{\numberline {5.1.2}数据库读取操作}{46}
+\contentsline {subsection}{\numberline {5.2}服务器技术}{49}
+\contentsline {subsubsection}{\numberline {5.2.1}Tomcat}{50}
+\contentsline {subsection}{\numberline {5.3}前端}{52}
+\contentsline {subsubsection}{\numberline {5.3.1}ExtJS}{53}
+\contentsline {subsubsection}{\numberline {5.3.2}用户界面编写}{55}
+\contentsline {section}{\numberline {6}系统实现}{56}
+\contentsline {subsection}{\numberline {6.1}需求分析}{56}
+\contentsline {subsubsection}{\numberline {6.1.1}任务概述}{56}
+\contentsline {subsubsection}{\numberline {6.1.2}功能需求}{56}
+\contentsline {subsubsection}{\numberline {6.1.3}运行需求}{58}
+\contentsline {subsubsection}{\numberline {6.1.4}运行需求}{59}
+\contentsline {subsubsection}{\numberline {6.1.5}其他需求}{60}
+\contentsline {subsection}{\numberline {6.2}概要设计}{60}
+\contentsline {subsubsection}{\numberline {6.2.1}基本处理流程}{60}
+\contentsline {subsubsection}{\numberline {6.2.2}组织结构}{62}
+\contentsline {subsubsection}{\numberline {6.2.3}模块划分与接口设计}{63}
+\contentsline {subsection}{\numberline {6.3}详细设计}{63}
+\contentsline {subsection}{\numberline {6.4}测试}{67}
+\contentsline {section}{\numberline {7}结论}{69}
+\contentsline {subsection}{\numberline {7.1}总结}{69}
+\contentsline {subsection}{\numberline {7.2}展望}{69}
+\contentsline {section}{图片索引}{71}
+\contentsline {section}{表格索引}{73}
+\contentsline {section}{参考文献}{74}
+\contentsline {section}{致谢}{77}
+\contentsline {section}{附录 A 外文资料的调研阅读报告或书面翻译}{78}
+\contentsfinish 

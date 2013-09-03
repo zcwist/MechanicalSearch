@@ -1,0 +1,1593 @@
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2013.4.28)  24 JUN 2013 14:05
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**FinalPaper20130609.tex
+(./FinalPaper20130609.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
+ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
+rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
+kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
+ polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
+lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
+welsh, loaded.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box26
+\beforetitleunit=\skip43
+\aftertitleunit=\skip44
+\ttl@plus=\dimen111
+\ttl@minus=\dimen112
+\ttl@toksa=\toks16
+\titlewidth=\dimen113
+\titlewidthlast=\dimen114
+\titlewidthfirst=\dimen115
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/fontspec/fontspec.sty
+Package: fontspec 2012/05/06 v2.2b Advanced font selection for XeLaTeX/LuaLaTeX
+
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3names.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3bootstrap.sty
+Package: l3bootstrap 2011/12/29 v3110 L3 Experimental bootstrap code
+)
+Package: l3names 2012/03/04 v3494 L3 Experimental namespace for primitives
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
+\et@xins=\count91
+)
+Package: expl3 2012/04/23 v3570 L3 Experimental code bundle wrapper
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: xetex.def on input line 130.
+
+(/usr/local/texlive/2012/texmf-dist/tex/xelatex/xetex-def/xetex.def
+File: xetex.def 2009/11/22 v0.94 LaTeX color/graphics driver for XeTeX (RRM/JK)
+
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: xetex.def on input line 91.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3basics.sty
+Package: l3basics 2012/03/04 v3491 L3 Experimental basic definitions
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3expan.sty
+Package: l3expan 2012/02/26 v3460 L3 Experimental argument expansion
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3tl.sty
+Package: l3tl 2012/03/04 v3490 L3 Experimental token lists
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3seq.sty
+Package: l3seq 2012/03/04 v3490 L3 Experimental sequences and stacks
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3int.sty
+Package: l3int 2012/03/04 v3490 L3 Experimental integers
+\c_max_int=\count92
+\l_tmpa_int=\count93
+\l_tmpb_int=\count94
+\l_tmpc_int=\count95
+\g_tmpa_int=\count96
+\g_tmpb_int=\count97
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3quark.sty
+Package: l3quark 2012/02/12 v3384 L3 Experimental quarks
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3prg.sty
+Package: l3prg 2012/03/04 v3490 L3 Experimental control structures
+\g_prg_map_int=\count98
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3clist.sty
+Package: l3clist 2012/03/04 v3490 L3 Experimental comma separated lists
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3token.sty
+Package: l3token 2012/03/04 v3491 L3 Experimental token manipulation
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3prop.sty
+Package: l3prop 2012/03/04 v3490 L3 Experimental property lists
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3msg.sty
+Package: l3msg 2012/04/23 v3568 L3 Experimental messages
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3file.sty
+Package: l3file 2012/03/09 v3520 L3 Experimental file and I/O operations
+\l_iow_stream_int=\count99
+\l_iow_line_length_int=\count100
+\l_iow_target_length_int=\count101
+\l_iow_current_line_int=\count102
+\l_iow_current_word_int=\count103
+\l_iow_current_indentation_int=\count104
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3skip.sty
+Package: l3skip 2012/03/05 v3499 L3 Experimental dimensions and skips
+\l_tmpa_dim=\dimen116
+\l_tmpb_dim=\dimen117
+\l_tmpc_dim=\dimen118
+\g_tmpa_dim=\dimen119
+\g_tmpb_dim=\dimen120
+\l_tmpa_skip=\skip45
+\l_tmpb_skip=\skip46
+\l_tmpc_skip=\skip47
+\g_tmpa_skip=\skip48
+\g_tmpb_skip=\skip49
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3keys.sty
+Package: l3keys 2012/03/03 v3487 L3 Experimental key-value interfaces
+\g_keyval_level_int=\count105
+\l_keys_choice_int=\count106
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3fp.sty
+Package: l3fp 2012/03/04 v3490 L3 Experimental floating-point operations
+\c_one_hundred_million=\count107
+\c_five_hundred_million=\count108
+\c_one_thousand_million=\count109
+\c_fp_pi_by_four_decimal_int=\count110
+\c_fp_pi_by_four_extended_int=\count111
+\c_fp_pi_decimal_int=\count112
+\c_fp_pi_extended_int=\count113
+\c_fp_two_pi_decimal_int=\count114
+\c_fp_two_pi_extended_int=\count115
+\l_fp_count_int=\count116
+\l_fp_div_offset_int=\count117
+\l_fp_exp_integer_int=\count118
+\l_fp_exp_decimal_int=\count119
+\l_fp_exp_extended_int=\count120
+\l_fp_exp_exponent_int=\count121
+\l_fp_input_a_sign_int=\count122
+\l_fp_input_a_integer_int=\count123
+\l_fp_input_a_decimal_int=\count124
+\l_fp_input_a_exponent_int=\count125
+\l_fp_input_b_sign_int=\count126
+\l_fp_input_b_integer_int=\count127
+\l_fp_input_b_decimal_int=\count128
+\l_fp_input_b_exponent_int=\count129
+\l_fp_input_a_extended_int=\count130
+\l_fp_input_b_extended_int=\count131
+\l_fp_mul_a_i_int=\count132
+\l_fp_mul_a_ii_int=\count133
+\l_fp_mul_a_iii_int=\count134
+\l_fp_mul_a_iv_int=\count135
+\l_fp_mul_a_v_int=\count136
+\l_fp_mul_a_vi_int=\count137
+\l_fp_mul_b_i_int=\count138
+\l_fp_mul_b_ii_int=\count139
+\l_fp_mul_b_iii_int=\count140
+\l_fp_mul_b_iv_int=\count141
+\l_fp_mul_b_v_int=\count142
+\l_fp_mul_b_vi_int=\count143
+\l_fp_mul_output_int=\count144
+\l_fp_output_sign_int=\count145
+\l_fp_output_integer_int=\count146
+\l_fp_output_decimal_int=\count147
+\l_fp_output_exponent_int=\count148
+\l_fp_output_extended_int=\count149
+\l_fp_round_position_int=\count150
+\l_fp_round_target_int=\count151
+\l_fp_split_sign_int=\count152
+\l_fp_internal_int=\count153
+\l_fp_trig_octant_int=\count154
+\l_fp_trig_sign_int=\count155
+\l_fp_trig_decimal_int=\count156
+\l_fp_trig_extended_int=\count157
+\l_fp_internal_dim=\dimen121
+\l_fp_internal_skip=\skip50
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3box.sty
+Package: l3box 2012/03/04 v3490 L3 Experimental boxes
+\l_tmpb_box=\box27
+\l_box_top_dim=\dimen122
+\l_box_bottom_dim=\dimen123
+\l_box_left_dim=\dimen124
+\l_box_right_dim=\dimen125
+\l_box_top_new_dim=\dimen126
+\l_box_bottom_new_dim=\dimen127
+\l_box_left_new_dim=\dimen128
+\l_box_right_new_dim=\dimen129
+\l_box_internal_box=\box28
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3coffins.sty
+Package: l3coffins 2012/03/03 v3482 L3 Experimental coffin code layer
+\l_coffin_internal_box=\box29
+\l_coffin_internal_dim=\dimen130
+\l_coffin_offset_x_dim=\dimen131
+\l_coffin_offset_y_dim=\dimen132
+\l_coffin_x_dim=\dimen133
+\l_coffin_y_dim=\dimen134
+\l_coffin_x_prime_dim=\dimen135
+\l_coffin_y_prime_dim=\dimen136
+\l_coffin_Depth_dim=\dimen137
+\l_coffin_Height_dim=\dimen138
+\l_coffin_TotalHeight_dim=\dimen139
+\l_coffin_Width_dim=\dimen140
+\c_empty_coffin=\box30
+\l_coffin_aligned_coffin=\box31
+\l_coffin_aligned_internal_coffin=\box32
+\l_coffin_bounding_shift_dim=\dimen141
+\l_coffin_left_corner_dim=\dimen142
+\l_coffin_right_corner_dim=\dimen143
+\l_coffin_bottom_corner_dim=\dimen144
+\l_coffin_top_corner_dim=\dimen145
+\l_coffin_scaled_total_height_dim=\dimen146
+\l_coffin_scaled_width_dim=\dimen147
+\l_coffin_display_coffin=\box33
+\l_coffin_display_coord_coffin=\box34
+\l_coffin_display_pole_coffin=\box35
+\l_coffin_display_offset_dim=\dimen148
+\l_coffin_display_x_dim=\dimen149
+\l_coffin_display_y_dim=\dimen150
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3color.sty
+Package: l3color 2011/09/07 v2776 L3 Experimental colour support
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3kernel/l3luatex.sty
+Package: l3luatex 2012/02/09 v3355 L3 Experimental LuaTeX-specific functions
+\g_cctab_allocate_int=\count158
+\g_cctab_stack_int=\count159
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2012/04/23 v3570 L3 Experimental document command parser
+\l_xparse_current_arg_int=\count160
+\l_xparse_m_args_int=\count161
+\l_xparse_mandatory_args_int=\count162
+\l_xparse_processor_int=\count163
+\l_xparse_v_nesting_int=\count164
+)
+\l_fontspec_script_int=\count165
+\l_fontspec_language_int=\count166
+\l_fontspec_strnum_int=\count167
+\l_fontspec_tmpa_dim=\dimen151
+\l_fontspec_tmpb_dim=\dimen152
+\l_fontspec_tmpc_dim=\dimen153
+Variant \tl_gset:cV already defined; not changing it on line 66
+
+*************************************************
+* fontspec warning: "cm-default-obsolete"
+* 
+* The "cm-default" package option is obsolete.
+*************************************************
+(/usr/local/texlive/2012/texmf-dist/tex/latex/fontspec/fontspec-patches.sty
+Package: fontspec-patches 2012/05/06 v2.2b Advanced font selection for XeLaTeX/
+LuaLaTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
+LaTeX Info: Redefining \em on input line 420.
+)
+LaTeX Info: Redefining \em on input line 22.
+LaTeX Info: Redefining \emph on input line 29.
+LaTeX Info: Redefining \- on input line 32.
+
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \oldstylenums with arg. spec. 'm' on line 107.
+*************************************************
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \liningnums with arg. spec. 'm' on line 111.
+.................................................
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2012/05/06 v2.2b Advanced font selection for XeLaTeX/Lu
+aLaTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/euenc/eu1enc.def
+File: eu1enc.def 2010/05/27 v0.1h Experimental Unicode font encodings
+)
+LaTeX Font Info:    Try loading font information for EU1+lmr on input line 100.
+
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/euenc/eu1lmr.fd
+File: eu1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+(/usr/local/texlive/2012/texmf-dist/tex/xelatex/xunicode/xunicode.sty
+File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many 
+other characters in Unicode lower plane
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tipa/t3enc.def
+File: t3enc.def 2001/12/31 T3 encoding
+LaTeX Font Info:    Try loading font information for EU1+lmss on input line 357
+.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/euenc/eu1lmss.fd
+File: eu1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+\tipaTiiicode=\count168
+\tipasavetokens=\toks17
+\tipachecktokens=\toks18
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen154
+\Gin@req@width=\dimen155
+))
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \fontspec with arg. spec. 'O{}m' on line 39.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setmainfont with arg. spec. 'O{}m' on line 43.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setsansfont with arg. spec. 'O{}m' on line 47.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setmonofont with arg. spec. 'O{}m' on line 51.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setmathrm with arg. spec. 'O{}m' on line 59.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setboldmathrm with arg. spec. 'O{}m' on line 62.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setmathsf with arg. spec. 'O{}m' on line 65.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setmathtt with arg. spec. 'O{}m' on line 68.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newfontfamily with arg. spec. 'mO{}m' on line 84.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newfontface with arg. spec. 'mO{}m' on line 87.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \defaultfontfeatures with arg. spec. 'm' on line
+. 91.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \addfontfeatures with arg. spec. 'm' on line 107.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newfontfeature with arg. spec. 'mm' on line 118.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newAATfeature with arg. spec. 'mmmm' on line 125.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newICUfeature with arg. spec. 'mmm' on line 132.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \aliasfontfeature with arg. spec. 'mm' on line
+. 159.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \aliasfontfeatureoption with arg. spec. 'mmm' on
+. line 164.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newfontscript with arg. spec. 'mm' on line 169.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newfontlanguage with arg. spec. 'mm' on line 192.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \DeclareFontsExtensions with arg. spec. 'm' on
+. line 211.
+.................................................
+Variant \prop_gput:cnV already defined; not changing it on line 485
+Variant \prop_gput:cnx already defined; not changing it on line 486
+\l_fontspec_tmp_int=\count169
+LaTeX Info: Redefining \itshape on input line 1893.
+LaTeX Info: Redefining \slshape on input line 1897.
+LaTeX Info: Redefining \scshape on input line 1901.
+LaTeX Info: Redefining \upshape on input line 1905.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks19
+\ex@=\dimen156
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen157
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count170
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count171
+\leftroot@=\count172
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count173
+\DOTSCASE@=\count174
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box36
+\strutbox@=\box37
+\big@size=\dimen158
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count175
+\c@MaxMatrixCols=\count176
+\dotsspace@=\muskip10
+\c@parentequation=\count177
+\dspbrk@lvl=\count178
+\tag@help=\toks20
+\row@=\count179
+\column@=\count180
+\maxfields@=\count181
+\andhelp@=\toks21
+\eqnshift@=\dimen159
+\alignsep@=\dimen160
+\tagshift@=\dimen161
+\tagwidth@=\dimen162
+\totwidth@=\dimen163
+\lineht@=\dimen164
+\@envbody=\toks22
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count182
+\lst@gtempboxa=\box38
+\lst@token=\toks24
+\lst@length=\count183
+\lst@currlwidth=\dimen165
+\lst@column=\count184
+\lst@pos=\count185
+\lst@lostspace=\dimen166
+\lst@width=\dimen167
+\lst@newlines=\count186
+\lst@lineno=\count187
+\lst@maxwidth=\dimen168
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count188
+\lst@skipnumbers=\count189
+\lst@framebox=\box39
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2012/02/19 v3.2f Customizing captions (AR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
+\captionmargin=\dimen169
+\captionmargin@=\dimen170
+\captionwidth=\dimen171
+\caption@indent=\dimen172
+\caption@parindent=\dimen173
+\caption@hangindent=\dimen174
+)
+\c@ContinuedFloat=\count190
+Package caption Info: listings package is loaded.
+)
+\g_fontspec_family_SimSun_int=\count191
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font SimSun/I (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font Adobe Heiti Std/I (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'SimSun(0)' created for font 'SimSun' with options
+. [BoldFont=Adobe Heiti Std].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. <->"SimSun/ICU:script=latn;language=DFLT;"
+. 
+. * 'bold' with NFSS spec.:
+. <->"Adobe Heiti Std/ICU:script=latn;language=DFLT;"
+.................................................
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/extarrows/extarrows.sty
+Package: extarrows 2008/05/15 v1.0b Some extensible arrows
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks25
+)
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font LiSu does not contain any OpenType `Script' information.
+.................................................
+\g_fontspec_family_LiSu_int=\count192
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font LiSu/B (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font LiSu/I (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font LiSu/BI (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'LiSu(0)' created for font 'LiSu' with options [].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. <->"LiSu/ICU:"
+.................................................
+\g_fontspec_family_Adobe Fangsong Std_int=\count193
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font Adobe Fangsong Std/B (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font Adobe Fangsong Std/I (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font Adobe Fangsong Std/BI (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'AdobeFangsongStd(0)' created for font 'Adobe Fangsong Std' with
+. options [].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. <->"Adobe Fangsong Std/ICU:script=latn;language=DFLT;"
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font SimSun/B (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font SimSun/I (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font SimSun/BI (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'SimSun(1)' created for font 'SimSun' with options [].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. <->"SimSun/ICU:script=latn;language=DFLT;"
+.................................................
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font Times New Roman does not contain any OpenType `Script' information.
+.................................................
+\g_fontspec_family_Times New Roman_int=\count194
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'TimesNewRoman(0)' created for font 'Times New Roman' with
+. options [].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. <->"Times New Roman/ICU:"
+. 
+. * 'bold' with NFSS spec.:
+. <->"Times New Roman/B/ICU:"
+. 
+. * 'italic' with NFSS spec.:
+. <->"Times New Roman/I/ICU:"
+. 
+. * 'bold italic' with NFSS spec.:
+. <->"Times New Roman/BI/ICU:"
+.................................................
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font FZCuSong-B09S does not contain any OpenType `Script' information.
+.................................................
+\g_fontspec_family_FZCuSong-B09S_int=\count195
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font FZCuSong-B09S/B (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font FZCuSong-B09S/I (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font FZCuSong-B09S/BI (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'FZCuSong-B09S(0)' created for font 'FZCuSong-B09S' with options
+. [].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. <->"FZCuSong-B09S/ICU:"
+.................................................
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count196
+\cp@tempcnt=\count197
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/titlesec/titletoc.sty
+Package: titletoc 2011/12/15 v1.6 TOC entries
+\ttl@leftsep=\dimen175
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count198
+\mult@box=\box40
+\multicol@leftmargin=\dimen176
+\c@unbalance=\count199
+\c@collectmore=\count200
+\doublecol@number=\count201
+Normal \count register pool exhausted, switching to extended pool.
+\multicoltolerance=\count277
+\multicolpretolerance=\count278
+\full@width=\dimen177
+\page@free=\dimen178
+\premulticols=\dimen179
+\postmulticols=\dimen180
+\multicolsep=\skip54
+\multicolbaselineskip=\skip55
+\partial@page=\box41
+\last@line=\box42
+\mult@rightbox=\box43
+\mult@grightbox=\box44
+\mult@gfirstbox=\box45
+\mult@firstbox=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\c@columnbadness=\count279
+\c@finalcolumnbadness=\count280
+\last@try=\dimen181
+\multicolovershoot=\dimen182
+\multicolundershoot=\dimen183
+\mult@nat@firstbox=\box64
+\colbreak@box=\box65
+\multicol@sort@counter=\count281
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen184
+\extrarowheight=\dimen185
+\NC@list=\toks26
+\extratabsurround=\skip56
+\backup@length=\skip57
+)
+\rotheadsize=\dimen186
+\c@nlinenum=\count282
+\TeXr@lab=\toks27
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip58
+\bibsep=\skip59
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count283
+)
+(./FinalPaper20130609.aux
+
+LaTeX Warning: Label `eq:recall' multiply defined.
+
+)
+\openout1 = `FinalPaper20130609.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 70.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 70.
+ (/usr/local/texlive/2012/texmf-dist/tex/latex/tipa/t3cmr.fd
+File: t3cmr.fd 2001/12/31 TIPA font definitions
+)
+LaTeX Font Info:    ... okay on input line 70.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(108.12054pt, 645.87758pt, 91.04872pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=645.87758pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-1.14944pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+.................................................
+. fontspec info: "setup-math"
+. 
+. Adjusting the maths setup (use [no-math] to avoid this).
+.................................................
+\symlegacymaths=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 70.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 70.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 70.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 70.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 70.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 70.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 70.
+LaTeX Font Info:    Redeclaring math accent \check on input line 70.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 70.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 70.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 70.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 70.
+LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
+(Font)              `operators' in the math version `normal' on input line 70.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> EU1/SimSun(0)/m/n on input line 70.
+LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
+(Font)              `operators' in the math version `bold' on input line 70.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> EU1/SimSun(0)/m/n on input line 70.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  EU1/SimSun(0)/m/n --> EU1/SimSun(0)/m/n on input line 7
+0.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  EU1/SimSun(0)/m/n --> EU1/SimSun(0)/m/n on input line 7
+0.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> EU1/SimSun(0)/m/it on input line 70.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> EU1/SimSun(0)/bx/n on input line 70.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> EU1/lmss/m/n on input line 70.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 70.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  EU1/SimSun(0)/m/n --> EU1/SimSun(0)/bx/n on input line 
+70.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  EU1/SimSun(0)/m/n --> EU1/SimSun(0)/bx/n on input line 
+70.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> EU1/SimSun(0)/bx/it on input line 70.
+
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> EU1/lmss/bx/n on input line 70.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 70.
+\c@lstlisting=\count284
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Calculating math sizes for size <26> on input line 88.
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <26> not available
+(Font)              size <24.88> substituted on input line 88.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <18.19992> not available
+(Font)              size <17.28> substituted on input line 88.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <13> not available
+(Font)              size <12> substituted on input line 88.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <26> not available
+(Font)              size <24.88> substituted on input line 88.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <18.19992> not available
+(Font)              size <17.28> substituted on input line 88.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <13> not available
+(Font)              size <12> substituted on input line 88.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 88.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 88.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <26> not available
+(Font)              size <24.88> substituted on input line 88.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18.19992> not available
+(Font)              size <17.28> substituted on input line 88.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13> not available
+(Font)              size <12> substituted on input line 88.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
+[1
+
+] [1] [2] (./FinalPaper20130609.toc [3] [4])
+\tf@toc=\write3
+\openout3 = `FinalPaper20130609.toc'.
+
+ [5]
+File: queryExample.png Graphic file (type QTm)
+ <use  "queryExample.png" >
+Overfull \hbox (0.55695pt too wide) in paragraph at lines 188--189
+[]\EU1/SimSun(1)/m/n/12 本 体 （\EU1/TimesNewRoman(0)/m/n/12 Ontology\EU1/Si
+mSun(1)/m/n/12 ） 最 初 是 一 个 哲 学 概 念， 后 来 被 引 入 �
+�� 计 算 机 技 术 中，\EU1/TimesNewRoman(0)/m/n/12 Neches
+ []
+
+[1] [2]
+Overfull \hbox (7.31541pt too wide) in paragraph at lines 204--205
+[]\EU1/TimesNewRoman(0)/m/n/12 Deborah L. McGuinness\EU1/SimSun(1)/m/n/12 等 �
+�� 介 绍 了\EU1/TimesNewRoman(0)/m/n/12 OWL\EU1/SimSun(1)/m/n/12 语 言， 
+比 较 其 与\EU1/TimesNewRoman(0)/m/n/12 XML, RDF, RDF Schema
+ []
+
+
+Overfull \hbox (3.5589pt too wide) in paragraph at lines 204--205
+\EU1/TimesNewRoman(0)/m/n/12 (RDF-S)\EU1/SimSun(1)/m/n/12 的 差 异， 阐 �
+� 为 什 么 要 采 用\EU1/TimesNewRoman(0)/m/n/12 OWL\EU1/SimSun(1)/m/n/12 
+语 言 进 行 本 体 描 述， 并 分 别 介 绍 了\EU1/TimesNewRoman(0)
+/m/n/12 OWL\EU1/SimSun(1)/m/n/12 三
+ []
+
+[3] [4] [5] [6] [7] [8]
+File: fig/basicStructure.png Graphic file (type QTm)
+ <use  "fig/basicStructure.png" > [9] [10]
+File: fig/biotax.png Graphic file (type QTm)
+
+<use  "fig/biotax.png" > [11]
+Overfull \hbox (14.0143pt too wide) in paragraph at lines 370--371
+[]\EU1/SimSun(1)/m/n/12 一 个 完 整 的 本 体 包 括 5 类 基 本 元 �
+��： 概 念、 关 系、 函 数、 公 理、 实 例。 即：$\OML/cmm/m/
+it/12 O \OT1/cmr/m/n/12 ::=
+ []
+
+
+Overfull \hbox (16.39343pt too wide) in paragraph at lines 374--375
+[]$\OML/cmm/m/it/12 R$\EU1/SimSun(1)/m/n/12 ： 关 系 （\EU1/TimesNewRoman(0
+)/m/n/12 relationship\EU1/SimSun(1)/m/n/12 ）， 描 述 概 念 之 间 的 �
+�� 系， 比 如“\EU1/TimesNewRoman(0)/m/n/12 subclass-of\EU1/SimSun(1)/m/n/
+12 ”（子 类），
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 380--382
+
+ []
+
+[12]
+File: fig/SystemStructure.png Graphic file (type QTm)
+ <use  "fig/SystemStructure.png" > [13]
+File: fig/功能框图.jpg Graphic file (type QTm)
+ <use  "fig/功能框图.jpg" >
+[14]
+Overfull \hbox (6.46866pt too wide) in paragraph at lines 426--427
+[]\EU1/SimSun(1)/m/n/12 首 先， 针 对 机 械 设 计 领 域 的 知 识�
+�� 将 概 念 化 分 为 三 大 类 (\EU1/TimesNewRoman(0)/m/n/12 Protégé\
+EU1/SimSun(1)/m/n/12 中 称 作\EU1/TimesNewRoman(0)/m/n/12 Class\EU1/SimSun(1
+)/m/n/12 )：
+ []
+
+[15]
+Overfull \hbox (7.54678pt too wide) in paragraph at lines 430--431
+[]\EU1/SimSun(1)/m/n/12 接 下 来， 建 立 上 一 步 中 建 立 的 关 
+系 的 函 数 特 性。 在\EU1/TimesNewRoman(0)/m/n/12 Protégé\EU1/SimSun
+(1)/m/n/12 中， 这 些 特 性 （\EU1/TimesNewRoman(0)/m/n/12 Char-
+ []
+
+File: fig/searchFlow.png Graphic file (type QTm)
+<use  "fig/searchFlow.png" > [16] [17]
+Overfull \hbox (28.55008pt too wide) in paragraph at lines 463--464
+[]\EU1/TimesNewRoman(0)/m/n/12 RDFS\EU1/SimSun(1)/m/n/12 （\EU1/TimesNewRoman(
+0)/m/n/12 Resource Description Framework Schema\EU1/SimSun(1)/m/n/12 , 资 源 
+描 述 框 架）: 也 可 写 作\EU1/TimesNewRoman(0)/m/n/12 RDF(S),
+ []
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+)
+Overfull \hbox (20.18759pt too wide) in paragraph at lines 473--474
+[][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (12.37112pt too wide) in paragraph at lines 480--481
+[]\EU1/TimesNewRoman(0)/m/n/12 OWL\EU1/SimSun(1)/m/n/12 语 言 具 有 三 种
+ 子 语 言：\EU1/TimesNewRoman(0)/m/n/12 OWL Lite\EU1/SimSun(1)/m/n/12 ，\E
+U1/TimesNewRoman(0)/m/n/12 OWL DL\EU1/SimSun(1)/m/n/12 和\EU1/TimesNewRoman(0)
+/m/n/12 OWL Full\EU1/SimSun(1)/m/n/12 。\EU1/TimesNewRoman(0)/m/n/12 OWL DL\EU
+1/SimSun(1)/m/n/12 和\EU1/TimesNewRoman(0)/m/n/12 OWL
+ []
+
+[18]
+File: fig/isA.png Graphic file (type QTm)
+ <use  "fig/isA.png" >
+File: fig/partOf.png Graphic file (type QTm)
+ <use  "fig/partOf.png" >
+Overfull \hbox (16.93558pt too wide) in paragraph at lines 500--501
+ [][] 
+ []
+
+
+Overfull \hbox (4.0pt too wide) in paragraph at lines 492--504
+[][] [] 
+ []
+
+[19]
+Overfull \hbox (2.81992pt too wide) in paragraph at lines 519--520
+\EU1/SimSun(1)/m/n/12 (\EU1/TimesNewRoman(0)/m/n/12 Object Property\EU1/SimSun(
+1)/m/n/12 )， 数 据 属 性 （\EU1/TimesNewRoman(0)/m/n/12 Data Property\EU
+1/SimSun(1)/m/n/12 ）， 注 释 属 性 （\EU1/TimesNewRoman(0)/m/n/12 Annot
+ation Property\EU1/SimSun(1)/m/n/12 ）。
+ []
+
+[20]
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.542 ^^I$
+          
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.552 ^^I$
+          
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[21]
+File: fig/functionalPropertyExample.png Graphic file (type QTm)
+ <use  "fig/functionalPropertyExample.png" >
+File: fig/inverseFunctionalPropertyExample.png Graphic file (type QTm)
+
+<use  "fig/inverseFunctionalPropertyExample.png" > [22]
+File: fig/transitivePropertyExample.png Graphic file (type QTm)
+
+<use  "fig/transitivePropertyExample.png" >
+File: fig/SymmetricPropertyExample.png Graphic file (type QTm)
+
+<use  "fig/SymmetricPropertyExample.png" > [23] [24]
+(/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+) [25]
+Overfull \hbox (24.18623pt too wide) in paragraph at lines 643--644
+[]\EU1/SimSun(1)/m/n/12 首 先 要 对 一 些 概 念 进 行 解 释。 之 
+前 反 复 提 到 将 本 体 看 成 一 张 图$\OML/cmm/m/it/12 G \OT1/cmr
+/m/n/12 = (\OML/cmm/m/it/12 C; R\OT1/cmr/m/n/12 )$\EU1/SimSun(1)/m/n/12 ，\EU1
+/TimesNewRoman(0)/m/n/12 RDF\EU1/SimSun(1)/m/n/12 图
+ []
+
+
+Overfull \hbox (4.7134pt too wide) in paragraph at lines 643--644
+\EU1/SimSun(1)/m/n/12 就 是 表 示 这 种 图 的 一 种 表 示 方 式�
+� 根 据\EU1/TimesNewRoman(0)/m/n/12 W3C\EU1/SimSun(1)/m/n/12 组 织 的 定 
+义$[]$，\EU1/TimesNewRoman(0)/m/n/12 RDF\EU1/SimSun(1)/m/n/12 图 （\EU1/Tim
+esNewRoman(0)/m/n/12 RDF Graph\EU1/SimSun(1)/m/n/12 ）
+ []
+
+
+Overfull \hbox (2.43138pt too wide) in paragraph at lines 643--644
+\EU1/SimSun(1)/m/n/12 是\EU1/TimesNewRoman(0)/m/n/12 RDF\EU1/SimSun(1)/m/n/12 
+三 元 组 （\EU1/TimesNewRoman(0)/m/n/12 RDF Triple\EU1/SimSun(1)/m/n/12 ）
+ 的 集 合。\EU1/TimesNewRoman(0)/m/n/12 RDF\EU1/SimSun(1)/m/n/12 三 元 �
+� 包 含 三 个 部 分， 主 语 （\EU1/TimesNewRoman(0)/m/n/12 Subject\EU
+1/SimSun(1)/m/n/12 ）,
+ []
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+Overfull \hbox (20.96478pt too wide) in paragraph at lines 655--657
+[]\EU1/SimSun(1)/m/n/12 操 作 本 体： 在\EU1/TimesNewRoman(0)/m/n/12 Jena
+\EU1/SimSun(1)/m/n/12 中， 每 个 概 念 作 为 一 个\EU1/TimesNewRoman(
+0)/m/n/12 OntClass\EU1/SimSun(1)/m/n/12 类 的 对 象 进 行 存 储。 用\
+EU1/TimesNewRoman(0)/m/n/12 Model\EU1/SimSun(1)/m/n/12 类
+ []
+
+[26]
+Overfull \hbox (34.01334pt too wide) in paragraph at lines 696--697
+[][][][][][][][][][][][][][][] 
+ []
+
+[27] [28] [29]
+File: fig/SearchEngineFrame.png Graphic file (type QTm)
+ <use  "fig/SearchEngineFrame.png" > [30] [31]
+Overfull \hbox (34.01334pt too wide) in paragraph at lines 784--785
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (19.61319pt too wide) in paragraph at lines 786--788
+[][][][][][][][][] 
+ []
+
+[32]
+File: fig/IndexSearcher.png Graphic file (type QTm)
+ <use  "fig/IndexSearcher.png" > [33]
+File: fig/QueryParser.png Graphic file (type QTm)
+ <use  "fig/QueryParser.png" >
+[34]
+Overfull \hbox (5.21304pt too wide) in paragraph at lines 874--875
+[][][][][][][][][][][] 
+ []
+
+[35]
+Overfull \hbox (11.93346pt too wide) detected at line 899
+[] []
+ []
+
+[36]
+Overfull \hbox (45.79446pt too wide) in paragraph at lines 928--929
+\EU1/SimSun(1)/m/n/12 统 计 公 式。 为 了 对 排 序 评 分 进 行 �
+� 量 分 析， 采 用\EU1/TimesNewRoman(0)/m/n/12 Lucene\EU1/SimSun(1)/m/n/1
+2 提 供 的\EU1/TimesNewRoman(0)/m/n/12 Explanation\EU1/SimSun(1)/m/n/12 类�
+��\EU1/TimesNewRoman(0)/m/n/12 IndexSearcher
+ []
+
+[37] [38]
+File: fig/prFigureExample.eps Graphic file (type eps)
+ <fig/prFigureExample.eps> [39] [40]
+File: fig/SystemUseCase.png Graphic file (type QTm)
+ <use  "fig/SystemUseCase.png" >
+[41]
+File: fig/SearchSystemUseCase.png Graphic file (type QTm)
+ <use  "fig/SearchSystemUseCase.png" > [42]
+File: fig/IndexerUseCase.png Graphic file (type QTm)
+
+<use  "fig/IndexerUseCase.png" >
+File: fig/DatabaseUseCase.png Graphic file (type QTm)
+ <use  "fig/DatabaseUseCase.png" > [43]
+File: fig/WindowsDistribution.png Graphic file (type QTm)
+
+<use  "fig/WindowsDistribution.png" > [44]
+File: fig/Sequence.png Graphic file (type QTm)
+ <use  "fig/Sequence.png" >
+Overfull \hbox (6.82864pt too wide) in paragraph at lines 1144--1145
+ [][] 
+ []
+
+File: fig/SearchSequence.png Graphic file (type QTm)
+<use  "fig/SearchSequence.png" > [45] [46]
+Overfull \hbox (0.37344pt too wide) in paragraph at lines 1167--1169
+\EU1/SimSun(1)/m/n/12 在 服 务 器 端 完 成 大 部 分 业 务 逻 辑�
+� 减 轻 客 户 端 负 载。 采 用\EU1/TimesNewRoman(0)/m/n/12 Javascript
+\EU1/SimSun(1)/m/n/12 和\EU1/TimesNewRoman(0)/m/n/12 ExtJS\EU1/SimSun(1)/m/n/1
+2 库
+ []
+
+[47]
+File: fig/moduleInterface.png Graphic file (type QTm)
+ <use  "fig/moduleInterface.png" >
+File: fig/Package.png Graphic file (type QTm)
+ <use  "fig/Package.png" > [48]
+File: fig/SearchPackage.png Graphic file (type QTm)
+
+<use  "fig/SearchPackage.png" >
+Overfull \hbox (20.98267pt too wide) in paragraph at lines 1214--1215
+\EU1/TimesNewRoman(0)/m/n/12 Parse\EU1/SimSun(1)/m/n/12 类 可 以 根 据 中
+ 心 词 汇， 获 得\EU1/TimesNewRoman(0)/m/n/12 Triple\EU1/SimSun(1)/m/n/12
+ 类 型 的 扩 展 词 汇 及 关 系 表， 解 析 成\EU1/TimesNewRoman(0
+)/m/n/12 Lucene\EU1/SimSun(1)/m/n/12 可
+ []
+
+File: fig/dbandindexpackage.png Graphic file (type QTm)
+<use  "fig/dbandindexpackage.png" > [49]
+Overfull \hbox (20.09363pt too wide) in paragraph at lines 1224--1225
+[]\EU1/TimesNewRoman(0)/m/n/12 MakeDBandIndex\EU1/SimSun(1)/m/n/12 类 是 建 
+立 索 引 和 把 文 本 添 加 进 数 据 库 的 总 入 口；\EU1/Time
+sNewRoman(0)/m/n/12 StuffTextFilePro-
+ []
+
+File: fig/hibernatepackage.png Graphic file (type QTm)
+<use  "fig/hibernatepackage.png" >
+File: fig/OntologyPackage.png Graphic file (type QTm)
+ <use  "fig/OntologyPackage.png" > [50]
+File: fig/webpackage.png Graphic file (type QTm)
+
+<use  "fig/webpackage.png" >
+Overfull \hbox (74.19205pt too wide) in paragraph at lines 1251--1252
+[]\EU1/SimSun(1)/m/n/12 如 图 5.14[]， 网 页 包 中 提 供 了 一 个 �
+��\EU1/TimesNewRoman(0)/m/n/12 HTML\EU1/SimSun(1)/m/n/12 文 本 添 加 高 �
+� 显 示 的 工 具\EU1/TimesNewRoman(0)/m/n/12 HighLight\EU1/SimSun(1)/m/n/1
+2 类，\EU1/TimesNewRoman(0)/m/n/12 DoSearch\EU1/SimSun(1)/m/n/12 提
+ []
+
+[51]
+File: fig/SearchStructure.png Graphic file (type QTm)
+ <use  "fig/SearchStructure.png" >
+Overfull \hbox (7.6163pt too wide) in paragraph at lines 1265--1266
+[]\EU1/SimSun(1)/m/n/12 通 过 这 样 的 流 程， 把 用 户 的 查 询 
+词 条 封 装 在 请 求 中， 通 过 一 个 充 当\EU1/TimesNewRoman(0)
+/m/n/12 Servlet\EU1/SimSun(1)/m/n/12 的\EU1/TimesNewRoman(0)/m/n/12 JSP
+ []
+
+[52] (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+) [53]
+Overfull \hbox (4.41354pt too wide) in paragraph at lines 1294--1295
+[]\EU1/TimesNewRoman(0)/m/n/12 GridPanel\EU1/SimSun(1)/m/n/12 以\EU1/TimesNewR
+oman(0)/m/n/12 MVC\EU1/SimSun(1)/m/n/12 的 模 式 进 行 设 计， 将 数 
+据 的 模 型、 显 示、 控 制 分 开 处 理。\EU1/TimesNewRoman(0)/m
+/n/12 Col-
+ []
+
+
+Overfull \hbox (11.34946pt too wide) in paragraph at lines 1299--1300
+[]\EU1/TimesNewRoman(0)/m/n/12 FormPanel\EU1/SimSun(1)/m/n/12 的 功 能 在 �
+��， 除 了 可 作 为 容 器 装 载 组 件 以 外， 还 可 以 在 �
+� 有 的\EU1/TimesNewRoman(0)/m/n/12 DOM\EU1/SimSun(1)/m/n/12 结
+ []
+
+File: fig/GUI.png Graphic file (type QTm)
+<use  "fig/GUI.png" >
+Overfull \hbox (6.82864pt too wide) in paragraph at lines 1313--1314
+ [][] 
+ []
+
+[54] [55]
+File: fig/stuffdb.png Graphic file (type QTm)
+ <use  "fig/stuffdb.png" > [56]
+File: fig/createdb.png Graphic file (type QTm)
+ <use  "fig/createdb.png" >
+Overfull \hbox (5.21304pt too wide) in paragraph at lines 1364--1365
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[57]
+Overfull \hbox (1.51099pt too wide) in paragraph at lines 1390--1392
+[][][][][][][][][]\EU1/SimSun(1)/m/n/12 新 建 长 度 为 128 字 节 的 字
+ 符 串 型 file-
+ []
+
+[58]
+Overfull \hbox (11.06479pt too wide) in paragraph at lines 1420--1422
+[]\EU1/SimSun(1)/m/n/12 下 面 通 过\EU1/TimesNewRoman(0)/m/n/12 JDBC\EU1/Si
+mSun(1)/m/n/12 ， 在\EU1/TimesNewRoman(0)/m/n/12 Java\EU1/SimSun(1)/m/n/12 �
+� 执 行\EU1/TimesNewRoman(0)/m/n/12 SQL\EU1/SimSun(1)/m/n/12 语 句。 通 �
+�� 上 面 获 得 最 大\EU1/TimesNewRoman(0)/m/n/12 id\EU1/SimSun(1)/m/n/12 
+的 语 句， 在\EU1/TimesNewRoman(0)/m/n/12 java\EU1/SimSun(1)/m/n/12 中
+ []
+
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 142
+4.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/euenc/eu1lmtt.fd
+File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \hbox (5.21304pt too wide) in paragraph at lines 1424--1425
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (48.41348pt too wide) in paragraph at lines 1436--1438
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[59]
+Overfull \hbox (6.68317pt too wide) in paragraph at lines 1456--1457
+[]\EU1/SimSun(1)/m/n/12 其 中\EU1/TimesNewRoman(0)/m/n/12 POJO\EU1/SimSun(1)/
+m/n/12 是 指 普 通\EU1/TimesNewRoman(0)/m/n/12 Java\EU1/SimSun(1)/m/n/12 �
+�， 由 于\EU1/TimesNewRoman(0)/m/n/12 Hibernate\EU1/SimSun(1)/m/n/12 的 低
+ 浸 入 式 设 计，\EU1/TimesNewRoman(0)/m/n/12 POJO\EU1/SimSun(1)/m/n/12 �
+�� 与 普 通\EU1/TimesNewRoman(0)/m/n/12 Jav-
+ []
+
+[60]
+Overfull \hbox (84.41385pt too wide) in paragraph at lines 1484--1485
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[61] [62]
+Overfull \hbox (5.78787pt too wide) in paragraph at lines 1517--1518
+[]\EU1/SimSun(1)/m/n/12 常 用 的\EU1/TimesNewRoman(0)/m/n/12 Web\EU1/SimSun(
+1)/m/n/12 服 务 器 软 件 有\EU1/TimesNewRoman(0)/m/n/12 Tomcat\EU1/SimSun
+(1)/m/n/12 、\EU1/TimesNewRoman(0)/m/n/12 Apache\EU1/SimSun(1)/m/n/12 和\EU1/
+TimesNewRoman(0)/m/n/12 Microsoft\EU1/SimSun(1)/m/n/12 的\EU1/TimesNewRoman(0)
+/m/n/12 Internet\EU1/SimSun(1)/m/n/12 信 息 服 务 器 （\EU1/TimesNewRoman
+(0)/m/n/12 In-
+ []
+
+
+Overfull \hbox (14.02655pt too wide) in paragraph at lines 1519--1520
+\EU1/SimSun(1)/m/n/12 个\EU1/TimesNewRoman(0)/m/n/12 Java servlet\EU1/SimSun(1
+)/m/n/12 容 器 （\EU1/TimesNewRoman(0)/m/n/12 container\EU1/SimSun(1)/m/n/12
+ ）， 与 此 同 时， 它 还 提 供 了\EU1/TimesNewRoman(0)/m/n/12 Java
+ servlet\EU1/SimSun(1)/m/n/12 和\EU1/TimesNewRoman(0)/m/n/12 JSP\EU1/SimSun(1)
+/m/n/12 （\EU1/TimesNewRoman(0)/m/n/12 JavaServer
+ []
+
+[63]
+Overfull \hbox (7.07529pt too wide) in paragraph at lines 1524--1525
+[]\EU1/SimSun(1)/m/n/12 配 置\EU1/TimesNewRoman(0)/m/n/12 Java\EU1/SimSun(1)/
+m/n/12 编 译 环 境： 因 为\EU1/TimesNewRoman(0)/m/n/12 Tomcat\EU1/SimSun
+(1)/m/n/12 是 基 于\EU1/TimesNewRoman(0)/m/n/12 Java\EU1/SimSun(1)/m/n/12 �
+�， 要 运 行\EU1/TimesNewRoman(0)/m/n/12 Tomcat\EU1/SimSun(1)/m/n/12 首 �
+� 需 要 配 置\EU1/TimesNewRoman(0)/m/n/12 Java
+ []
+
+
+Overfull \hbox (1.96393pt too wide) in paragraph at lines 1526--1527
+\EU1/SimSun(1)/m/n/12 8080， 但 在 一 些 罕 见 的 情 况 下， 这 �
+� 端 口 号 可 能 冲 突。 通 过\EU1/TimesNewRoman(0)/m/n/12 tomcat-use
+rs.xml\EU1/SimSun(1)/m/n/12 主
+ []
+
+File: fig/tomcatsuccess.png Graphic file (type QTm)
+<use  "fig/tomcatsuccess.png" > [64]
+File: fig/SearchResult.png Graphic file (type QTm)
+ <use  "fig/SearchResult.png" >
+Overfull \hbox (6.82864pt too wide) in paragraph at lines 1546--1547
+ [][] 
+ []
+
+File: fig/KeywordBasedPR.jpg Graphic file (type QTm)
+<use  "fig/KeywordBasedPR.jpg" >
+Overfull \hbox (3.41432pt too wide) in paragraph at lines 1559--1560
+ [][] 
+ []
+
+File: fig/OntologyBasedPR.jpg Graphic file (type QTm)
+<use  "fig/OntologyBasedPR.jpg" >
+Overfull \hbox (3.41432pt too wide) in paragraph at lines 1565--1566
+ [][] 
+ []
+
+
+Overfull \hbox (4.0pt too wide) in paragraph at lines 1557--1569
+[][] [] 
+ []
+
+[65] [66] [67
+
+] [68] (./FinalPaper20130609.lof [69])
+\tf@lof=\write4
+\openout4 = `FinalPaper20130609.lof'.
+
+ [70]
+(./FinalPaper20130609.lot)
+\tf@lot=\write5
+\openout5 = `FinalPaper20130609.lot'.
+
+ [71] (./FinalPaper20130609.bbl
+
+LaTeX Font Warning: Font shape `EU1/SimSun(0)/m/it' undefined
+(Font)              using `EU1/SimSun(0)/m/n' instead on input line 11.
+
+[72] [73]) [74] [75] [76] (./translation.tex [77] [78] [79]
+File: fig/trans/fig1.png Graphic file (type QTm)
+
+<use  "fig/trans/fig1.png" > [80]
+File: fig/trans/fig2.png Graphic file (type QTm)
+ <use  "fig/trans/fig2.png" > [81]
+File: fig/trans/fig3.png Graphic file (type QTm)
+
+<use  "fig/trans/fig3.png" > [82]
+File: fig/trans/fig4.png Graphic file (type QTm)
+ <use  "fig/trans/fig4.png" >
+Overfull \hbox (6.82864pt too wide) in paragraph at lines 126--127
+ [][] 
+ []
+
+File: fig/trans/fig5.png Graphic file (type QTm)
+<use  "fig/trans/fig5.png" >
+Overfull \hbox (6.82864pt too wide) in paragraph at lines 141--142
+ [][] 
+ []
+
+[83] [84]
+File: fig/trans/fig6.png Graphic file (type QTm)
+ <use  "fig/trans/fig6.png" > [85]
+File: fig/trans/tab1.png Graphic file (type QTm)
+ <use  "fig/trans/tab1.png" >
+File: fig/trans/tab2.png Graphic file (type QTm)
+
+<use  "fig/trans/tab2.png" > [86]
+File: fig/trans/tab3.png Graphic file (type QTm)
+ <use  "fig/trans/tab3.png" >
+File: fig/trans/tab4.png Graphic file (type QTm)
+
+<use  "fig/trans/tab4.png" >
+Overfull \hbox (6.82864pt too wide) in paragraph at lines 190--191
+ [][] 
+ []
+
+[87] [88]
+File: fig/trans/tab5.png Graphic file (type QTm)
+ <use  "fig/trans/tab5.png" >
+Overfull \hbox (3.44144pt too wide) in paragraph at lines 216--217
+[]\EU1/SimSun(0)/m/it/10.5 假 设 一 个 用 户 想 要 查 询\EU1/TimesNew
+Roman(0)/m/n/10.5 Alex\EU1/SimSun(0)/m/it/10.5 对\EU1/TimesNewRoman(0)/m/n/10.
+5 Ronaldo\EU1/SimSun(0)/m/it/10.5 的 犯 规， 他 会 输 入 一 个 查 �
+�”犯 规 \EU1/TimesNewRoman(0)/m/n/10.5 Alex Ronaldo\EU1/SimSun(0)/m/it/10.5
+ ”。
+ []
+
+File: fig/trans/tab6.png Graphic file (type QTm)
+<use  "fig/trans/tab6.png" > [89]) [90] (./FinalPaper20130609.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.12pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 19050 strings out of 494004
+ 377523 string characters out of 3150890
+ 405551 words of memory out of 3000000
+ 21974 multiletter control sequences out of 15000+200000
+ 12393 words of font info for 95 fonts, out of 3000000 for 9000
+ 1144 hyphenation exceptions out of 8191
+ 39i,18n,49p,897b,1460s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on FinalPaper20130609.pdf (96 pages).

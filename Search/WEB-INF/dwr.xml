@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC
+	"-//GetAhead Limited//DTD Direct Web Remoting 1.0//EN"
+	"httmp://www.getahead.ltd.uk/dwr/dwr10.dtd">
+
+<dwr>
+	<allow>
+		<create javascript="jsDoSearch" creator="new">
+			<param name="class"	 value="web.DoSearch"/>
+		</create>
+	</allow>
+</dwr>
+<!-- 每次引用都会创建一个新的java.until.Date对象 -->

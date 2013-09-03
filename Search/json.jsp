@@ -1,0 +1,14 @@
+{success:true,
+msg:'success',
+extendWord:[
+{word:'Gear',descn:'center'},
+{word:'Herringbone_Gear',descn:'SubClass'},
+{word:'Internal_Gear',descn:'SubClass'},
+{word:'Link',descn:'SuperClass'},
+{word:'Worm_Gear',descn:'SubClass'},
+{word:'Bevel_Gear',descn:'SubClass'},
+{word:'Worm',descn:'SubClass'},
+{word:'Rack',descn:'SubClass'},
+{word:'Helical_Gear',descn:'SubClass'},
+{word:'External_Gear',descn:'SubClass'}],
+content:''}

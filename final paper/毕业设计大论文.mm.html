@@ -1,0 +1,565 @@
+<html>
+<head>
+<title>&#27605;&#19994;&#35774;&#35745;&#22823;&#35770;&#25991;</title>
+<style type="text/css">
+    span.foldopened { color: white; font-size: xx-small;
+    border-width: 1; font-family: monospace; padding: 0em 0.25em 0em 0.25em; background: #e0e0e0;
+    VISIBILITY: visible;
+    cursor:pointer; }
+
+
+    span.foldclosed { color: #666666; font-size: xx-small;
+    border-width: 1; font-family: monospace; padding: 0em 0.25em 0em 0.25em; background: #e0e0e0;
+    VISIBILITY: hidden;
+    cursor:pointer; }
+
+    span.foldspecial { color: #666666; font-size: xx-small; border-style: none solid solid none;
+    border-color: #CCCCCC; border-width: 1; font-family: sans-serif; padding: 0em 0.1em 0em 0.1em; background: #e0e0e0;
+    cursor:pointer; }
+
+    li { list-style: none; }
+
+    span.l { color: red; font-weight: bold; }
+
+    a:link {text-decoration: none; color: black; }
+    a:visited {text-decoration: none; color: black; }
+    a:active {text-decoration: none; color: black; }
+    a:hover {text-decoration: none; color: black; background: #eeeee0; }
+
+</style>
+<!-- ^ Position is not set to relative / absolute here because of Mozilla -->
+</head>
+<body>
+
+<script language="JavaScript">
+   // Here we implement folding. It works fine with MSIE5.5, MSIE6.0 and
+   // Mozilla 0.9.6.
+
+   if (document.layers) {
+      //Netscape 4 specific code
+      pre = 'document.';
+      post = ''; }
+   if (document.getElementById) {
+      //Netscape 6 specific code
+      pre = 'document.getElementById("';
+      post = '").style'; }
+   if (document.all) {
+      //IE4+ specific code
+      pre = 'document.all.';
+      post = '.style'; }
+
+function layer_exists(layer) {
+   try {
+      eval(pre + layer + post);
+      return true; }
+   catch (error) {
+      return false; }}
+
+function show_layer(layer) {
+   eval(pre + layer + post).position = 'relative'; 
+   eval(pre + layer + post).visibility = 'visible'; }
+
+function hide_layer(layer) {
+   eval(pre + layer + post).visibility = 'hidden';
+   eval(pre + layer + post).position = 'absolute'; }
+
+function hide_folder(folder) {
+    hide_folding_layer(folder)
+    show_layer('show'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+}
+
+function show_folder(folder) {
+    // Precondition: all subfolders are folded
+
+    show_layer('hide'+folder);
+    hide_layer('show'+folder);
+    show_layer('fold'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+
+    var i;
+    for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       show_layer('show'+folder+'_'+i); }
+}
+function show_folder_completely(folder) {
+    // Precondition: all subfolders are folded
+
+    show_layer('hide'+folder);
+    hide_layer('show'+folder);
+    show_layer('fold'+folder);
+
+    scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+
+    var i;
+    for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       show_folder_completely(folder+'_'+i); }
+}
+
+
+
+function hide_folding_layer(folder) {
+   var i;
+   for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       hide_folding_layer(folder+'_'+i); }
+
+   hide_layer('hide'+folder);
+   hide_layer('show'+folder);
+   hide_layer('fold'+folder);
+
+   scrollBy(0,0); // This is a work around to make it work in Browsers (Explorer, Mozilla)
+}
+
+function fold_document() {
+   var i;
+   var folder = '1';
+   for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       hide_folder(folder+'_'+i); }
+}
+
+function unfold_document() {
+   var i;
+   var folder = '1';
+   for (i=1; layer_exists('fold'+folder+'_'+i); ++i) {
+       show_folder_completely(folder+'_'+i); }
+}
+
+</script>
+<SPAN class=foldspecial onclick="fold_document()">All +</SPAN>
+<SPAN class=foldspecial onclick="unfold_document()">All -</SPAN>
+<p>&#27605;&#19994;&#35774;&#35745;&#22823;&#35770;&#25991;
+<ul><li>&#24341;&#35328;&#65288;&#25552;&#21462;&#24320;&#39064;&#25253;&#21578;&#20869;&#23481;&#65289;
+<ul><li>&#30740;&#31350;&#32972;&#26223;
+
+</li>
+<li>&#21457;&#23637;&#29616;&#29366;&#19982;&#36235;&#21183;
+
+</li>
+<li>&#26412;&#25991;&#20027;&#35201;&#20869;&#23481;
+
+</li>
+<li>&#35770;&#25991;&#32467;&#26500;
+
+</li>
+
+</ul>
+</li>
+<li>&#24635;&#20307;&#35774;&#35745;&#19982;&#20851;&#38190;&#25216;&#26415;
+<ul><li>&#25628;&#32034;&#24341;&#25806;&#31616;&#20171;
+<ul><li>&#25628;&#32034;&#24341;&#25806;&#26412;&#36136;
+
+</li>
+<li>&#32463;&#20856;&#25628;&#32034;&#24341;&#25806;&#30340;&#21407;&#29702;&#21644;&#32467;&#26500;
+
+</li>
+
+</ul>
+</li>
+<li>&#24635;&#20307;&#35774;&#35745;
+<ul><li>&#30693;&#35782;&#30340;&#34920;&#36798;
+
+</li>
+<li>&#31995;&#32479;&#20307;&#31995;&#32467;&#26500;
+<ul><li>&#32473;&#20986;&#20307;&#31995;&#32467;&#26500;&#22270;
+
+</li>
+<li>&#20998;&#21035;&#38416;&#36848;
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>&#20851;&#38190;&#25216;&#26415;&#27010;&#36848;
+<ul><li>&#26412;&#20307;&#30340;&#26500;&#24314;(&#21482;&#25551;&#36848;&#35201;&#27714;)
+
+</li>
+<li>&#25193;&#23637;&#24615;&#35821;&#20041;&#25628;&#32034;&#31639;&#27861;(&#21482;&#25551;&#36848;&#35201;&#27714;)
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>&#30693;&#35782;&#30340;&#34920;&#36798;&#19982;&#26412;&#20307;&#30340;&#26500;&#24314;
+<ul><li>&#26412;&#20307;&#23646;&#24615;
+<ul><li> &#32487;&#25215;
+
+</li>
+<li>&#20989;&#25968;&#65295;&#21453;&#20989;&#25968;
+
+</li>
+<li>&#23545;&#31216;&#65295;&#21453;&#23545;&#31216;
+
+</li>
+
+</ul>
+</li>
+<li>&#26412;&#20307;&#25512;&#29702;
+
+</li>
+<li>&#26412;&#20307;&#30340;&#35835;&#21462;
+<ul><li>&#26412;&#20307;&#23384;&#20648;&#26041;&#24335;
+
+</li>
+<li>Jena&#20171;&#32461;
+
+</li>
+
+</ul>
+</li>
+<li>Protege&#20171;&#32461;
+
+</li>
+
+</ul>
+</li>
+<li>&#25193;&#23637;&#24615;&#35821;&#20041;&#25628;&#32034;&#31639;&#27861;
+<ul><li>&#21407;&#29702;
+
+</li>
+<li>&#23454;&#29616;
+<ul><li>&#20171;&#32461;Lucene&#21253;
+
+</li>
+<li>&#32034;&#24341;&#19982;&#25628;&#32034;
+
+</li>
+<li>&#25490;&#24207;&#20381;&#25454;
+
+</li>
+
+</ul>
+</li>
+<li>&#35780;&#20272;&#25351;&#26631;
+<ul><li>&#26597;&#20934;&#29575;
+
+</li>
+<li>&#26597;&#20840;&#29575;
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>&#20854;&#20182;&#31995;&#32479;&#23454;&#26045;&#25216;&#26415;
+<ul><li>&#25968;&#25454;&#24211;&#25216;&#26415;
+<ul><li>Hibernate
+
+</li>
+<li>&#25991;&#26723;&#24211;&#24314;&#31435;
+
+</li>
+<li>&#25968;&#25454;&#24211;&#35835;&#21462;&#25805;&#20316;
+
+</li>
+
+</ul>
+</li>
+<li>&#26381;&#21153;&#22120;&#25216;&#26415;
+<ul><li>Tomcat
+
+</li>
+
+</ul>
+</li>
+<li>&#21069;&#31471;
+<ul><li>ExtJS
+
+</li>
+<li>&#29992;&#25143;&#30028;&#38754;&#32534;&#20889;
+<ul><li>&#30028;&#38754;&#24067;&#23616;
+
+</li>
+
+</ul>
+</li>
+<li>B/S&#26550;&#26500;&#23454;&#29616;
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>&#31995;&#32479;&#23454;&#29616;
+<ul><li>&#38656;&#27714;&#20998;&#26512;
+<ul><li>&#20219;&#21153;&#27010;&#36848;
+<ul><li>&#24212;&#29992;&#30446;&#26631;&#65288;&#25551;&#36848;&#31995;&#32479;&#21151;&#33021;&#65289;
+
+</li>
+<li>&#36816;&#34892;&#29615;&#22659;
+<ul><li>&#26381;&#21153;&#22120;&#31471;
+<ul><li>&#30828;&#20214;&#65288;&#22788;&#29702;&#22120;&#12289;&#20869;&#23384;&#12289;&#30828;&#30424;&#65289;
+
+</li>
+<li>&#36719;&#20214;
+<ul><li>&#31995;&#32479;&#36719;&#20214;
+
+</li>
+<li>Web&#26381;&#21153;&#22120;:java jdk, Apache Tomcat
+
+</li>
+<li>&#25968;&#25454;&#24211;&#65306;MySQL
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>&#23458;&#25143;&#31471;
+<ul><li>&#30828;&#20214;&#65288;&#22788;&#29702;&#22120;&#12289;&#20869;&#23384;&#12289;&#30828;&#30424;&#65289;
+
+</li>
+<li>&#36719;&#20214;
+<ul><li>&#25805;&#20316;&#31995;&#32479;
+
+</li>
+<li>&#27983;&#35272;&#22120;
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>&#26465;&#20214;&#19982;&#38480;&#21046;
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>&#21151;&#33021;&#38656;&#27714;
+<ul><li>&#21151;&#33021;&#21010;&#20998;
+<ul><li><span id="show1_1" class="foldclosed" onClick="show_folder('1_1')" style="POSITION: absolute">+</span> <span id="hide1_1" class="foldopened" onClick="hide_folder('1_1')">-</Span>
+&#39046;&#22495;&#27169;&#22411;&#23450;&#20041;
+<ul id="fold1_1" style="POSITION: relative; VISIBILITY: visible;"><li><img src="&#39046;&#22495;&#27169;&#22411;&#33539;&#20363;.png">
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>&#21151;&#33021;&#35814;&#32454;&#25551;&#36848;(Use Case&#22270;)
+<ul><li>&#35774;&#35745;&#30693;&#35782;&#26597;&#35810;
+
+</li>
+<li>&#30693;&#35782;&#24211;&#32500;&#25252;
+<ul><li>&#26412;&#20307;&#24314;&#31435;&#19982;&#32500;&#25252;
+
+</li>
+<li>&#25991;&#26723;&#24211;&#33719;&#21462;&#19982;&#26356;&#26032;
+
+</li>
+<li>&#25968;&#25454;&#24211;&#24314;&#31435;&#19982;&#32500;&#25252;
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>&#25968;&#25454;&#25551;&#36848;
+<ul><li>&#38745;&#24577;&#25968;&#25454;
+
+</li>
+<li>&#21160;&#24577;&#25968;&#25454;
+
+</li>
+<li>&#25968;&#25454;&#24211;&#20171;&#32461;
+
+</li>
+<li>&#25968;&#25454;&#30340;&#37319;&#38598;
+
+</li>
+
+</ul>
+</li>
+<li>&#36816;&#34892;&#38656;&#27714;
+<ul><li>&#29992;&#25143;&#30028;&#38754;
+
+</li>
+<li>&#30828;&#20214;&#25509;&#21475;
+
+</li>
+<li>&#36719;&#20214;&#25509;&#21475;
+<ul><li>&#26412;&#20307;&#26816;&#20837;
+
+</li>
+<li>&#25991;&#26412;&#26816;&#20837;
+
+</li>
+<li>&#25968;&#25454;&#24211;&#26816;&#20837;&#12289;&#26816;&#20986;
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>&#20854;&#20182;&#38656;&#27714;
+<ul><li>&#20445;&#23494;&#24615;
+
+</li>
+<li>&#29992;&#25143;&#30028;&#38754;&#21451;&#22909;
+
+</li>
+<li>&#21487;&#32500;&#25252;&#24615;&#12289;&#21487;&#25193;&#23637;&#24615;
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>&#27010;&#35201;&#35774;&#35745;
+<ul><li><span id="show1_2" class="foldclosed" onClick="show_folder('1_2')" style="POSITION: absolute">+</span> <span id="hide1_2" class="foldopened" onClick="hide_folder('1_2')">-</Span>
+&#22522;&#26412;&#22788;&#29702;&#27969;&#31243;
+<ul id="fold1_2" style="POSITION: relative; VISIBILITY: visible;"><li><img src="&#27969;&#31243;&#22270;.png">
+
+</li>
+
+</ul>
+</li>
+<li><span id="show1_3" class="foldclosed" onClick="show_folder('1_3')" style="POSITION: absolute">+</span> <span id="hide1_3" class="foldopened" onClick="hide_folder('1_3')">-</Span>
+&#32452;&#32455;&#32467;&#26500;
+<ul id="fold1_3" style="POSITION: relative; VISIBILITY: visible;"><li><img src="&#20307;&#31995;&#32467;&#26500;.png">
+
+</li>
+
+</ul>
+</li>
+<li>&#27169;&#22359;&#21270;&#20998;
+<ul><li>&#36164;&#28304;&#23618;
+<ul><li>&#26412;&#20307;&#26500;&#24314;&#19982;&#32500;&#25252;
+
+</li>
+<li>&#25991;&#26723;&#24211;&#33719;&#21462;&#19982;&#26356;&#26032;
+
+</li>
+
+</ul>
+</li>
+<li>&#24212;&#29992;&#26381;&#21153;&#23618;
+<ul><li>&#36164;&#28304;&#35843;&#29992;&#39044;&#22788;&#29702;
+<ul><li>&#35835;&#21462;&#26412;&#20307;
+
+</li>
+<li>&#26681;&#25454;&#25991;&#26723;&#24211;&#20135;&#29983;&#32034;&#24341;
+
+</li>
+<li>&#26681;&#25454;&#25991;&#26723;&#24211;&#24314;&#31435;&#25968;&#25454;&#24211;
+
+</li>
+
+</ul>
+</li>
+<li>&#21151;&#33021;&#23454;&#29616;
+<ul><li>&#35821;&#20041;&#25193;&#23637;
+
+</li>
+<li>&#25628;&#32034;
+
+</li>
+<li>&#25968;&#25454;&#24211;&#35843;&#29992;
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>&#34920;&#31034;&#23618;
+<ul><li>&#37197;&#32622;Web&#26381;&#21153;&#22120;
+
+</li>
+<li>&#29992;&#25143;&#30028;&#38754;
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>&#25509;&#21475;&#35774;&#35745;
+<ul><li>&#33719;&#21462;&#25193;&#23637;&#35821;&#20041;
+
+</li>
+<li>&#25968;&#25454;&#24211;&#35843;&#29992;&#36755;&#20986;
+
+</li>
+<li>&#25628;&#32034;&#32467;&#26524;&#36755;&#20986;
+
+</li>
+
+</ul>
+</li>
+<li>&#25968;&#25454;&#32467;&#26500;&#35774;&#35745;
+<ul><li>&#25193;&#23637;&#35821;&#20041;
+
+</li>
+<li>&#25968;&#25454;&#24211;&#34920;&#32467;&#26500;
+
+</li>
+
+</ul>
+</li>
+
+</ul>
+</li>
+<li>&#35814;&#32454;&#35774;&#35745;
+<ul><li>&#31867;&#22270;
+
+</li>
+<li>&#31639;&#27861;
+
+</li>
+
+</ul>
+</li>
+<li>&#27979;&#35797;
+<ul><li>&#26597;&#20934;&#29575;&#23454;&#39564;
+
+</li>
+<li>&#26597;&#20840;&#29575;&#23454;&#39564;
+
+</li>
+
+</ul>
+</li>
+<li>&#31995;&#32479;&#23637;&#31034;
+
+</li>
+
+</ul>
+</li>
+
+</ul><SCRIPT language=JavaScript>
+fold_document();
+</SCRIPT>
+</body>
+</html>

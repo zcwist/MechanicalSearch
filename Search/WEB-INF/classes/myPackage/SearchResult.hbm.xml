@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="myPackage">
+	<class name="SearchResult" table="stuff">
+		<id name="id">
+			<!-- 指定主键生成策略 -->
+			<generator class="identity"/>
+		</id>
+		<property name="contents"/>
+		<property name="filename"/>
+		<property name="fullpath"/>
+	</class>
+</hibernate-mapping>
+
+	
+<!-- 通过映射文件，Hibernate可以理解持久化类和数据表之间的关系，也可以理解持久化类属性与数据表列之间的关系 -->

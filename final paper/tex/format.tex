@@ -1,0 +1,107 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[top=3.8cm, bottom=3.2cm, left=3cm, right=3cm]{geometry}
+%
+\usepackage{titlesec}
+\usepackage[cm-default]{fontspec}
+\usepackage{amsmath}
+\usepackage{amsfonts,amssymb}
+\usepackage{listings} %代码
+\usepackage{graphicx} 
+\setmainfont[BoldFont=Adobe Heiti Std]{SimSun}
+\usepackage{extarrows} %箭头包
+\usepackage{enumerate}
+\newfontfamily{\lishu}{LiSu}
+\newfontfamily{\FanSong}{Adobe Fangsong Std}
+\usepackage{changepage} %缩进包
+
+%
+%设置一二三级标题格式
+\newcommand{\xiaochu}{\fontsize{36pt}{\baselineskip}\selectfont}
+\newcommand{\yihao}{\fontsize{26pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{16pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosanhao}{\fontsize{15pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosihao}{\fontsize{13pt}{\baselineskip}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}
+
+\titleformat{\section}{\center\xiaosanhao\bfseries}{第\,\thesection\,章}{1em}{}
+\titleformat{\subsection}{\sihao\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\xiaosihao\bfseries}{\thesubsubsection}{1em}{}
+%
+
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+\renewcommand{\theequation}{\arabic{section}-\arabic{equation}}
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+%表、公式、图编号格式
+
+\usepackage{makecell} %表格线宽包
+\usepackage{indentfirst}                 % 首行缩进宏包
+\setlength{\parindent}{2em}             % 段落缩进
+\XeTeXlinebreaklocale "zh"                      % 针对中文进行断行
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt  % 给予TeX断行一定自由度
+\usepackage[super,square,comma,sort&compress]{natbib}   %参考文献上标
+\usepackage{multicol} %用于实现在同一页中实现不同的分栏
+\renewcommand\figurename{图}
+\def\tablename{表}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+%
+\title{\yihao\textbf{捕捉查询意图的机械领域知识检索系统}}
+\author{\xiaosihao\ 张承巍\\机械工程及自动化\\2009010512}
+\date{\today}
+%
+\begin{titlepage}
+\begin{center}
+
+
+% Upper part of the page  
+
+\textsc{\yihao \lishu 清华大学}\\[1.5cm]
+
+\textsc{\xiaochu \bfseries \textbf{综合论文训练} }\\[1.5cm]
+
+\end{center}
+% Title
+\textbf{\xiaosanhao{题目：}\yihao \underline{捕捉查询意图的机械领域知识}\\ \hspace*{14mm} \underline{检索系统}}\\[4cm]
+
+% Author and supervisor
+
+
+\FangSong \sanhao 
+{
+
+\hspace{11mm}系\hspace{11mm}别：机械工程系\\[0.25cm]
+
+\hspace{11mm}专\hspace{11mm}业：机械工程及自动化\\[0.25cm]
+
+\hspace{11mm}姓\hspace{11mm}名：张承巍\\[0.25cm]
+
+\hspace{11mm}指导教师：田凌 教授\\[3cm]
+
+}
+
+
+
+% Bottom of the page
+\center{ \large \today}
+
+
+
+\end{titlepage}
+
+\pagenumbering{Roman}
+
+\renewcommand\abstractname{中文摘要}
+\begin{abstract}
+中文摘要
+\end{abstract}
+\newpage
+\renewcommand\abstractname{Abstract}
+\begin{abstract}
+英文摘要
+\end{abstract}
+
+\begin{document}
+\setlength{\baselineskip}{20pt} %设置行间距20pt
+\newpage
+\end{document}

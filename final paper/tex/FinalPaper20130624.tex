@@ -1,0 +1,1670 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[top=3.8cm, bottom=3.2cm, left=3cm, right=3cm]{geometry}
+%
+\usepackage{titlesec}
+\usepackage[cm-default]{fontspec}
+\usepackage{amsmath}
+\usepackage{amsfonts,amssymb}
+\usepackage{listings} %代码
+\usepackage{graphicx} 
+\usepackage{caption} %caption后加[]可以让引用不列进figurelist中
+\setmainfont[BoldFont=Adobe Heiti Std]{SimSun}
+\usepackage{extarrows} %箭头包
+\usepackage{enumerate}
+\newfontfamily{\lishu}{LiSu}
+\newfontfamily{\FangSong}{Adobe Fangsong Std}
+\newfontfamily{\SimSun}{SimSun}
+\newfontfamily{\Times}{Times New Roman}
+\newfontfamily{\ChuSong}{FZCuSong-B09S}
+
+\usepackage{changepage} %缩进包
+\usepackage{titletoc}%目录格式包
+\usepackage{multicol} %用于实现在同一页中实现不同的分栏
+%
+%设置一二三级标题格式
+\newcommand{\xiaochu}{\fontsize{36pt}{\baselineskip}\selectfont}
+\newcommand{\yihao}{\fontsize{26pt}{\baselineskip}\selectfont}
+\newcommand{\erhao}{\fontsize{22pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{16pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosanhao}{\fontsize{15pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}
+
+\titleformat{\section}{\center\xiaosanhao\bfseries}{第\,\thesection\,章}{1em}{}
+\titleformat{\subsection}{\sihao\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\xiaosihao\bfseries}{\thesubsubsection}{1em}{}
+%
+
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+\renewcommand{\theequation}{\arabic{section}-\arabic{equation}}
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\DeclareCaptionLabelSeparator{twospace}{\ ~}
+\captionsetup{labelsep=twospace} 
+%表、公式、图编号格式
+
+\usepackage{makecell} %表格线宽包
+\usepackage{indentfirst}                 % 首行缩进宏包
+\setlength{\parindent}{2.5em}             % 段落缩进
+
+\XeTeXlinebreaklocale "zh"                      % 针对中文进行断行
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt  % 给予TeX断行一定自由度
+\usepackage[super,square,comma,sort&compress]{natbib}   %参考文献上标
+
+\renewcommand\figurename{\wuhao 图}
+\def\tablename{\wuhao 表}
+\renewcommand{\today}{\number\year \ 年\ \number\month \ 月\ \number\day \ 日}
+%
+\title{\yihao\textbf{捕捉查询意图的机械领域知识检索系统}}
+\author{\xiaosihao\ 张承巍\\机械工程及自动化\\2009010512}
+\date{\today}
+%
+
+%要导入titletoc包才能用哦～
+\titlecontents{section}[0pt]{\vspace{.5\baselineskip}\bfseries}
+    {第\thecontentslabel 章\quad}{}
+    {\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
+\dottedcontents{subsection}[2.00cm]{\normalsize}{2.0em}{4pt}
+\dottedcontents{subsubsection}[2.74cm]{\normalsize}{3.0em}{4pt}
+\begin{document}
+
+
+\begin{titlepage}
+\begin{center}
+
+
+% Upper part of the page  
+\phantom{Start!}
+
+\vspace{1cm} 
+
+{\yihao \lishu 清\ 华\ 大\ 学}\\[1.5cm]
+
+\textbf{\xiaochu \bfseries {综\ \ 合\ \ 论\ \ 文\ \ 训\ \ 练} }\\[2.5cm]
+
+\end{center}
+% Title
+\textbf{\erhao{题目：}\yihao \underline{捕捉查询意图的机械领域知识}\\ \hspace*{21mm} \underline{检索系统}}\\[4cm]
+
+% Author and supervisor
+
+
+
+{
+\FangSong \sanhao 
+\hspace{11mm}系\hspace{11mm}别：机械工程系\\[0.25cm]
+
+\hspace{11mm}专\hspace{11mm}业：机械工程及自动化\\[0.25cm]
+
+\hspace{11mm}姓\hspace{11mm}名：张承巍\\[0.25cm]
+
+\hspace{11mm}指导教师：田\quad 凌 教授\\[2cm]
+
+}
+
+
+
+% Bottom of the page
+\center{\SimSun \large \today}
+
+\newpage
+
+	\centering\includegraphics[width=6in]{authorization.png} 
+	\thispagestyle{empty}
+
+
+
+
+
+
+\end{titlepage}
+
+
+
+
+
+\pagenumbering{Roman}
+
+\renewcommand\abstractname{\xiaosanhao 中文摘要}
+\newgeometry{left=2cm, right=2cm}
+\phantom{Start!}
+
+\vspace{1cm} 
+\begin{abstract}
+
+\setlength{\baselineskip}{20pt} %设置行间距20pt
+\noindent
+\xiaosihao
+\quad \quad 随着信息化的深入，企业内部的数据量爆炸性地增长。设计人员要从海量的数据中快速地检索出所需要的信息，快速地获取设计知识，从而提高设计效率。与此同时，如果系统能将下游的工艺、销售、售后等知识也检索出来，就能让设计阶段就更多地兼顾到下游的各阶段，有效缩短产品研发周期。知识检索系统就可以有效地实现这一目标。
+
+\noindent
+\quad \quad 本文以本体作为知识的表达形式，建立了机械领域的领域本体，通过扩展性语义搜索算法，实现语义的扩展功能，对其他相关各功能模块进行算法实现，最后建立了一套机械领域知识的检索系统。
+
+\vspace{13pt} 
+
+\noindent
+\quad \quad 
+ \ChuSong {关键词：} \SimSun
+ 机械设计；搜索；本体
+\end{abstract}
+
+\newpage
+\renewcommand\abstractname{\xiaosanhao ABSTRACT}
+\begin{abstract}
+\setlength{\baselineskip}{20pt} %设置行间距20pt
+\xiaosihao
+\Times
+With the development of informatization, the amount of the data of an enterprise has been increasing at a tremendous speed. In order to aquire knowledge about designing and improve design efficiency, the designers have to search what they need from such a big mass of data. If a system is able to push related downstream knowledge about procedure, marketing and after-sales services, the designers could take the the downstream stage into account while they are designing, thus it will make a contribution to shorten product cycles. A knowledge search system is created to achieve this purpose.
+
+This paper describes a search system of based on domain ontology which is a special expression of knowledge. By an algorithm of extensive semantic, the system could extend the query from the users. Realizing the other related function module, we have, finally, constructed a search system on the domain of mechanism.  
+
+\vspace{13pt} 
+
+\bfseries{Keywords: }\mdseries mechanical design; search; ontology
+
+\end{abstract}
+
+\newpage
+
+\restoregeometry
+\setlength{\parskip}{10pt}
+\renewcommand{\contentsname}{目\quad 录}
+\tableofcontents
+
+
+
+\newpage
+\makeatletter %将文献引用作为上标出现,增加括号，
+\pagenumbering{arabic}
+\setlength{\baselineskip}{20pt} %设置行间距20pt
+\setlength{\parskip}{0pt}
+\section{引言} 
+	\subsection{研究背景}
+	以计算机技术为代表的新兴技术，深刻影响了现代制造技术的发展。制造技术产生初期只包括生产车间与物流有关的加工和装配过程，现在则涵盖采购、生产、销售、售后的全生命周期。对于产品制造的全生命周期，会产生海量的相关技术文档，包括设计需求报告、设计说明书、设计图纸、加工工艺规程、质量检验报告、维修报告等文档，称之为语料库。而另据报道，在某航空企业，仅仅与一个发动机相关的文档就高达40000份，其中63\%是文本信息\cite{1}。 
+   
+	面对瞬息万变的市场，企业要及时做出反应，必须以旧产品的技术积累为基础，加速新产品的研发过程。统计表明，“产品全生命周期的成本在产品设计阶段有90\%已经被决定，产品的质量和性能也在设计阶段被确定下来。”\cite{2}设计人员在产品全生命周期中的作用可见一斑。但是设计人员的知识始终是有限的，需要在设计过程中不断查询和学习新知识，而这一过程将会花费大量的时间。如文献\cite{1}中所说，“设计人员有20-30\%的时间是在查询和交流设计信息”。
+   
+	要降低查询的时间成本，需要有效地组织文档，并从中快速而准确搜索出设计人员所需要的信息。目前企业内部的各种技术文档已经逐步从纸张化发展到无纸化，可以用更先进的数据信息组织方式，更高效的搜索方法，达到加速知识检索过程这一目标。
+   
+	目前，用于领域文档搜索的一般方法是基于关键词的全文搜索，其原理在于通过关键词匹配进行搜索，这种方法较为生硬，搜索引擎只是通过对比文字的编码信息进行搜索，却并没有理解关键词的真实含义，很容易形成语义鸿沟。在出现一词多义和同义词情况时，往往不能检索到理想的结果。比如搜索“梅西进球”，出现的网页都是同时包含了“梅西”和“进球 ”的页面，如图{\ref{fig:queryExample}}，却没有“梅西得分”的页面。然而根据人的理解，“进球”与“得分”应该表示同一个意思。
+   
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=5in]{queryExample.png} 
+	\caption{\wuhao 基于关键词搜索结果}\label{fig:queryExample} 
+	\end{figure} 
+   
+	搜索的目的在于获取知识，自然语言是表达知识的一种形式，却不是唯一的形式。在计算机技术中，自然语言是不容易被理解的，所以提出了用本体来表达知识的方式，本体也成为了现代语义网的支柱。
+   
+	本体（{\Times Ontology}）最初是一个哲学概念，后来被引入到计算机技术中，{\Times Neches} 等人最先定义了本体，即“给出构成相关领域词汇的基本术语和关系，以及利用这些术语和关系构成的规定这些词汇外延的规则的定义。”\cite{3}本体优势在于其精确的描述，可以摆脱语言层面的干扰，而上升到概念层面进行描述，为语义搜索提供基础。通过推理机，能把隐性知识转换成显性知识。比如，通过“汤姆是一只猫”，就可以推理出“汤姆是一个动物”，以此为基础，不仅可以检索到汤姆作为一只猫的特征，也可以检索到汤姆作为一个动物的特征。这种基于本体的语义性搜索，可以给用户提供更多的有用信息。
+   
+	对搜索性能的评估，主要有两个参数——查全率（{\Times Recall}）和查准率（{\Times Precision}），“查全率用来衡量搜索系统查找相关文档的能力；而查准率用来衡量搜索系统过滤非相关文档的能力。”\cite{4}基于本体的语义性搜索，可以规避词语可能出现的歧义，通过推理机，合理拓展搜索范围，从而有效提高搜索的查准率和查全率。现在，{\Times SPARQL}等查询语言可以实现精确的语义网搜索，但是它有一套复杂的语法，要求终端用户具有本体等方面的知识，增加了用户的学习成本，并不能真正的提高搜索效率。
+
+	针对上述问题，本项目拟以机械领域为例，建立一种基于本体的语义性搜索系统。使得用户可以用常规方式输入关键词，系统首先用本体对关键词进行语义解析和扩展，再在语料库中进行搜索，最后给用户提供丰富而精确的查询结果。
+	\subsection{国内外发展现状}
+	对于基于本体的语义性搜索系统，需要对本体和语义性搜索两个方面进行研究。
+		\subsubsection*{本体}
+	根据应用范围的不同，本体可分为领域本体、通用本体、应用本体等。领域本体指在特定类型领域或某个学科的相关知识组成的本体。通用本体则涵盖若干个领域。应用本体包含某个特定领域的设计知识。
+	
+	{\Times Fabian M. Suchanek}等人介绍了{\Times YAGO}本体，它从维基百科和语义网上获得知识，涵盖面广，信息准确，还提供了强大的查询接口，是一种被广泛运用的通用本体\cite{5}。
+	
+	{\Times Ashburner}等人建立了生物过程、分子功能、细胞组成三个本体，组成基因联合本体，生成了一套用于真核生物的动态可控的词库，同时扩展了细胞中基因和蛋白质功能增加和变化的知识，还建立了网站({\Times http://www.geneontology.org})，提供搜索接口\cite{6}，是领域本体与搜索结合的，应用于实际研究的例子。
+	
+	{\Times Maedche}等人提出了一种本体学习框架，通过半自动的本体构建工具搭建典型的本体工作环境，通过本体导入、提取、修剪、提纯、评估等步骤进行建模，同时提出了用自由文本、字典等非结构文本进行本体构建的方法\cite{7}。
+	
+	{\Times Deborah L. McGuinness}等人介绍了{\Times OWL}语言，比较其与{\Times XML, RDF, RDF Schema (RDF-S)}的差异，阐释为什么要采用{\Times OWL}语言进行本体描述，并分别介绍了{\Times OWL}三种子语言：{\Times OWL Lite, OWL DL, OWL FULL}的联系与区别\cite{8}。为最后选择本体描述方法提供指导。
+	
+	上海交通大学王英林等人提出基于本体、知识处理模块与基于实例推理方法的可重构知识管理系统框架，实现了知识类型扩充的功能，讨论了基于工作流程的协作知识生产方法\cite{9}。
+	
+	中科院数学研究所金芝等人开发了一套基于本体的需求自动获取方法，该方法以企业本体和领域本体为线索来描述现系统，重用领域需求模型以构造应用软件需求模型\cite{10}，是本体的另一种运用方法。
+	
+	中国科学院文献情报中心李景等对构建知识本体的方法体系进行了比较研究，阐述了当前常用的7种知识本体构建方法，分别探讨它们的优缺点\cite{11}。
+	
+		\subsubsection*{语义性搜索}
+	{\Times Sara Cohen}研发了一种面向XML的语义性搜索系统，支持用简易的检索语言进行搜索，并用扩展信息检索系统将查询结果进行排序，输出与查询相关的文档块\cite{12}。
+
+	{\Times Thanh Tran}等人提出一种基于本体的语义性搜索方法，其核心在于用本体将搜索关键词转换成为查询语言，这种方法可以用于浏览声明过的知识，完成一些语义搜索\cite{13}，但是之后的评估表明这种方法存在一定的局限性。
+
+	基于上述的方法，{\Times Qi Zhou}等人开发出一套“{\Times Spark}”系统，将关键词翻译成正式的逻辑查询，使得用户可以用熟悉的关键字搜索实现语义搜索的功能\cite{14}。
+
+	{\Times Li Ding}等人开发了一套基于爬虫索引的语义网搜索系统“{\Times Swoogle}”，其工作方法是将找到文档的元数据抽取出来，计算出文章之间的关系，再以{\Times URI}作为索引关键字来查找相关文章\cite{15}。
+
+	{\Times METU}的{\Times Soner Kara}等人运用语义性索引，提出了一种基于本体的检索系统。先用爬虫程序获得数据，将本体实例化，通过信息抽取和推理得到完全的实例关系{\Times OWL}，再转换成索引进行搜索，并把它应用于足球领域\cite{16}，拥有较好的搜索性能。
+
+	{\Times Sugato Chakrabarty}等人通过建立同义词表，一定程度上解决了类似缩写与全称的同义词关系，提高了查全率，并成功运用在了通用汽车公司的维修查询系统中\cite{17}。
+
+	普渡大学的{\Times Zhanjun Li}等人提出了一种框架，采用本体基础和算法来处理复杂查询，通过计算相关度，在一词多义的情况下，准确判断出用户的真实意图\cite{18}。
+
+	台湾大学的{\Times Hsien-Tang Lin}等人设计了一种方法，通过领域知识，把文章化分为段落，再把每个段落作为一篇独立的文章，解决了对于较长文章有多个主题，不便于进行处理的问题\cite{19}。
+
+	浙江大学的胡玥姮用{\Times PLIB}本体和{\Times XML}技术对制造信息进行结构化描述，建立描述网页内容混合向量空间模型，设计了对零件资源信息的概念搜索系统。
+
+	中国人民大学的{\Times Anjian Ren}等人利用现成的{\Times YAGO}本体，针对用户的具体查询，自动生成合适的分类，克服了在搜索关键字过于笼统时，搜索结果不理想的问题\cite{20}。
+
+	上海交大的{\Times Dong Yang}等人，用基于本体的方法，开发出一套可以自动进行产品配置系统，以同时满足客户需求和技术指标\cite{21}。
+
+	浙江大学郭剑锋等人建立了零件库本体，并实现了关键字扩展搜索\cite{22}。
+
+	综上所述，现在基于本体的语义性搜索是研究的热点问题，国内外研究取得了一些成果，但也存在一些问题。首先，在需要大量设计知识的机械设计领域，并没有构建出一个较完整的本体，而谷歌等通用的搜索工具又不便于企业内部部署实施，不能搜索企业内部的语料库，其次，没有提出一种扩展性较好的方法框架，文献\cite{15}中提到了其方法具有较好的可扩展性，但是其前提是所涉及领域模板简单。本项目以较为庞大的机械设计领域为例，开发出一套具有较高可扩展性，可移植性的基于本体的语义性搜索系统。
+		
+	\subsection{论文主要研究内容}
+	本项目通过本体描述机械设计知识，基于本体组织语料库，形成以本体为骨架、语料库为内容的机械设计领域的知识库。再利用本体的扩展和推理功能, 真正从语义层面理解用户的查询要求,通过一定的搜索算法,在知识库中搜索出相关度较高的条目作为搜索结果。
+	
+	系统开发流程：首先,构建机械设计本体作为搜索系统的核心；然后，探究运用本体进行知识的推理和语义的扩展的方法，建立扩展性语义搜索算法；然后，用爬虫程序获得模拟语料库，用本体重新组织语料库，从而获得搜索的知识库；最后，将以上几个部分结合在一起，增加用户接口，完成搜索系统的搭建。
+
+	本文以机械产品设计为背景，设计并开发了一种机械设计知识搜索引擎系统，并针对其中的若干关键技术进行了深入研究。具体研究工作包括：
+	\begin{enumerate}[(1)]
+		\item
+	
+	研究知识的表达和存储方式，研究本体构建技术，扩展和推理功能。以本体描述机械设计知识，从而实现自然语言和搜索系统的联系。研究本体建模理论，构建机械设计的基础本体，确定本体建模工具。正确使用类，个体，对象属性，数据属性等建模类型，建立恰当的继承关系，关系特性（即函数关系，反函数关系，对称关系，反对称关系，传递性等）及对象的逆特性，为后面的推理过程提供基础。采用基于{\Times Web}本体描述语言（{\Times OWL}）的形式化描述语言，方便后续步骤中对于本体的调用。研究类层与个体层的关系，为后续本体的扩展提供支持，为在搜索时进行合理的关键词扩展提供方便。
+		\item
+	研究可以实现语义扩展功能的、具有设置参数接口的搜索算法，并提出一种评分和排序方式，使得排序靠前的结果更可能是用户最想要得到的结果，达到捕捉用号意图的目的。
+		\item
+	研究{\Times Web}应用系统的相关常用技术，包括架设服务器，建立数据库，用户界面设计等。为保证搜索系统的跨平台通用性和可扩展性，将其定位为{\Times Web}应用，采用{\Times B/S}架构，不需要在客户端安装专用搜索软件，只需在浏览器中像进入普通网页那样，就可以实现搜索，大大提高了搜索的便捷性。要实现这样的功能，需要架设服务器，通过数据库来管理维护知识库，并且编写友好的用户界面，方便用户使用。
+		\item
+	研究知识库建立的方法，通过爬虫程序，从维基百科上获得与机械相关词条网页，对其进行解析，去掉{\Times HTML}标签，获得非结构化的文本信息，模拟企业内部语料库，并以关系数据库的方式进行存储。研究关系数据库与本体之间建立关系的方法，以本体为骨架、数据库为内容来设计数据库，从而提高搜索效率。
+		\item
+	设计并开发一种基于本体的、具有语义扩展功能的搜索引擎基础架构，提供灵活的参数设置接口和底层数据更新接口，为知识检索提供一种高效的方式。在理论和方法研究的基础上，集成各功能模块，增加用户操作界面，研究各模块之间信息交流，相互调用的方式。使得各模块具有自己较为独立的功能，以实现之后对于其他领域应用的扩展，松散耦合地集成模块，并将此架构运用于机械领域，开发出捕捉查询意图的机械领域知识检索系统，并进行性能验证。
+	\end{enumerate}
+
+	\subsection{论文结构}
+	论文后续部分将围绕捕捉查询意图的机械领域知识检索系统的设计开发以及其中关键的技术研究展开。具体的安排如下：
+
+	第一章介绍论文的研究背景和研究意义，阐释具有语义扩展性功能的、可以捕捉查询意图的搜索系统的重要性，并对相关技术的研究现状进行介绍。最后，给出论文的研究内容和组织结构。
+
+	第二章介绍捕捉查询意图的知识检索系统的总体设计，通过介绍现有搜索引擎技术，提出功能扩展的方法，建立系统体系结构图，引出系统中包含的若干关键技术，为后续章节中相关关键技术的阐述提供系统背景。
+
+	第三章介绍知识的表达方式，引出本体，介绍本体的基本属性和构建方法，利用本体的推理功能，实现隐性知识到显性知识的过渡，实现语义的扩展。介绍本体的存储方式，并介绍利用{\Times Java}工具包——{\Times Jena}操作本体的方法。最后介绍了一种建立本体的软件——{\Times Prot{\'e}g{\'e}}。
+
+	第四章首先介绍扩展性语义搜索算法的其本原理及定性的排序方式，然后介绍{\Times Java}工具包——{\Times Lucene}及其功能实现的方式，阐述排序的定量依据，最后介绍对搜索系统性能的评价指标。
+
+	第五章在前几章对体系结构和关键技术介绍的基础上，以软件工程的思路，从需求分析、概要设计、详细设计，三个层面进行分析和阐述，介绍搜索系统实现的方法。在部署与实施部分介绍架设服务器及数据库设计实现的方法。最后展示系统使用全貌，并进行系统的性能测试。
+
+	第六章总结全文，并对系统未来的改善进行展望。
+\newpage	
+\section{系统总体设计}
+%初始化编号
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+	本章首先对普通搜索引擎的核心和机制进行介绍，以此为基础框架，扩展出本文检索系统的基本框架。进行系统整体设计，探讨知识表达的技术并确定知识表达的方法，构建系统体系结构。最后梳理其中涉及的关键技术，包括本体的构建和扩展性语义搜索算法。
+	\subsection{搜索引擎架构设计}
+	搜索引擎是信息检索的一种实施技术。“信息检索（{\Times Information retrieval, IR}）是指从大规模电子文本（通常存储在计算机上）找出满足信息检索要求的非结构化的自然语言数据（通常是文本）。”\cite{23}
+	
+	信息检索技术的应用已经非常普遍，几乎所有与网络有关系的人，都会或多或少地使用该技术。目前，{\Times Google}和{\Times Bing}，国内的百度，作为一种{\Times Web}搜索引擎，已经让信息检索技术深入寻常百姓家，成为目前为止最普遍和大量使用的信息检索服务的形式。与此同时，电子图书馆中检索期刊文章和会议报告，大型企业中利用企业搜索系统来管理和查询电子邮件、备忘录、技术报告和其他业务文档，也是信息检索就用的突出体现。
+	
+	所以，搜索引擎是信息检索的一种具体应用，而信息检索技术是搜索引擎的核心。
+
+	对于一个搜索引擎，检索模型提供了一种度量查询和文档之间相似度的方法。\nocite{24} 文献\cite{25}对搜索引擎进行了数学表述：通过一定结构维护文档集$M$，定义一个相关性函数{\Times SC(Similarity Coefficient)}，其满足：
+	\begin{equation}\label{eq:1}
+	 SC: D \times Q \longrightarrow \mathbb{R}
+	\end{equation}
+	
+	其中$D$代表文档集，$Q$代表用户的所有可能检索请求集合，$R$代表实数集合。当用户给定一个检索请求$q$时，搜索引擎的目标是利用相关性函数$SC$为$D$中的文本打分，从而在文档集$D$中找到一个$k$元素的有序的文档序列$T$：
+	\begin{equation}
+	T=\{ m_{1},m_{2},m_{3},\cdots, m_{k} \},\forall m \in T 且 n \in \bar{T} 满足 SC(q,m)>SC(q,n)
+	\end{equation}
+	
+	即查询结果的文本序列T中的文本总是比那些序列之外的文本得分要高。
+	
+	与此同时，在文本的内部，也满足：
+	\begin{equation}
+	\forall i < j, SC(q,m_{i})>SC(q,m_{j})
+	\end{equation}
+	
+	即排在前面的文档（编号较小）得分总比排在后面的文档高。
+	
+	由此，搜索系统的根本归结在了建立式\ref{eq:1}中的相关性函数，即检索模型。
+		\subsubsection{检索模型建模}
+	常用的检索模型有如下几种：
+	\begin{itemize}
+		\item
+	布尔模型：原始的布尔模型通过查询与文档的简单比对，判断出二者相同或不相同，相当于相似度只有无穷和零两种情况，没有相似度的考量，是最原始最朴素的模型，之后，通过对查询词条加进权重，给出了一种可以进行相关性排序的算法\cite{salton1970}。
+		\item
+	向量空间模型：将查询和文档表示为词项空间中的向量，判断相似度的传统方法是计算两个向量的内积，计算其余弦相似度，以此反映查询与文档的相似度。\cite{salton1975}之后，通过引入不同文档集的权重，提出了{\Times TF-IDF}（词频-文档逆向频率）\cite{robertson1976}来表达相似度的模型。
+		\item
+	概率模型：把相似度问题降为概率论应用的问题，通过计算文档与查询相关的概率，来表示文档和查询的相似度。
+		\item
+	语言模型：用文档中词的概率分布，为每一个文本建立一个语言模型，然后通过伯努利事件进行建模， 以条件概率来表达文档和查询的相似度\cite{ponte1998}。
+	\end{itemize}
+	
+	此外，较常用的检索模型还有推理网络、{\Times LSI}（隐性语言检索）、神经网络方法、遗传算法、模糊集检索等模型，此处不再赘述。
+		
+	本系统在布尔模型的基础上，融入概率模型，通过词频描述关键词在文档中出现的频率，通过文档逆向频率提高对关键词唯一性的评价。同时通过推理网络模型，将关键词进行语义性扩展，丰富检索结果，提高查准率、查全率。
+		\subsubsection{搜索引擎基本架构设计}
+	一个常规的搜索流程如图\ref{fig:basicStructure}，通过爬虫程序，从互联网上获得文本，构成原始资料库，以此建立索引库和有序资料库，搜索引擎的用户在文本框里输入一个简单的查询（{\Times query}），它可能包含几个词项（{\Times term}），通过索引库的逆排索引（{\Times inverted index}）获得相关搜索结果在有序资料库中的位置，然后将结果显示给用户。
+		
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=5in]{fig/basicStructure.png} 
+	\caption{\wuhao 搜索引擎基本架构}\label{fig:basicStructure} 
+	\end{figure} 
+		
+	\subsection{总体设计}
+		\subsubsection{知识表达方式的比较与选择}
+	“知识是人们在社会实践活动中所获得的认识和经验的总和。具体地说，知识是人们对客观世界的规律性的认识。”\cite{Chen2010}
+	
+	在漫长的人类文明中，人类积累了丰富的知识，它们被以文字、图表、声音、图像等形式记录下来，但是对它们的高效重用，仍然是制约发展的重要因素。以机械设计为例，众所周知，该领域的经验比知识更重要，但是经验的积累是从实践中逐步内化的，需要漫长的时间，有的经验以文字的形式记录下来，在重用的时候却发现检索的成本太高，这就造成了经验层面的知识无法进行较直接的高效的传承。
+	
+	随着信息技术的发展，知识工程、人工智能等新兴的领域也取得了日新月异的进步，它们研究的核心之一就是高效地存储、获取和使用知识。机械设计知识的检索也是一种知识检索的形式，在此，有必要就人工智能中知识的分类和表达进行简要的介绍。知识大致可以分为以下几类：
+	\begin{itemize}
+		\item
+	事实性知识：陈述客观性的知识，比如齿轮机构可以传递力和运动。事实性知识一般采用直接表示的形式。
+		\item
+	过程性知识：描述做某件事的流程，比如轴的加工工序。
+		\item
+	规则性知识：亦称产生式规则（{\Times Production Rule})，规则性知识由两部分构成，一部分是前提，另一部分是结果，用逻辑关系"{\Times IF THEN}"来描述。
+		\item
+	启发式知识：对解决问题有帮助的经验法则或技术，这种知识在描述上较为困难，有效性和效率都有待于研究，是人工智能的主要课题之一。
+		\item
+	实例性知识：包括已经形成的大批观察数据和案例，关于事物的知识都隐蔽在实例之中，这不是直接的知识，确实其他类型知识的重要来源。
+		\item
+	元知识：即所谓关于知识的知识，它告诉系统如何利用系统内部存储的知识，指导了系统运行和推理。
+	\end{itemize}
+	
+	由此可以看出，本搜索系统的功能之一，就是要得利用元知识将隐蔽在实例性知识中的其他知识挖掘并呈现出来。
+	
+	人类的交流是基于自然语言的，要实现人机的交流，就需要将自然语言表述的知识转化成计算机可以使用的。这就涉及到知识表示（{\Times Representation of Knowledge}）问题，现在成功运用的知识表示形式主要包括：数理逻辑，产生式规则，语义网络，框架，剧本，本体，下面就此进行简要介绍。
+	
+	数理逻辑是用逻辑符号语言进行精确的，没有歧义的描述，用数学方法进行研究；产生式规则表示为“{\Times if A then B}”，即如果{\Times A}则{\Times B}，以此可以实现正、反两种推理；语义网络是用网络的形式，用弧连接概念，这样就把概念和它们的关系转换成了一张结构图；框架由槽（属性）、侧面、值组成，一个槽可包含若干侧面，一个槽对应一个值，这样就形成了对于知识的树状描述；剧本描述了事件的起因、因果及事件间的关系，便于描述业务流程。本体定义了公共词汇集，把现实社会中某个应用领域抽象成概念及概念间的关系，以此来实现信息共享和知识共享。 
+
+	本系统采用本体来描述知识，并以此实现语义扩展，隐性知识向显性知识转换的功能。
+	
+	本体最初是一个哲学概念，是指关于存在及其本质和规律的学说，在哲学中记作本体论（{\Times Ontology}）。后被引入到计算机技术中，用以概括概念及它们之间的关系，记作本体（{\Times ontology}）。在1993年，{\Times Gruber}定义了本体——“本体是概念化（{\Times Conceptualization}）的一个显示的（{\Times Explicit}）规范说明或表示。”\cite{gruber1993} 在一些简单情况下，本体只是概念的分类层次结构，就像植物学、动物学分类，领域本体以概念树的方式，将概念进行分类，如图\ref{fig:生物分类}。
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=3in]{fig/biotax.png} 
+	\caption{\wuhao 生物分类图}\label{fig:生物分类} 
+	\end{figure}	
+	
+	但是，要描述真实情况，这样简单的树状结构是难以实现的。比如，对于一个直齿圆柱齿轮，从分类上说，它是齿轮的一种，所以应该是是齿轮的子结点，但是对一个装配体，在其装配树结构中，齿轮可能又是一个变速箱的子结点。作为一个描述知识的方式，概念树太过简单。所以在复杂情况下，本体并不是简单的概念树，而是又加入了关系、公理、规则。
+	
+	一个完整的本体包括5类基本元素：概念、关系、函数、公理、实例。即：$O::=\{C,R,F,A,I\}$。\cite{Chen2010}
+	
+	$C$：概念（{\Times concept}），除一般意义的概念外，还拓展到任务、功能等。
+	
+	$R$：关系（{\Times relationship}），描述概念之间的关系，比如“{\Times subclass-of}”（子类），可以表示一个概念继承了另一个概念。关系可以表述为$ R:C_{1} \times C_{2} \times \cdots \times C_{n} $， 即$C_{1}、C_{2}、\cdots 、C_{n}$之间存在{\Times n}元关系。
+	
+	$F$：函数（{\Times function}），即某个元素$C_{a}$可以由其他元素$ \{C_{i}\} $唯一确定，比如对于一个圆形，知道其半径，就可确定其面积。
+	
+	$A$：公理（{\Times axiom}），概念或关系所满足的永真式，比如一个子类继承其父类的特征。
+	
+	$I$：实例（{\Times instance}），概念类所对应的具体实体。
+	\\
+	
+	关于本体，到目前仍没有明确的数学定义，所以对于上述元素，在实际应用中，可能还根据需要进行设计。在后续部分将会作进一步阐述。
+	
+	本体优势在于其精确的描述，可以摆脱语言层面的干扰，而真正上升到概念层面进行描述，为语义搜索提供基础。通过推理机，也能把隐性知识转换成显性知识。比如，对于“汤姆是一只猫”这一陈述，就可以推理出“汤姆是一个动物”，以此为基础，不仅可以检索到汤姆作为一只猫的特征，也可以检索到汤姆作为一个动物的特征。这种基于本体的语义性搜索，就可以给用户提供更多的有用信息。
+	
+	本体建模采用{\Times Prot{\'e}g{\'e}}，它是由斯坦佛大学与曼彻斯特大学合作开发的一款免费的开源的本体编辑器和基本知识框架。它基于{\Times Java}框架，具有极强的扩展性，通过丰富的插件，可以实现快速的原型开发与应用开发。{\Times Prot{\'e}g{\'e}}具有相当友好的图形界面，灵活直观地展现本体模型的体系结构与概念间错综复杂的关系。{\Times Prot{\'e}g{\'e}}也提供了{\Times RDF/XML, OWL/XML, Turtle}等丰富的存储格式，由于{\Times Prot{\'e}g{\'e}}的开发本身就大量地使用了{\Times Jena}包，它们的深度集成为本系统从本体建模到本体操作提供了无缝衔接提供了支持。
+
+		\subsubsection{系统体系结构设计}
+	本文设计并开发了捕捉查询意图的机械领域知识检索系统，以此进行机械知识的快速查找。作为搜索引擎的一种，本系统具有与经典搜索引擎相似的体系结构，但是由于从本档库组织、搜索方法等方面都有其特殊性，所以同一般网页搜索引擎相比，本系统又有其特殊之处，下面介绍捕捉查询意图的机械领域知识检索系统的体系结构。
+	
+	本系统体系结构如图\ref{fig:体系结构},系统自下而上分为资源层，应用服务层，表示层，客户端层。
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=4in]{fig/SystemStructure.png} 
+	\caption{\wuhao 系统体系结构图}\label{fig:体系结构} 
+	\end{figure} 
+	
+	\begin{itemize}
+	 	\item
+	资源层：资源层为检索系统提供有组织的文档库。通过爬虫程序从互联网上获得的文档，经过解析操作，去掉了{\Times HTML}标签，转化为非结构化文本，再将其存储在数据库中，作为被搜索的文本。资源层也提供领域本体，本体的建立结合了人的认识规律，按照本科教学学习培养方案，将文献\cite{2005shen}和文献\cite{2008liu}进行一定的简化和概括，再按照一定的本体构建规则，以本体形式录入，作为扩展性语义搜索算法的知识基础。提供了本体的实例层，为实例搜索提供数据源，同时，由于本体的推理功能是在实例层进行的，所以为实现推理功能，而不是单纯的扩展功能，需要将一些重要概念进行实例化，从而更好地利用了本体的另一强大功能。
+		\item
+	{\Times Java}工具包层，提供{\Times Jena}、{\Times Lucene}、{\Times Hibernate}等工具包，{\Times Jena}实现了本体的读取操作、{\Times Lucene}实现文档库索引与搜索功能、{\Times Hibernate}实现操作数据库的功能。这些工具包强大而灵活，为系统开发提供了极大的便利，缩短了开发周期。该层也是连接应用服务层与资源层的枢纽层。
+	
+	功能集层：这是检索系统的核心部分，提供扩展性语义搜索功能，索引器功能和数据库维护器功能。索引器可以对特定目录的文档创建索引，数据库维护器可以把这些文档加入到搜索数据库中，从而实现了知识库维护功能，将本体、知识库、扩展性语义搜索算法松散耦合地集成在一起，同时提供灵活丰富的接口，保证与表示层的正常通讯，同时为今后功能扩展提供支持。
+		\item
+	表示层：采用开源的{\Times Tomcat}容器架设服务器，采用{\Times B/S}架构，在服务器端完成大部分业务逻辑，减轻客户端负载。采用{\Times Javascript}和{\Times ExtJS}库编写用户界面，设计和实现美观友好的用户界面，使用户便于使用系统提供的功能集。从而保证系统的跨平台性。
+		\item
+	客户端层：客户端层为用户终端，由于系统采用了{\Times B/S}架构，用户无需安装客户端软件，只需像登录普通网页那样，登录检索系统网页，就可以使用系统各项功能。由于系统逻辑主要由部署在服务器端的程序完成，对客户端层的设备配置要求低，保证了系统的跨平台性。由于对移动平台的兼容性，可以让设计人员在任何时候都能方便地查询所需要的设计知识，符合了“随时随地设计”的理念。
+	
+	\end{itemize}
+	
+	系统工作功能框图如图\ref{fig:功能框图}。
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=4in]{fig/功能框图.jpg} 
+	\caption{\wuhao 系统工作功能框图}\label{fig:功能框图} 
+	\end{figure} 
+	
+	通过抽象机械设计书籍中的概念，用{\Times Prot{\'e}g{\'e}}建立领域本体；通过爬虫程序，从互联网上获得领域相关的文本，将这些文本录入到数据库中，同时通过{\Times Lucene}建立文本索引。搜索引擎可以通过{\Times Lucene}调用索引，通过{\Times Jena }调用领域本体，当用户有查询请求时，通过用户界面将查询传到搜索引擎中，进行搜索，获得结果{\Times ID}，从数据库中获得对应{\Times ID}的文本，在用户界面中呈现出来，完成搜索流程。
+				
+	\subsection{关键技术分析}
+		\subsubsection{本体的构建}
+	根据搜索系统要求，利用本体主要完成两方面的任务：一是实现语义的扩展，二是实现知识的推理。结合这样的要求，拟定本体构建的大致思路如下：
+	
+	首先，针对机械设计领域的知识，将概念化分为三大类({\Times Prot{\'e}g{\'e}}中称作{\Times Class})： {\Times object}(对象)，{\Times function}(功能)，{\Times feature}(特征)。对象包括机构、构件、运动副、零件等客观存在的实体；功能就表示机构、零件等对象可以实现的功能，比如齿轮机构可以改变转速，改变转速就是一种功能；特征则描述对象的基本特征，形状特征定义了诸如分度圆等可以描述零件尺寸的特征，物理量特征则对形特征（比如分度圆直径）和功能（比如传动比）进行定量描述。这样，就可以建立出粗略的树状结构的领域本体，并且可以直接采用它们的继承和被继承的关系。
+	
+	然后，在上一步建立的树状本体基础上，添加关系({\Times Prot{\'e}g{\'e}}中称作对象属性（{\Times Object Property}）。与上述三类概念对应，将关系也分成三类：“具有对象”，“具有功能”，“具有特征”，从而有效沟通上述三大类概念。比如建立“具有功能”关系，将齿轮机构与传递功能相联系。这样一来，就把概念树扩展成为了一个有向图$ G=(C, R) $，从而为实现语义扩展提供基础。
+	
+	接下来，建立上一步中建立的关系的函数特性。在{\Times Prot{\'e}g{\'e}}中，这些特性（{\Times Characteristic}）包括函数关系、反函数关系、对称关系、反对称关系、传递关系等，这些关系将在后文进行介绍。通过这些关系，实现推理功能，将潜在的关系挖掘出来，将隐性知识转换成显性知识，得到一张扩展有向图$ G'=(C, R')$，它能使语义获得更丰富的扩展。
+	
+	最后，根据需要，再建立相应的实例，完成本体的构建。
+	
+		\subsubsection{扩展性语义搜索算法}
+	通过本体的构建，获得一张表述概念及概念关系（包括显性的和隐性的）图$ G'=(C, R') $，下面开始建立一种算法来实现语义的扩展搜索算法。搜索算法可以归结为之前所提到的式\ref{eq:1}中的相关性函数，即一种对搜索结果的打分机制。暂不考虑搜索的时间复杂度，拟定搜索算法流程，如图\ref{fig:搜索算法流程}。
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=5in]{fig/searchFlow.png} 
+	\caption{\wuhao 搜索算法流程}\label{fig:搜索算法流程} 
+	\end{figure} 
+	
+	首先，用户输入一个关键词$t$，系统读取图$G'$，确定$t$在$G'$中的位置，根据搜索半径$r$，确定与关键词$t$相关的概念$\{c\}$，然后获得$t$与$\{c\}$中各关键词$c_{i}$的关系$R_{ti}$。在一个可修改的权值配置文件中，定义不同类型的关系$R$对应的权值。建立一张关于词-权的映射表，通过这张表，生成能够被{\Times Lucene}读取的搜索词条，最后进行搜索。
+	
+	{\Times Lucene}中的加权搜索评分机制将会在后文进行介绍。这样就实现了具有权值配置功能的扩展性语义搜索算法。
+
+	\subsection{本章小节}
+	本章以普通搜索引擎为基础框架，提出本文检索系统的框架，进而对系统进行总体设计。分析知识表达形式，并最终确定基于本体的搜索方式，提取出本文检索系统的两项关键技术，包括本体的构建和扩展性语义搜索算法。
+
+\newpage
+\section{本体的构建}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+	本章具体介绍本体构建的实施步骤。首先介绍本体的描述方法，阐述采用{\Times Prot{\'e}g{\'e}}软件进行本体概念树建立、概念关系的添加、关系特征的描述的方法，通过阐述关系特性的性质，说明本体实现推理的机理。最后，介绍用Jena包对本体进行读写操作的方法。
+
+	\subsection{本体描述语言的确定}
+
+	本体是一种形式，需要用具有特定语法结构的语言进行描述。目前较成熟的有{\Times OWL}、{\Times Turtle}等语言，它们各自具有一些特点。本系统采用{\Times OWL}语言，{\Times OWL ( Ontology Web Language )}是由{\Times W3C}组织（{\Times World Wide Web}）提出的一种描述本体的语言。在{\Times OWL}中，有三种元素：类（{\Times Class}），属性（{\Times Property}），个体（{\Times Individual}）。它可以近似地与之前提到的概念、关系、实例相对应。
+
+	{\Times OWL}有不同的变体，实现对本体不同层次的描述。
+	\begin{itemize}
+		\item
+	{\Times RDFS}（{\Times Resource Description Framework Schema},资源描述框架）:也可写作{\Times RDF(S),  RDF-S, RDF/S}或 {\Times RDF Schema}。它用{\Times XML}（{\Times eXtensive Markup Language}，可扩展标记语言）来描述类和属性的集合，可以描述本体的的基本元素。
+	
+	对于图\ref{fig:生物分类}所示，这个本体就具有五个类，并且动物是生物的子类等等。在这种关系下，就可以说每个动物都是生物。所以这种类的层次关系可以理解成数学上的子集，即：$ \{动物\} \subset \{生物\} $。
+	
+	用{\Times RDFS}形式来描述这种关系,可以表示为：
+	\lstset{language=XML,frame=lines,basicstyle=\Times, commentstyle=\SimSun}
+	
+	\begin{lstlisting}
+	<owl:Class rdf:about="creature"/></rdf:RDF>
+	<owl:Class rdf:about="animal">
+		<rdfs:subClassOf rdf:resource="creature"/>
+	</owl:Class>
+	\end{lstlisting}
+	第一部分建立一种名为“生物”的类，第二部分建立了“动物”的类，并且定义它是“生物”类的子类。
+		\item
+	{\Times OWL}：{\Times OWL}是{\Times RDFS}的一种扩展，{\Times RDF}能完成的它都能完成，同时它又多了一些扩展功能。比如对立关系，可以通过把两个类设置成对立关系（{\Times Disjointed}），这样就保证了，不能有一个个体同时是两个类的实体。再比如，通过OWL可以设置上文所述的传递性、对称性等关系特性，这就大大的拓展了本体的表达的推理的基础，而{\Times RDFS}只能建立类的层次结构。
+	
+	{\Times OWL}语言具有三种子语言：{\Times OWL Lite}，{\Times OWL DL}和{\Times OWL Full}。{\Times OWL DL}和{\Times OWL Lite}让层次关系更容易被追溯；{\Times OWL DL}可以使用描述逻辑推理机（{\Times Description Logic Reasoner}），使其具有更强大的查询功能；{\Times OWL Lite}则更利于使用一些简单的推理算法。
+
+	\end{itemize}
+	
+	所以，本体有不同的描述语言，从最强大的{\Times OWL Full}到最精简的{\Times RDFS}，建立时要根据需要进行合理选择。
+	\subsection{建立本体的雏形}
+	
+
+	在{\Times Prot{\'e}g{\'e}}中建立本体，首先面对的类的问题，类并不是孤立的概念，而是已经设定了子类（{\Times SubClass}）和超类（{\Times SuperClass}）等相关的概念并且设定了子类会继承其超类的属性。比如前文所提到的，汤姆是“猫”的一个个体，“猫”具有一个超类是“动物”，当描述了动物“具有眼睛”这样的属性，猫也会继承“具有眼睛”这样的属性。
+	
+	在建模的初始阶段，会遇到这样的问题。常见的从属关系有两种，一种是“{\Times is-a}”，如图\ref{fig:“is-a”关系}；一种是“{\Times part-of}”，如图\ref{fig:“part-of”关系}。
+	\begin{figure}[htbp]
+	\begin{minipage}[t]{0.5\linewidth}
+	\centering
+	\includegraphics[scale=1]{fig/isA.png}
+	\caption{\wuhao “{\Times is-a}”关系}
+	\label{fig:“is-a”关系}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\linewidth}
+	\centering
+	\includegraphics[scale=1]{fig/partOf.png}
+	\caption{\wuhao “{\Times part-of}”关系}
+	\label{fig:“part-of”关系}
+	\end{minipage}
+	\end{figure}
+	
+	“{\Times is-a}”是本体组织的一种核心关系，用它可以描述出概念的三种关系：包含、相交、独立。
+	
+	若两个概念存在包含关系，则它们在“{\Times is-a}”层次中处于上下层的父子关系；若两个概念存在相交关系，则它们在“{\Times is-a}”层次中处于同一层的兄弟关系，即具有相同的父亲；若两个概念是独立的，则它们在“{\Times is-a}”层次中没有直接的联系。
+	
+	容易混淆的一种情况是“{\Times part-of}”，“{\Times part-of}”表示了一种部分与整体的关系，就像机械领域中的产品结构树，管理领域的部分划分，都是一种树状的结构，但在建模时，如果误把这种关系当作类的结构，就会造成继承特性无法正常使用。比如，在图\ref{fig:“is-a”关系}所示的关系中，当给“动物”赋予有生命这一属性的时候，其子类“猫”、“狗”、“人”都继承了这一属性，易于理解，无论是人、狗、还是猫，都是具有生命的。但是如果误用了“{\Times part-of}”结构，则会出现不符合事实的陈述？举个例子，在图\ref{fig:“part-of”关系}所示的关系中，如果给“人”赋予了“能说话”这样的属性，那么它的子类也会继承这样的属性，也就意味着“手”“能说话”，“脚”“能说话”，这显然是荒谬的。这就解释了在{\Times Prot{\'e}g{\'e}}的类的建模中，有一个默认根类“{\Times Thing}”，因为无论是对象或是特征，都应该是一种事物（{\Times Thing}）。
+	
+	本体建立过程中，必须反复验证是否采用了“{\Times is-a}”的方式进行类的组织，以确保可以正确使用继承关系。验证的方法是在添加一个子类的时候，跟其父类作这样的一个判定“子类 是 父类 的一种吗？”比如，对于“齿轮”类，建立其子类“直齿圆柱齿轮”，容易判断，直齿圆柱齿轮是齿轮的一种，所以这个父子关系是正确的。但是对于“变速箱”类，“直齿圆柱齿轮”就不能是其子类，因为我们容易判断“直齿圆柱齿轮是变速箱的一种”这种表述是错误的。通过这样的方法，就能够建立起能够合理利用{\Times OWL}中父子继承关系的本体。
+	
+	用这样的方法，建立起了本体的雏形，即一个粗略的树状结构的领域本体。对于一张本体图$ G=(C,R) $，就完成了$C$（概念）部分的建模。下面进行关系（$R$）层次的建模。
+	
+	\subsection{建立关系}
+	在上一步中，建立了树状结构的领域本体，完成了本体的概念部分建模。通过树的结构，也进行了概念间父子继承关系建模，下面将完善关系层次的建模。
+	
+	在{\Times Prot{\'e}g{\'e}}中，与{\Times OWL}中的属性（{\Times Property}）元素相对应的有三种：对象属性({\Times Object Property})，数据属性（{\Times Data Property}），注释属性（{\Times Annotation Property}）。在一个“主-谓-宾”三元描述中，属性都充当了谓语的功能。
+	
+	对象属性：根据{\Times Prot{\'e}g{\'e}}提供的官方讲义，对象属性是用于描述个体关系的。但是在建模过程中，个体都不是孤立的，它们都依托于一些特定的类，所以对象属性可以借用来描述概念与概念之间的关系，此处的概念是指用户自己建立的类，亦即，对象属性所连接的主语和宾语都是用户建立的概念。
+	
+	数据属性：数据属性建立了个体和数据值（{\Times Data Value}）之间的关系。与上一种情况相同，建模过程中，也可以用以建立概念与数据值之间的关系。数据值的类型涵盖了XML（可扩展建模语言）概要数据类型和{\Times RDF}（资源描述框架）文字，也就是整型、实型等数据类型。事实上，可以把数据属性理解成一种特殊的对象属性，把数据值理解成一种特殊的类。
+	
+	注释属性用于添加信息（元知识），它的主语可以是类、个体，也可以是对象属性或数据属性；宾语则是一些系统定义的元知识类型，比如{\Times label}（标签），{\Times versionInfo}（版本信息）等，当然用户也可以自行添加。在机械领域本体建模过程中，就添加了“{\Times inChinese}”类型的元知识，由于概念层均是用英文书写，用这样一个注释属性可以建立中英文的对照，为今后系统兼容中文提供支持。与数据属性相类似，可以把注释属性及元知识与对象属性和类建立对应关系，这样就从本体的概念上统一了三种属性。
+	
+	由于概念分类上，领域的概念被分成了对象、特征、功能三大类，那么，建立关系的重要任务之一就是要彼此沟通这三类概念、沟通同一类概念的跨级关系，所以与它们相对应地，建立三种对象属性，“具有功能”，“具有特征”，“具有对象”。这三种关系的主语都是对象类，由于后文将会提到的对称性，就能实现“对象-对象”，“对象-功能”，“功能-对象”，“对象-特征”，“特征－对象”几种关系。接下来，再根据要求，将几类关系进行一定的细分，就能完成本体图中$R$（关系）部分的建模。
+	
+	然后，将概念层和关系层进行耦合。一种简单的情况是“齿轮机构-具有功能-传递运动”，通过这种联系，可以完成大部分概念-关系的建模。但是，在一些细节处理上，出现了两种或两种以上的建模方式，就需要比较哪一种更优，即比较哪一种能更好地为之后的搜索功能提供基础。举一个关于齿轮参数的例子。
+	
+	在建立关于齿轮参数模型的时候，可能有如下几种方式：
+	
+	\begin{enumerate}[1)]
+	
+
+	\item	
+	$齿轮 \xlongrightarrow{具有参数} 齿轮参数 \left\{
+	\begin{array}{rcl}
+	齿数z \xlongrightarrow{具有值} 数值\\
+	模数m \xlongrightarrow{具有值} 数值\\
+	\end{array}	
+	$
+	
+	其中，齿轮、齿轮参数、齿数{\Times z}、模数{\Times m}为类；具有参数为对象属性；具有值为数据属性。
+	
+	\item
+	$齿轮 \left\{
+	\begin{array}{rcl}
+	\xlongrightarrow{具有齿轮参数中的齿数{\Times z}} 数值\\
+	\xlongrightarrow{具有齿轮参数中的模数{\Times m}} 数值\\
+	\end{array}	
+	$
+	
+	其中，齿轮为类；齿轮参数中的齿轮{\Times z}、具有齿轮参数中的模数{\Times m}为数据属性。
+	\end{enumerate}
+	
+	上述两种方法都可以建立齿轮、齿数、模数、具体数值之间的具体关系，后一种方法形式上看起来简洁，但是“具有齿轮参数中的齿数{\Times z}”意味着需要建立大量的类似的数据属性，且这种属性不利于之后的搜索工作，它并没有提取出“齿数”这么关键的概念。分析将被搜索的文本，一个概念应该是比一个数字更为重要，所以采用了第一种建模方法。
+
+	\subsection{关系特性}
+	%列举继承，函数、反函数、对称、反对称关系
+	关系特性拓展了关系的含义，为本体推理提供基础。下面就对几种关系特性进行介绍。
+\begin{enumerate}[(1)]
+
+		\item 函数属性
+
+	\quad \quad 如果一个关系具有函数属性（{\Times Functional Properties}），就意味着通过这种属性与某个个体相联系的个体最多只可能有一个。比如如图\ref{fig:函数属性例子}，如果李华具有生父李四，同时李华具有生父老李，将“具有生父”赋予函数属性，就可以推断出，李四和老李是同一个个体。用这样的方法，可以把挖掘出本体中的更多同义实体。	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=3.5in]{fig/functionalPropertyExample.png} 
+	\caption{\wuhao 函数属性例子}\label{fig:函数属性例子} 
+	\end{figure} 
+	
+		\item 反函数属性
+
+	\quad \quad 反函数属性（{\Times Inverse Functional Properties}）是指其反属性是函数的。举例说明，如图\ref{fig:反函数属性例子}，如果有这样两条陈述：李四是李华的生父，老李是李华的生父，“是其生父”具有反函数属性，那么就可以推断出，李四和老李是同一个人。这样同样可以推断出同义个体。
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=3.5in]{fig/inverseFunctionalPropertyExample.png} 
+	\caption{\wuhao 反函数属性例子}\label{fig:反函数属性例子} 
+	\end{figure} 
+	
+	\quad \quad 函数关系与反函数关系较为相似，为了更准确地利用，必须加以严格的区别。对于函数关系而言，是通过主语和谓语判断出不同的宾语指的是同一个体；而对于反函数关系而言，则是通过谓语和宾语判断出不同的主语指的是同一个体。
+		
+		\item 传递性
+
+	\quad \quad 传递性（{\Times Transitive Properties}）是指，如果个体{\Times A}和个体{\Times B}之间存在某种关系，{\Times B}和{\Times C}之间也存在这种关系，那么能推理出{\Times A}和{\Times C}之间也存在这种关系。举个例子，如图\ref{fig:传递性属性例子}。现在有两条陈述，李华有祖先老李，老李有祖先李爷爷，有祖先被定义了传递性属性，据此，就可以推理出李华具有祖先李爷爷。在前文的概念树建模阶段，类与类的继承关系（包括子类和超类）就利用了传递性。通过传递性的扩展，子类就被推广成了后代类，超类就被推广成为祖先类，大大拓展了一个概念的扩展范围。
+		
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=3.5in]{fig/transitivePropertyExample.png} 
+	\caption{\wuhao 传递性属性例子}\label{fig:传递性属性例子} 
+	\end{figure}	
+	
+		\item 对称性
+
+	\quad \quad 如果一个关系具有对称性（{\Times Symmetric Properties}），也就意味着个体{\Times A}到个体{\Times B}具有这种关系，那么个体{\Times B}到个体{\Times A}也具有这种关系。如图\ref{fig:对称性属性例子}，如果李华有兄弟李阳，那么根据有兄弟的对称性属性，就可以推断出李阳有兄弟李华。通过对称性，可以将单向的关系扩展成为双向的，在关系建模阶段就得到了简化。
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=3in]{fig/SymmetricPropertyExample.png} 
+	\caption{\wuhao 对称性属性例子}\label{fig:对称性属性例子} 
+	\end{figure}	
+	
+		\item 其他属性
+
+	\quad \quad 反对称性（{\Times Asymmetric Properties}）与对称性相反，反对称性是指，如果个体{\Times A}到个体{\Times B}存在关系{\Times P}，那么个体{\Times B}到个体{\Times A}就不能具有关系{\Times P}。比如，如果有一个陈述，李四有孩子李华，有孩子具有反对称属性，那么就不能存在“李华有孩子李四”这样的陈述。这种属性设置是为了检验本体的逻辑正确性。
+	
+	\quad \quad 自反性（{\Times Reflexive Properties}）指一个关系的主语宾语是同一个体；反自反性（{\Times Irreflexive Properties}）指一个关系的主语宾语不能是同一个体。这两种关系在系统中都没有运用，就不再赘述。
+	
+\end{enumerate}
+	\vspace{6pt}
+
+	以上介绍了本体关系所具有的几种常用的属性，它们将会作为本体推理的基础。
+	
+	\subsection{本体推理}
+	以{\Times OWL}语言描述本体的一个重要好处就是可以采用推理机（{\Times Reansoner}）,通过推理机，可以完成三方面的功能。第一，拓展类的层次结构关系，把子类推广到后代类，把超类推广到祖先类，这样可以回溯出一个概念在分类学上的线索，对于语言扩展而言，这是相当重要的。比如在检索直齿圆柱齿轮的特性的同时，系统会找到其超类——齿轮，然后找到齿轮的特性，同样，齿轮作为构件的子类，构件的性质也能被找出来，这是一个从具体的特性到抽象的共性的拔高过程，以此获取更为丰富的信息，需要注意的是，此处的推理是在类的层次进行的；第二，检验本体的一致性，也就是检验了本体各种关系的逻辑会不会出现矛盾，以此来判断本体的合理性，通过分析出现矛盾的情况，能够不断完善本体，提高本体的鲁棒性；第三，通过推理机，判断某个个体是否为某个类的个体，举个例子，定义了一个叫减速箱的类，它具有一些充要的约束条件，如具有箱体，具有数量大于2的齿轮，在检索箱体和齿轮的时候，系统就可以推理出它是一个减速箱，从而列举出减速箱的相关信息。
+	
+	{\Times Prot{\'e}g{\'e}}提供了{\Times FaCT++}等推理机，可以在建模阶段发挥检验的作用，一方面检验本体的逻辑一致性，另一方面检验推理出的关系是否如我们所预期。但是这种{\Times Prot{\'e}g{\'e}}推理出来的信息并不会保存在{\Times OWL}文件中，所以在之后系统可用的本体的推理功能是通过{\Times Jena}实现的。{\Times Jena}将会在后文进行介绍。
+	
+	\subsection{本体的读取}
+
+		
+	上文提到，采用{\Times Prot{\'e}g{\'e}}进行了本体建模，建立了以{\Times OWL}语言描述的本体。下面需要对本体进行读取和推理等操作，{\Times Jena}是{\Times Apache}软件基金会资助的项目，它是一种{\Times Java}框架的语义网构建应用，它提供了方便易用的读取、加工、编写{\Times RDF}数据的{\Times API}以及操控{\Times RDFS}和{\Times OWL}本体的{\Times API}。系统采用{\Times Jena}工具包，实现了本体与搜索引擎的交互，下面对一些关键的{\Times API}进行简要介绍。
+
+	本体导入：
+	通过{\Times ModelFactory}类可以以如下代码建立本体模型：
+	
+	\lstset{language=Java,frame=lines,basicstyle=\Times, commentstyle=\SimSun}
+	\begin{lstlisting}
+OntModel m = ModelFactory.createOntologyModel();
+	\end{lstlisting}
+	
+	在无参数的情况下，可以获得一个以{\Times OWL Full}语言描述的、常驻内存的、具以推理子类、超类功能的推理机的模型。当然，在某些情况下这种设置的冗余功能较多；而在某些情况下，这样的功能对于系统要求又显得局促。在{\Times Jena}中，可以用{\Times OntModelSpec}对象来设置{\Times createOntologyModel}方法的参数来对建立的模型进行配置。根据系统的实际需要，采用{\Times OWL\_DL\_MEM\_RDFS\_INF }参数进行模型建立与配置，获得以{\Times OWL DL}语言描述的、常驻内存的、具有{\Times RDF}层衍生规则的规则推理机的本体模型。
+	
+	对于每一个本体模型，还需要有一个对应的文档管理器来协助完成操作、加工的工作，{\Times OntDocumentManager}起到沟通本体文件与本体模型的作用。通过{\Times OntDocumentManager}类的{\Times addAltEntry}方法，可以建立系统公共本体文{\Times URI}和本地本体文档{\Times URI}的映射，再使用{\Times OntModel}类的{\Times read}方法，就可以按设定的格式进行本体读取。
+	
+	\begin{lstlisting}
+OntDocumentManager dm = model.getDocumentManager();
+dm.addAltEntry(docURI,locationURI);
+model.read(docURI,"RDF/XML");
+	\end{lstlisting}	
+	
+	经过试验验证，只有“{\Times RDf/XML}”能够与{\Times Prot{\'e}g{\'e}}建立的以“{\Times RDf/XML}”格式存储的本体进行无缝的衔接。以上完成了对本体的读操作，通过设置推理机，获得扩展之后的本体。下面根据搜索的需求，先找到一个关键词在本体中的位置，进而枚举已经定义的关系，找到与之相关的概念。如果把关键词当作根结点，把各种关系当作第二级结点，把相关的概念当作第三级结点，则构成一棵深度为3的树。对这棵树进行深度优先的遍历，列举出所有“主-谓-宾”三元组关系（{\Times Triple}）。
+	
+	列举操作类似对于数据库的查询操作，在数据库有查询语言{\Times SQL}，在本体中也存在相类似的查询语言——{\Times SPARQL}。
+	
+	首先要对一些概念进行解释。之前反复提到将本体看成一张图$ G=(C,R) $，{\Times RDF}图就是表示这种图的一种表示方式。根据{\Times W3C}组织的定义\cite{w3c}，{\Times RDF}图（{\Times RDF Graph}）是{\Times RDF}三元组（{\Times RDF Triple}）的集合。{\Times RDF}三元组包含三个部分，主语（{\Times Subject}）,谓语（{\Times Predict}），宾语（{\Times Object}）。
+	$$主语\ \xlongrightarrow{谓语} 宾语$$
+	
+	此处有三个容易混淆的概念。{\Times RDF}是一种应用与应用间交换信息的框架，即资源描述框架；{\Times RDFS}是一种基于{\Times XML}的本体描述语言；而{\Times RDF}图是一种图，是三元组的集合。{\Times SPARQL}的搜索对象是RDF图，它具有与{\Times SQL}相类似的语法。比如要检索齿轮（{\Times Gear}）的子类，可以用下列的{\Times SPARQL}。
+	\lstset{language=SQL,frame=lines}
+	\begin{lstlisting}
+SELECT ?x
+WHERE {?x <SubClassOf> "Gear"}
+	\end{lstlisting}	
+	{\Times SPARQL}可以实现对本体的查询，但是当主语、宾语处在多层嵌套，语法会变得异常复杂，需要对{\Times RDF}图的细节有较深的了解，对于一般用户难以灵活自如地运用。采用{\Times Jena}为提供的丰富易用的类，可以避开底层地操作，直接进行查询。
+
+	
+	操作本体：		
+	在{\Times Jena}中，每个概念作为一个{\Times OntClass}类的对象进行存储。用{\Times Model}类的{\Times getOntClass}方法，以类节点的{\Times URI}为参数，确定关键词在本体中的位置，完成主语的确定。
+	
+	下面需要枚举出所有的关系，找到所有谓语。谓语可以通过两种分类方法，分成六类，如表\ref{tb:谓语分类}
+
+\begin{table}[htbp]
+\centering
+\caption{\label{tb:谓语分类}\wuhao 谓语的分类}
+\begin{tabular}{c c c c}
+\Xhline{1.5pt}
+ & 超类 & 等价类 & 子类\\
+\hline
+ 普通类 & 普通超类 & 普通等价类 & 普通子类\\
+
+ 约束性类  & 约束性超类 & 约束性等价类 & 约束性子类\\
+\Xhline{1.5pt}
+\end{tabular}
+\end{table}
+
+	超类、等价类、子类这种分类方法是基于概念的层次结构的，而普通类和约束性类则是基于建模不同阶段的。对于第一种分类方法，它们的区别仅在于概念层次结构的细微差异，处理方法是类似。下面主要讨论普通类和约束性类的区别及不同的处理方法。
+	
+	普通类谓语是在概念层次结构阶段的建模就具有的，这种谓语关系已经被蕴含在了概念树结构中，其{\Times OWL}语言表述如下
+	
+	\lstset{language=XML,frame=lines}
+	\begin{lstlisting}
+<Class rdf:about="4-Bar_Linkage_mechanism">
+ <rdfs:subClassOf rdf:resource="Linkage_Mechanism"/>
+</Class>
+	\end{lstlisting}
+	
+	这样就定义了连杆机构和四连杆机构的继承关系，可以观察到谓语“{\Times subClassOf}"的宾语是一个普通的概念。
+	
+	另一种情况是约束性谓语，约束性谓语相对复杂，如上文建立关系部分所提到的，采用了对象属性来描述概念与概念之间的关系。但根据官方说明，对象属性是用来描述个体关系的，所以，必须要采用一定的转化机制。在本体中提供了这样的机制——约束（{\Times Restriction}）。将上一段代码所表示的关系进行扩展，在“四连杆机械是连杆机构”的描述之后，添加了另一条陈述“四连杆机构具有构件连杆”，其中“具有构件”是自己定义的对象属性，用{\Times OWL}的表示方法如下：
+	
+	\begin{lstlisting}
+<Class rdf:about="4-Bar_Linkage_mechanism">
+ <rdfs:subClassOf rdf:resource="Linkage_Mechanism"/>
+ <rdfs:subClassOf>
+  <Restriction>
+   <onProperty rdf:resource="has_Some_Links"/>
+   <onClass rdf:resource="Linkage"/>
+   <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">
+    3
+   </qualifiedCardinality>
+  </Restriction>
+ </rdfs:subClassOf>
+</Class>
+	\end{lstlisting}
+	
+	容易观察到，系统处理以对象属性作为概念间的关系的方法是：把真实的谓语和宾语封装成为一个约束，这个约束再作为“{\Times subClassOf}”的宾语。约束中主要包括三种元素：真实的谓语（即对象属性），真实的宾语（即相关概念），约束类型。
+	
+	通过这种机制，在迭代器获得关键词概念的下一个超类（或等价类，或子类）的时候，先判断出它是普通类谓语还是约束性谓语，再分别作出对应的处理，就可以实现上述的“主-谓-宾”三元组关系的列举，把这些关系封装成一个{\Times Triple}类的对象，以备之后使用。{\Times Triple}对象在后文中介绍。至此，基本完成与本体相关的操作：建模，读取，操作，使用。	
+	
+	\subsection{本章小节}
+	
+	基于{\Times Prot{\'e}g{\'e}}本体建模软件，首先建立本体概念树，进而扩展概念关系、关系特征，实现本体推理，探讨建模过程中面向搜索的建模问题，形成较为完整的领域本体，最后实现用{\Times Jena}对该本体进行读写操作。
+
+	
+\newpage
+\section{扩展性语义搜索算法}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+	
+	在前文所述的工作中，完成了本体的构建，并且获得了读取操作本体的方法。本部分要以此为基础，实现扩展性语义搜索算法。首先介绍扩展性语义搜索算法的原理，然后介绍一些关于搜索的基本方法概念，阐述系统是如何运用相关工具包实现搜索，提出搜索结果的排序依据，最后提出对搜索引擎评价的两种指标。
+	\subsection{算法原理设计}
+	
+	前文提到，普通的基于关键词的搜索是通过简单的编码匹配，这样的方式甚至不能解决最基本的同义词问题，实现语义的扩展也就无从谈起了。对于一个理想的人工智能的系统而言，用户希望它能理解自己表述的意思，但要表达这种意思，依旧需要以语言作为载体。而这种载体不能像{\Times SPARQL}查询语言那样艰深，因为尽管它有强大的查询能力，但会让大多数用户望而生畏。扩展性语义搜索算法的核心理念就在于，让用户就像在使用普通的关键词搜索那样操作，却获得远远超越普通关键词搜索的性能。这种思想的实现得益于以本体来描述知识的方式，通过简单的同义词关系，就可以获得同义词搜索的功能，通过本体中定义的其他丰富概念之间存在的关系，就可以获得语义扩展的功能。
+	
+	实现思路是，用户输入关键词，在本体中找到该关键词并获取与之有关系的概念词，把关键词与概念词一并作为搜索关键词进行加权搜索，获得搜索结果。如图\ref{fig:搜索算法流程}。
+	
+	\subsection{算法的实现}
+		\subsubsection{{\Times Lucene}的应用}
+	{\Times Lucene}同样是{\Times Apache}基金会支持的项目，是一个开源的全文检索引擎工具包，是一个包含了查询引擎、索引引擎及部分分析引擎的完整架构。{\Times Lucene }定义了一种以 8 位字节为基础的索引文件格式 ,可以轻松地实现跨平台下共享索引文件,同时由于众多优秀的程序员对 {\Times Lucene }做出卓越贡献,使得 {\Times Lucene }能够提供极高的搜索效率,包括苹果公司等众多商业场合,都用在使用 {\Times Lucene }进行搜索。{\Times Lucene}的后台极其复杂，运用了先进的信息检索技术，但是它提供了丰富易用的API屏蔽了后台的复杂机制，普通编程者可以很容易地在目标系统中进行全文检索。
+	
+	{\Times Lucene}不是一个完整的搜索程序，它只是一个搜索程序的两个核心模块，即索引和搜索。下面简要介绍搜索程序的架构。如图\ref{fig:搜索程序架构}。
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=5in]{fig/SearchEngineFrame.png} 
+	\caption{\wuhao 搜索程序架构}\label{fig:搜索程序架构} 
+	\end{figure} 
+	
+	对于一个搜索程序，首先它需要从原始文本中获取内容，建立文档并分析它们，生成一个索引文档并放在索引中，当用户有搜索请求时，用户在用户界面上中输入他的查询要求，然后系统建立并执行一个查询（{\Times Query}），在索引中获得该查询的相关信息，然后将搜索结果进行的一定的加工，再在用户界面上呈现出来。对于{\Times Lucene}，它完成的是整个架构中的深色部分，当然也是至关重要的部分。下面就对这两个部分进行介绍。	
+	
+		\subsubsection{索引器的设计}
+	搜索的任务就是要找到具有特定关键字的文件，一种朴素的方法是顺序扫描每个文件，检验文件中是否含有要这个关键字，在不计任何成本的情况下，这样做是可以达到目的的。但是，如果搜索的对象是具有庞大数据量的数据集，或是庞大的单个文件，这种搜索方法的效率势必是极低的。所以在进行搜索操作之前，需要把文档转换成一种能够快速搜索的格式，这种转换过程就是所谓索引操作（{\Times indexing}），其输出结果就是索引（{\Times index}）。下面以倒排索引为例，解释为什么通过索引可以提高搜索效率。
+	
+	倒排索引（{\Times Inverted Index}），亦称反向索引、置入档案或反向档案，是众多索引方式中较为常用的一种，它建立了一个词在单个或多个文档的映射，这样就可以根据词快速确定存在该词的文档列表。比如对于以下三个文本：
+	
+	$T_0 = "What\ is\ lucene?"$
+	
+	$T_1 = "Lucene\ is\ for\ search."$
+	
+	$T_2 = "What\ is\ search?"$
+	
+	经过索引操作之后，就可以获得如下索引：
+	\begin{lstlisting}
+	"what":   {1,3}
+	"is":     {1,2,3}
+	"lucene": {1,2}
+	"for":    {2}
+	"search": {2,3}
+	\end{lstlisting}
+	
+	通过这样的机制，就建立了简单的索引文件。当然，根据需要，还可以把词在文档中的位置信息存储在索引中。实际的索引比这个要复杂很多，但索引的技术细节并不我们的研究对象，此不赘述。
+	
+	下面介绍系统是如何使用{\Times Lucene}建立索引，从而得到功能集中的索引器的。
+	在{\Times Lucene}中，要执行一个简单的索引操作需要用到以下几个类：
+	
+	\begin{itemize}
+		\item {\Times IndexWriter}（写索引）
+		\item {\Times Directory}（目录）
+		\item {\Times Analyzer}（分析器）
+		\item {\Times Document}（文档）
+		\item {\Times Field}（域）
+	\end{itemize}
+	
+	{\Times IndexWriter}是索引操作的核心类，它负责完成新建或打开索引，并且执行添加、删除及更新等操作；{\Times Directory}类则为{\Times IndexWriter}存储的索引开辟空间，同时通过{\Times FSDictory.open}方法，可以建立待索引文件在文件系统中的目录与索引文件之间的对应关系；在上述的简单的索引的例子中，是人工的采用了以空格来区分单词的方法，但在实际使用中，这种方法可能是不完备的，这就需要有一种机制对文本进行解析处理，{\Times Analyzer}类就是完成这项功能的，它将文本进行合理的划分，提取词汇单元，筛选掉无用信息；文档是域的集合，{\Times Document}类就实现了文档的功能；域则保存了不同种类的文本信息，比如对于一个音乐文件，其文件名、作者、专辑名等元数据都会被存在不同的{\Times Field}类中，进而被包成一个{\Times Document}类。通过这些一系列的步骤，就可以完成索引操作。实现索引操作关键代码如下：
+	
+	\lstset{language=Java,frame=lines,basicstyle=\Times, commentstyle=\SimSun,texcl=true}
+	\begin{lstlisting}
+%//声名一个写索引器	
+IndexWriter writer = null;
+
+//打开实际文件系统中的文件目录
+Directory dir = FSDirectory.open(new File(indexPath));
+
+//配置写索引器，设置索引存储空间、分析器、创建或重写及最大文件数
+writer = new IndexWriter(dir, 
+			new StandardAnalyzer(Version.LUCENE_30), 
+			true,
+			IndexWriter.MaxFieldLength.UNLIMITED);
+
+//声明一个Document类
+Document doc = new Document();
+
+//建立内容（CONTENTS）域，配置域名、待加工内容、域存储选项及域的项向量选项
+Field contents = new Field(CONTENTS, 
+				stuff.getContents(), 
+				Field.Store.YES,
+				Field.Index.NOT_ANALYZED);
+					 
+//以类似的方法,建立文件名域,文件ID域
+
+//将之前建立的各域写进文档
+doc.add(contents);
+	\end{lstlisting}
+	
+	在实际建立索引过程中，每个域并不是被等同创建的。比如，如果要搜索关键词“齿轮”，其他条件都相同的情况下，一个文件的文件名包含一次“齿轮”，另一个文件的文本内容包含一次“齿轮”，显然前者更有可能是用户要找的文本，这就要求对不同的域采用恰当的权值进行加权操作。加权操作可以在索引期间完成，也可以在搜索期间完成。由于后者虽然动态性较加，可以在搜索期间进行灵活的权值确定，但这会消耗掉一定的{\Times CPU}效率。所以，系统选择在索引期间进行加权，在一些特殊情况，也可以在搜索期间把索引期间所加的权值补偿回来，这样既保证了效率，又提供了足够的灵活性。在{\Times Lucene}中，可以通过{\Times setBoost}方法对文档和域进行加权操作。在此，将文件名域（{\Times filename}）权值设置得略高于内容域（{\Times contents}）的权值，以突出文件名在搜索中的重要性。在一定的评价指标下，可以通过改变权值配置，进行搜索的优化。
+
+	为了方便信息的传递，通过{\Times Lucene}获得的搜索结果将会是一个文件{\Times ID}号，通过这个{\Times ID}号，可以在数据库中找到对应的文档，还可以获得其他未在索引中建立，但是存储在数据库中的信息。
+	
+		\subsubsection{搜索功能的实现}
+	建立了索引，就提供了一种快速检索的机制，但是索引终究是处于后台的，要让其强大的功能得以表现，还需要有搜索作为一个窗口。下面就要针对索引，建立相应的搜索程序，简要介绍搜索会用到的几个基础类。
+	
+	\begin{itemize}
+		\item {\Times IndexSearcher}（索引搜索）
+		\item {\Times Query}（查询）
+		\item {\Times QueryParser}(查询解析器)
+		\item {\Times TopDocs}（顶部文档）
+		\item {\Times ScoreDoc}（评分文档）
+	\end{itemize}
+	
+	{\Times IndexSearcher}类是搜索的门户，由它完成通过索引进行的搜索操作。在实际运用中，它与其他相关类的关系如图\ref{fig:IndexSeacher类与相关类的关系}。
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=4in]{fig/IndexSearcher.png} 
+	\caption{\wuhao {\Times IndexSeacher}类与相关类的关系}\label{fig:IndexSeacher类与相关类的关系} 
+	\end{figure} 
+	
+	在初始化阶段，建立{\Times Directory}对象用以开辟读取索引文件{\Times Index}文件的空间，用一个{\Times IndexReader}类对象来读取索引文件，{\Times IndexReader}需要较大的系统开销，所以在搜索过程中，最好只建立一个{\Times IndexReader}实例。下面就是搜索阶段，当{\Times IndexSearcher}对象接收了一个{\Times Query}类的对象，它就会用{\Times search}方法调用通过相关类调用索引文件，获得搜索结果，进行评分等工作，最后输出一个{\Times TopDocs}类的对象作为搜索结果。	
+	\vspace{6pt}
+	
+	{\Times Query}是一种查询请求的封装，{\Times IndexSearcher}类接收{\Times Query}对象作为查询的参数。针对不同的搜索要求，{\Times Query}有不同的子类来实现相应的功能，如{\Times TermQuery}、 {\Times NumericRangeQuery}、 {\Times TermRangeQuery}、 {\Times PhraseQuery}、 {\Times PrefixQuery}、 {\Times FuzzyQuery}、 {\Times WildcardQuery}、 {\Times BooleanQuery}以及{\Times MatchAllDocsQuery}等，它们可以完成通过项搜索、通过指定数字范围搜索、通过指定项范围搜索等功能、短语搜索、前缀搜索、模糊搜索、通配符搜索、布尔搜索以及匹配所有文档搜索。这些子类可以被直接实例化，可以通过{\Times QueryParser}相应的子类来实例化，我们采用后一种方法。
+	\vspace{6pt}
+	
+	{\Times QueryParser}类能把用户输入的查询表达式进行解析，把查询拆分成若干个项（{\Times term}）（项是最小的索引片段，它包含了一个域名和一个文本值），进而封装成一个{\Times Query}类的对象。
+	
+	举个较为复杂的查询表达式的例子：“{\Times Cam\^{}4 (Link)\^{}1 (Vedge AND Cam)\^{}1 (Disc AND Cam)\^{}1 (Cylindrical AND Cam)\^{}1}”，所谓解析，就是要把这种表达式转换成若干个项，再封装成对应的{\Times Query}实例。流程及类的关系如图\ref{fig:QueryParser}。
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=4in]{fig/QueryParser.png} 
+	\caption{\wuhao {\Times QueryParser}工作流程及与相关类关系}\label{fig:QueryParser} 
+	\end{figure} 
+	
+	当{\Times QueryParser}接收到一个查询表达式（这个表达式可能是由用户输入，也可能是由系统生成），它会利用分析器（{\Times Analyzer}）进行分词操作把查询语句分割成多个项，进行大小写转换等处理，再封装成一个{\Times Query}类的对象，传送给{\Times IndexSearcher}类。
+	
+	事实上，一个详细的查询表达式，能够更精确地描述查询意图。表\ref{tb:查询表达式范例}就列举了一些查询表达式的语法结构。
+	
+\begin{table}[htbp]
+\centering
+\caption{\label{tb:查询表达式范例}\wuhao 查询表达式范例}
+\begin{tabular}{c c}
+\Xhline{1.5pt}
+ 查询表达式 & 匹配文档\\
+\hline
+ {\Times Gear  }& 默认域包含{\Times Gear}项的文档 \\
+
+ {\Times Gear Mechanism  }& 默认域包含{\Times Gear}和{\Times Mechanism}项中一个或两个的文档\\
+
+ {\Times Gear  OR Mechanism  }& 默认域包含{\Times Gear}和{\Times Mechanism}项中一个或两个的文档\\
+
+ {\Times +Gear +Mechanism}  & 默认域同时包含{\Times Gear}和{\Times Mechanism}项的文档\\
+
+ {\Times Gear  AND Mechanism  }& 默认域同时包含{\Times Gear}和{\Times Mechanism}项的文档\\
+\Xhline{1.5pt}
+\end{tabular}
+\end{table}
+	通过这些逻辑表达式可以更精确地限制搜索的范围。
+	
+	如前文所述，针对不同的搜索要求，{\Times Lucene}提供了不同的查询子类，这些子类可以由不同的解析器来进行实例化。在本文的搜索算法中，一项很重要的功能是加权，{\Times Lucene}提供了相对应的方法。在一个项后面加一个“\^{}”符号再跟一个浮点数，就会对该项查询处理进加权因子的设置 。比如，查询表达式为“{\Times Cam\^{}4 (Link)\^{}1}”，那么{\Times Cam}的{\Times TermQuery}的加权系数设为4，而将{\Times Link}的{\Times TermQuery}设置为1。加权系数如何影响结果的排序将会在后文中有阐述。
+	
+	之前在索引的部分提到，在索引操作的过程中，建立了文件名域和内容域两个域，用户会更倾向于同时对两个域进行搜索，而不是只针对其中一个。要实现这样的多域搜索功能，可以用建立全包含域的索引的方法，也就是将把所有域的内容全拼接在一块儿，形成一个包含所有内容的域，再对这个域进行索引，这种方法虽然在搜索效率上不错，但是显然，字符串的简单连接使得它不能进行域的加权操作。这里系统采用了用{\Times MultiFieldQueryParser}的方法。
+	
+	{\Times MultiFieldQueryParser}是{\Times QueryParser}的子类，它能在后台把一个{\Times QueryParser}实例化，分别针对每个域解析查询表达式，再用{\Times BooleanQuery}将它们连接在一块儿。
+	\lstset{language=Java,frame=lines,basicstyle=\Times, commentstyle=\SimSun,texcl=true}
+	\begin{lstlisting}
+//多域查询解析器
+QueryParser multiFieldParser = 
+                new MultiFieldQueryParser(Version.LUCENE_30, 
+		new String[] {"filename", "contents"},
+		new StandardAnalyzer(Version.LUCENE_30));
+	\end{lstlisting}
+	
+	这样，就可以同时针对文件名域和内容域进行搜索，并且能够利用之前对它们进行的域的加权操作。
+	
+	\vspace{6pt}
+	
+	{\Times TopDocs}类是一个简单的指针窗口，其对象保存了{\Times IndexSearcher}获得的得分较高的搜索结果。它提供了两个属性，{\Times totalHits}用以表示匹配搜索条件的文档数量，{\Times scoreDocs}是一个{\Times scoreDoc}类的数组，通过遍历{\Times scoreDocs}属性，可以逐个获得搜索结果；{\Times TopDocs}还提供了{\Times getMaxScore}方法，用来返回最大评分。尽管评分对于普通用户是隐性的，但是在系统调试阶段，这样的评分会作为评估系统搜索性能的重要依据。
+	\vspace{6pt}
+	
+	{\Times ScoreDoc}类则提供了对搜索结果访问的丰富接口
+	\vspace{6pt}。
+	
+	采用这些类，就可以实现一个搜索，它即保证了基本的搜索功能，也能完成我们所设计的搜索算法。
+	
+		\subsubsection{排序依据}
+	
+	如式\ref{eq:1}所描述，搜索归根结底是一种文档与评分的映射。对域或项进行加权操作会影响评分，评分会影响文章的排序。{\Times Lucene}提供了一套完整成熟优秀的评分机制，其核心是相似度评分公式，计算方式是查询语句（{\Times q}）的各项（{\Times t}）与文档（{\Times d}）的匹配程度，它深刻地描述了查询语句与对应匹配文档的相似度：
+	\begin{equation}\label{eq:luceneScore}
+	\begin{aligned}
+SC = \sum_{t\ in\ d}&(tf(t\ in\ d)\times idf(t)^2 \times boost(t.field\ in\ d) \times lengthNorm(t.field\ in\ d)) \\
+   				    & \times coord(q,d) \times queryNorm(q)
+    \end{aligned}
+	\end{equation}
+	
+	各个评分因子含义如下：
+	\begin{itemize}
+		\item
+	$ tf(t\ in\ d) $：{\Times tf}（{\Times term frequency}）项频率因子。
+	\begin{equation}\label{eq:tf}
+	tf(t\ in\ d)＝\frac{n_{t\ in\ d}}{\sum_{i \in d}{n_{i\ in\ d}}}
+	\end{equation}
+	$ {n_{i\ in\ d}} $指一个项（{\Times i}）在文档（{\Times d}）中的出现次数 。	
+	项频率因子描述了在某个文档（{\Times d}）中出现查询项（{\Times t}）的频率，它是对词数的归一化，以避免它偏向较长的文件。因为在较长的文件中，无论它重要与否，某个项可能出现的次数都有增多的趋势。
+		\item
+	$ idf(t) $:{\Times idf}（{\Times inversed document frequency}）逆向文件频率因子。
+	\begin{equation}\label{eq:idf}
+	idf(t)＝log\frac{|D|}{1+|\{ j:t \in d_j\}|} 
+	\end{equation}
+	$ |D| $表示文档总数，$ |\{ j:t \in d_j\}| $表示包含了项（{\Times t}）的文档数。分母加了1是为了避免出现项（{\Times t}）未在任何文档中出现而造成分母为零的情况。
+	
+	逆向文件频率因子可以评价项的“唯一”性，定性地说，在包含项（{\Times t}）的文档（{\Times d}）越少，该因子越大，因此它具有很高的类别区分能力。
+		\item
+	$ boost(t.field\ in\ d) $:域或文档的权值，如前文介绍，这个权值可以是在索引期间建立的，比如本系统的域加权部分；也可以是在搜索过程中建立的，比如本系统的项加权部分。
+		\item
+	$ lengthNorm(t.field\ in\ d) $:域的归一化值（{\Times Normalization}）,它表示了域中所包含项的数量。域的归一化值在索引操作期间建立，然后保存在{\Times norm}索引中。对于域的归一化值，越短的域，词汇单元越少的域将会获得越大的加权。
+		\item
+	$ coord(q,d) $:协调因子（{\Times Coordination factor}），基于文档中所包含的查询的项数来确定。协调因子对包含更多搜索项的文档进行类似{\Times AND}的加权。
+		\item
+	$ queryNorm(q) $:查询的归一化值，即查询语句（{\Times q}）中每个查询项（{\Times t}）权重的平方和。
+	\end{itemize}
+	
+	由此可见，在一串其貌不扬的具有一定顺序的搜索结果背后，隐含着复杂的统计公式。为了对排序评分进行定量分析，采用{\Times Lucene}提供的{\Times Explanation}类。{\Times IndexSearcher} 类的{\Times explain(})方法通过一个{\Times Query}对象和文档的{\Times ID}作为参数，获得一个{\Times Explanation}类的对象，它包含了所有关于评分计算中各因子的信息。在系统后台，打印文档对应的评分，以此为依据，对权值设置进行调整，进而不断优化搜索系统的参数配置。	
+	
+	\subsection{评估指标的制定} 
+	搭建好搜索系统，要对系统进行相关性和搜索质量进行评估。对于一个搜索系统来说，如果用户没有得到他想要的结果，那么将算法描述得再怎么巧妙也是无济于事的。一个用户对于搜索系统的要求是，首先，搜索系统能够返回相关度高的文档，其次结果摘录是精确的，然后用户能在第一眼就看到他们想要的结果。文献\cite{buttcher2010information}介绍了关于评价搜索系统的指标。评估指标需要具有具备一些条件：
+	\begin{itemize}
+		\item
+	指标要能描述一种能表达完成搜索预期目标的特征，比如之前所提到的相关性特征。
+		\item
+	指标要能够定量描述完成搜索预期目标的效果。
+		\item
+	指标所采用的度量技术要精确而经济。
+		\item
+	指标要能够进行误差估计。
+	\end{itemize}
+	
+	作为信息检索评价指标中最古老、最朴素的，查全率和查准率被用来评价搜索系统在响应某个查询时检索出来的无序的文档集合。
+
+	作为传统的有效性指标，查全率和查准率都是基于两个基本假设的\cite{buttcher2010information}:
+	\begin{enumerate}[1)]
+		\item
+	对于一个用查询来表示的用户信息需求（{\Times information need}），且在一个文档集合中，那么文档集中的每个文档与这种用户的信息需求要么相关，要么不相关。
+		\item
+	信息需求和文档就能完全确定文档的相关性，相关性与文档集中其他文档的搜索引擎排名无关。
+	\end{enumerate}
+	
+	
+	查全率（{\Times recall}）描述了搜索结果的文档集中相关文档所占的比例，根据这个定义，如果用{\Times Resu}表示被检索出来的文档集合，用{\Times Rela}表示相关文档集，那么查全率就可以表述为：
+	\begin{equation}\label{eq:recall}
+	recall = \frac{|Resu\cap Rela|}{|Rela|}
+	\end{equation}
+	
+	容易发现，查全率在描述了相关度文档所占的比例，但它很容易就能实现1.0的查全率——只要将文档集中所有文档作为结果返回即可。这样虽然保证了相关文档都在返回文档集合中，却不能保证返回的文档集合里的文档都是相关文档。所以再引入查准率（{\Times precision}）来评价，即搜索系统检索出的相关文档占检索出的全部文档的比例，表述为：
+	\begin{equation}\label{eq:recall}
+	precision = \frac{|Resu\cap Rela|}{|Resu|}
+	\end{equation}
+	
+	从以上查全率、查准率的定义可以看出，它们能够一定程度上刻画搜索结果的优劣。但是它忽略了排序对于一个搜索系统的重要作用，用户一般会采用从上到下，从前往后的顺序进行检查，检查每一个文档都会付出一定的代价，所以能够排在前面的条目当然更应该是用户所想要的结果。在这种前提下，用户按一定顺序进行检查，那么查全率、查准率都会随着检查过程发生变化。要准备地描述这种变化，就要绘制{\Times P-R}图（查准率-查全率图）。
+	
+	举个例子，对于一个确定文档集及信息查询实例，包含查询q的相关文献的集合{\Times R}是确定了的，不失一般性，假设{\Times R}由下列文档组成:
+	$$ R = \{d_{2},d_{5},d_{23},d_{31},d_{57},d_{89},d_{97},d_{111},d_{137},d_{229}) $$
+	
+	现在由一个搜索系统以查询{\Times q}进行搜索，返回了搜索结果：
+\begin{multicols}{4}
+\begin{enumerate}
+\item $d_{137} \surd$
+\item $d_{23} \surd$ 
+\item $d_{4}$
+\item $d_{5} \surd$ 
+\item $d_{112}$
+\item $d_{92}$
+\item $d_{57} \surd$
+\item $d_{23} \surd$
+\item $d_{67}$
+\item $d_{55}$
+\item $d_{101}$
+\item $d_{34}$
+\end{enumerate}
+\end{multicols}
+
+	打勾的结果d是与查询q相关的文档，即$d_i \in R$。下面按照搜索的结果开始逐个检查，分别计算其查全率和查准率，步骤如下：
+\begin{enumerate}[a)]
+\item
+搜索结果中的第一篇文档$d_{137}$是相关的，得出查准率是100\%，总共有十篇相关文档，现在找到一篇，查全率是10\%；
+\item
+第二篇文档$d_{23}$是相关的，进行类似的计算，得到查准率是100\%，查全率是20\%；
+\item
+到了第四篇文档$d_{5}$，查准率是75\%，查全率是30\%；
+\end{enumerate}
+
+	重复这个操作，就可以达到一组查准率-查全率的点，从而得到{\Times P-R}图。通过以上数据，绘制出相应的{\Times P-R}图，如图\ref{fig:p-rFigure}。
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=4in]{fig/prFigureExample.eps} 
+	\caption{\wuhao 范例{\Times P-R}图}\label{fig:p-rFigure} 
+	\end{figure} 
+	
+	在上面的例子中，是针对一个查询请求的，但是在实际性能测试中，应该通过不同的查询来评价搜索算法。不同的查询就会对应不同的P-R曲线。为了综合地评价搜索系统的性能，可以对用平均查准率（{\Times average precision}）对每个查全率对应的不同的查准率进行平滑处理：
+	
+	\begin{equation}\label{eq:average precision}
+	\bar{P}(rec) = \sum_{i=1}^{N_q} \frac{P_i(rec)}{N_q}
+	\end{equation}
+	
+	其中$ {P}(rec) $是在查全率为{\Times r}的情况下，查准率的平均值，$ N_q $是查询请求的总数，$ P_i(req) $是第{\Times i}个查询在查全率为{\Times rec}时的查准率。
+	
+	在实际应用中，可能会遇到不同的查询对应的查全率是不一样的，这就需要对查全率进行插补操作。查准率的插补这样进行：
+
+	设$rec_j (j \in \{0,1,2,\dots\} )$为第{\Times j}个标准查全率的参量，那么有
+	\begin{equation}\label{eq:插补}
+	P(rec_j) = max_{rec_j \leq rec \leq rec_j+1}P(rec)
+	\end{equation}
+	
+	通过绘制{\Times P-R}图，可以对系统性能进行评估。
+	
+	\subsection{本章小节}
+	以前文本体构建为基础，提出扩展性语义搜索算法，通过索引器和搜索器设计，实现该算法，并提出搜索结果的排序依据，最后介绍了搜索性能的评估方式。	
+	
+\newpage
+\section{系统开发与实现}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+	由于本系统是一个软件系统，所以本部分将以软件工程的开发模式，分需求分析、概要设计、详细设计三个部分，对整个系统进行一定的疏理，然后介绍服务器架设与数据库设计等相关部署实施方案，最后进行查准率、查全率的实验，评估出系统性能。
+	\subsection{需求分析}
+		\subsubsection{任务概述}
+	计算机技术促进了制造技术的发展，制造技术的概念，初期只涉及加工装配，现在则覆盖了采购、生产、销售、售后等多个环节的全生命周期。对于产品的全生命周期，会产生海量的技术文档，包括了设计需求报告、设计说明书、设计图纸、加工工艺规程、质量检验报告、维修报告等文档。如何从这些海量的文档中，搜索出我们想要的内容，从而缩短产品设计周期，是企业对市场变化进行迅速的反应的决定条件之一。
+	
+	捕捉查询意图的机械领域知识检索系统正是为此目的而设计，它以机械领域的领域本体为知识载体，运用扩展性语义搜索算法，使用户通过较短的查询请求，就可以获得符合其查询意图的结果，根据相关性的排序，将相关度高的文档往前排序，节约用户检验文本的时间，从而提高了搜索效率。
+   
+		\subsubsection{功能需求}
+	作为一个搜索系统，首先需要一个核心的搜索引擎进行搜索操作；为了实现快速的搜索，需要就文本进行索引操作，所以需要定制一个专门的索引器；为了存储和调用文档，需要以数据库的方式来组织这些材料，并对它们进行维护操作。由此，得出整体用例图，如图\ref{fig:整体用例图}。
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[scale=0.5]{fig/SystemUseCase.png} 
+	\caption{\wuhao 整体用例图}\label{fig:整体用例图} 
+	\end{figure} 
+	
+	根据这样的需求，捕捉查询意图的机械领域知识检索系统被分成三个应用功能模块：扩展性语义搜索，索引器，数据库维护器。下面对几个模块分别进行阐述。
+	\begin{enumerate}[(1)]
+	\item 扩展性语义搜索
+	
+	对于一个搜索系统，用户输入关键词，系统返回相应的搜索结果，是其必需的功能。搜索结果应该包含文本的摘要信息，从而给用户提供参考。为了体现语义扩展性，给用户提供思路上的拓展，还应列举出与用户输入关键词相关的概念，并且说明这些概念与关键词的关系。作为一个面向文本搜索的系统，还应该提供文本的全文查看功能。同时，为了实现搜索系统的性能调试，还应该提供改变系统参数的方法。根据这些需求，得到扩展性语义搜索模块的用例图，如图\ref{fig:扩展性语义搜索用例图} 。
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[scale=0.4]{fig/SearchSystemUseCase.png} 
+	\caption{\wuhao 扩展性语义搜索用例图}\label{fig:扩展性语义搜索用例图} 
+	\end{figure} 
+
+	总结起来，扩展性语义搜索模块应该包含基本搜索，相关概念显示，全文显示，系统参数调整等功能。
+	
+	\item 索引器
+	
+	要实现搜索功能，就需要为被搜索的文本进行索引操作，通过索引操作获得索引文件，以一种高效的数据结构，实现快速根据关键词找到相应的结果。所以需要一个索引器，它应该具有对于索引的一般性操作，增加索引、修改索引、删除索引。当然这些操作不面向普通用户，只面向管理员。由此得出索引器模块的用例图，如图\ref{fig:索引器用例图}。
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[scale=0.4]{fig/IndexerUseCase.png} 
+	\caption{\wuhao 索引器用例图}\label{fig:索引器用例图} 
+	\end{figure} 
+	
+	\item 数据库维护器
+	
+	为了便于文档的管理，采用数据库的形式来存储文档。从普通文本转换到有组织的数据库存储，需要数据库维护器，它将完成数据库的基本操作，包括面向管理员的数据库记录的新建、修改、删除操作，以及面向用户的数据库记录的读取等操作，由此得出数据库维护器用例图，如图\ref{fig:数据库维护器用例图}。
+	
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[scale=0.4]{fig/DatabaseUseCase.png} 
+	\caption{\wuhao 数据库维护器用例图}\label{fig:数据库维护器用例图} 
+	\end{figure} 
+		
+	\end{enumerate}
+		\subsubsection{运行需求}
+\begin{itemize}
+	\item
+	服务器端软、硬件要求:
+	\begin{enumerate}[(1)]
+	\item
+	硬件要求：
+	
+	{\Times Pentium IV}以上处理器，512M以上内存，80G以上硬盘空间
+	
+	\item
+	软件要求:
+	
+	系统软件：{\Times Linux(Ubuntu 12.04 LTS)}
+	
+	{\Times Web}服务器：{\Times Apache Tomcat 7.0}
+	
+	数据库：{\Times MySQL}
+	
+	其他：{\Times jdk1.7}
+	\end{enumerate}
+	
+	\item
+	客户端软、硬件要求
+	\begin{enumerate}[(1)]
+	\item
+	硬件要求：
+	
+	{\Times Pentium IV}以上或相同性能的其他{\Times CPU}，{\Times 32M}以上内存，{\Times 4G}以上硬盘空间。
+	
+	\item
+	软件要求：
+	
+	系统软件：{\Times Windows 2000}以上, {\Times OS}，{\Times IOS}, {\Times Android}多平台支持
+	
+	浏览器：{\Times Internet Explorer}、{\Times Firefox}、{\Times Opera}、{\Times Chrome}、{\Times Safari}多种浏览器支持
+	\end{enumerate}
+	
+\end{itemize}
+		
+		\subsubsection{用户界面、接口与故障处理}	
+		
+\begin{enumerate}[(1)]
+\item 用户界面
+	结合之前的功能需求分析，用户界面是基于Web浏览器，大致分为以下几个部分：搜索框，扩展词列表，相关文件列表，搜索结果显示，全文显示，如图\ref{fig:页面布局图}。
+
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=4in]{fig/WindowsDistribution.png} 
+	\caption{\wuhao 页面布局图}\label{fig:页面布局图}
+	\end{figure} 
+
+\item 软件接口
+	系统要尽量采用{\Times MVC}结构来构建，将模型、视图、控制分开，让系统更利于维护。使得各功能模块具有各自独立的功能，具有丰富实用的接口，松散地耦合成一个整体。
+
+\item 故障处理
+	要利用{\Times Chrome},{\Times Firefox}等浏览器的网页调试功能，在系统运行的关键节点，发送相关的调试信息，便于故障的处理。
+	
+\end{enumerate}		
+		
+		\subsubsection{其他需求}
+	由于扩展性语义搜索是一种基于知识的搜索算法，所以需要选用一种知识的表达方式，并采用扩展性好的软件进行知识的建模。
+	
+	\subsection{概要设计}
+		\subsubsection{基本处理流程}
+	
+	根据{\Times B/S}架构{\Times Web}应用的相关协议，作出相应的客户端与服务器端交互的时序图，如图\ref{fig:B/S交互时序图}。
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=6in]{fig/Sequence.png} 
+	\caption{\wuhao {\Times B/S}交互时序图}\label{fig:B/S交互时序图}
+	\end{figure} 
+	
+	具体到业务逻辑，可以得出后台搜索时序图，如图\ref{fig:搜索时序图}。
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=5in]{fig/SearchSequence.png} 
+	\caption{\wuhao 搜索时序图}\label{fig:搜索时序图} 
+	\end{figure}
+	
+	首先，用户在前端网页中输入搜索请求，前端网页将请求传递到后台{\Times Java}类中，{\Times Java}类通过读取本体，获得了扩展语义，然后进行搜索，返回相应的结果，包括高亮的摘要结果、扩展词汇及关系、搜索结果的文件名；当用户点击某个文件名后，前端网页会通过文件对应的{\Times ID}号，调用数据库中的相关记录，并呈现在前端网页中。从而实现搜索功能。
+		
+		\subsubsection{组织结构}
+	系统组织结构如图\ref{fig:体系结构}，自下而上分为资源层，应用服务层，表示层，客户端层。
+\begin{itemize}
+	 	\item
+	资源层：资源层为检索系统提供了有组织的文档库，它是通过爬早程序从互联网上获得的文档，通过解析操作，去掉了{\Times HTML}标签，转化为非结构化文本，将其组织在数据库中，作为被搜索的文本；提供了领域本体，本体的建立结合了人的认识规律，按照本科教学的学习培养方案，将文献\cite{2005shen}和文献\cite{2008liu}进行一定的简化和概括，再按照一定的本体构建规则，以本体形式录入，作为扩展性语义搜索算法的基础；提供了本体的实例层，为实例搜索提供数据源，同时，由于本体的推理功能是在实例层进行的，所以为实现推理功能，而不是单纯的扩展功能，需要将一些重要概念进行实例化，从而更好地利用了本体的另一强大功能。
+		\item
+	应用服务层：应用服务层主要包括两个部分：{\Times Java}工具包层，提供{\Times Jena}、 {\Times Lucene}、 {\Times Hibernate}等工具包， {\Times Jena}实现了本体的读取操作、 {\Times Lucene}实现文档库索引与搜索功能、 {\Times Hibernate}实现操作数据库的功能。这些工具包强大而灵活，为系统开发提供了极大的便利，缩短了开发周期。该层也是连接应用服务层与资源层的枢纽层。
+	
+	功能集层：这是检索系统的核心部分，提供扩展性语义搜索功能，索引器功能和数据库维护器功能。索引器可以对特定目录的文档创建索引，数据库维护器可以把这些文档加入到搜索数据库中，从而实现了知识库维护功能，将本体、知识库、扩展性语义搜索算法松散耦合地集成在一起，同时提供灵活丰富的接口，保证与表示层的正常通讯，同时为今后功能扩展提供支持。
+		\item
+	表示层：在表示层内采用开源泉的{\Times Tomcat}容器架设服务器，采用{\Times B/S}架构，在服务器端完成大部分业务逻辑，减轻客户端负载。采用{\Times Javascript}和{\Times ExtJS}库编写用户界面，可以相对容易地实现美观友好的用户界面，使用户便于使用系统提供的功能集。这样，就保证了系统的跨平台性。
+		\item
+	客户端层：客户端层为用户终端，由于系统采用了{\Times B/S}架构，用户无需安装客户端软件，只需像登录普通网页那样，登录检索系统网页，就可以使用系统各项功能。系统逻辑主要由部署在服务器端的程序完成，这样也就使对客户端层的设备配置要求低，保证了系统的跨平台性。由于对移动平台的兼容性，可以让设计人员在任何时候都能方便地查询所需要的设计知识，符合了“随时随地设计”的理念。
+	
+	\end{itemize}
+	
+		\subsubsection{模块划分与接口设计}
+	根据模块划分高内聚，低耦合的特点，结合图\ref{fig:体系结构}的系统组织结构图。又将资源层和应用层结构进行进一步地细分。并描述它们之间的联系关系，定义必需的接口，为后面的详细设计提供参考，如图\ref{fig:模块与接口设计图}。
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=4in]{fig/moduleInterface.png} 
+	\caption{\wuhao 模块与接口设计图}\label{fig:模块与接口设计图}
+	\end{figure}
+	
+	\subsection{详细设计}	
+	\subsubsection{核心业务逻辑}
+	根据概要设计中的需求，搜索核心部分被分为五个包，它们彼此的关系如图\ref{fig:包图}。
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=3in]{fig/Package.png} 
+	\caption{\wuhao 包图}\label{fig:包图}
+	\end{figure}
+	
+	\begin{itemize}
+	\item{\Times search} 
+	核心搜索包，主要负责调用各功能模块，实现系统功能。
+	\item{\Times dbandindex} 
+	数据库和索引包，同步地将文本文件建立索引，并添加到数据库条目中。
+	\item{\Times hibernate} 
+	{\Times hibernate}包，主要完成系统采用{\Times Hibernate}的方式操作数据的功能。
+	\item{\Times ontology} 
+	本体包，主要完成对本体的读取和扩展词汇的存储。
+	\item{\Times web} 
+	网页包，提供高亮显示等网页预处理功能。	
+	\end{itemize}
+	
+	每一种包所包含的类如下。
+	
+	\begin{enumerate}[(1)]
+	\item 核心搜索包
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=3in]{fig/SearchPackage.png} 
+	\caption{\wuhao 搜索包}\label{fig:搜索包}
+	\end{figure}
+	
+	如图\ref{fig:搜索包}，该包中主要有三个类：
+	
+	{\Times DoSearch}类是后台搜索测试的入口类，由它来完成最顶级的调用；{\Times Searcher}类是搜索的核心类，由它访问索引文件并完成搜索并返回结果；{\Times ExtendQueryParse}类可以根据中心词汇，获得{\Times Triple}类型的扩展词汇及关系表，解析成{\Times Lucene}可以识别的查询语句。其工作流程大致是：首先导入本体文件，根据查询词条获得扩展词汇及关系，将其解析为{\Times Lucene}查询语句，最后进行搜索。
+	
+	\item 数据库和索引包
+	
+	如图\ref{fig:数据库和索引包}，该包大致分为{\Times MakeDBandIndex}等几个类：
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=5in]{fig/dbandindexpackage.png} 
+	\caption{\wuhao 数据库和索引包中的类关系}\label{fig:数据库和索引包}
+	\end{figure}
+	
+	{\Times MakeDBandIndex}类是建立索引和把文本添加进数据库的总入口；{\Times StuffTextFileProcessor}类是完成索引操作和数据库操作的核心类，由{\Times PropertyConfiguration}类为它提供相关的参数配置；然后，通过{\Times StuffJDBC}类实现与数据库的通信，通过{\Times StuffIndexer}类来建立索引；接下来用{\Times traverse()}方法遍历目标目录的每个文件，通过{\Times StuffDocument}类对每个文本的{\Times ID}、文件件、路径、内容等域进行索引操作，并把相应文件名和路径封装成{\Times Stuff}类，再把{\Times Stuff}类对象添加到数据库中。从而实现了索引器和数据库维护的部分操作。
+	
+	\item {\Times hibernate}包
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=3in]{fig/hibernatepackage.png} 
+	\caption{\wuhao {\Times hibernate}包中的类}\label{fig:hibernate包}
+	\end{figure}
+
+	如图\ref{fig:hibernate包}，{\Times HibernateUtil}类、{\Times HibernateSessionFactory}类是{\Times Hibernate}的配置类，通过{\Times FindStuff}类可以实现通过{\Times ID}号读取数据库中相关记录的功能。
+	
+	\item 本体包
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=3.5in]{fig/OntologyPackage.png} 
+	\caption{\wuhao 本体包中的类}\label{fig:ontology包}
+	\end{figure}
+
+	
+	如图\ref{fig:ontology包}，本体包主要包含两个类：{\Times Ontology}类能过{\Times Jena}实现了对本体的读取，用它可以获得关键词在本体图中的位置，并获得了扩展词汇及它们的关系，并存储成{\Times Triple}类对象；{\Times Triple}类提供了一些读取中心词、扩展词、关系的方法，是实现扩展性语言搜索算法的核心。
+	
+	\item 网页包
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=3.5in]{fig/webpackage.png} 
+	\caption{\wuhao 网页包中的类}\label{fig:web包}
+	\end{figure}
+	如图\ref{fig:web包}，网页包中提供了一个给{\Times HTML}文本添加高亮显示的工具{\Times HighLight}类，{\Times DoSearch}提供了网页访问{\Times Java}类的总接口，此处更多的运用了{\Times JavaBean}的思想，将搜索请求封装成{\Times DoSearch}类，将搜索结果都进行封装{\Times SearchResults}类，这样做有利于与前端的显示更有效地分离开来。
+	\end{enumerate}
+
+		\subsubsection{用户界面设计与实现}
+	系统采用{\Times Tomcat}作为容器，下面编写容器里面的内容，一方面实现功能的可视化操作，另一方面，实现查询业务逻辑。用户与系统的沟通，归结来说就是一组请求（{\Times Request}）和响应（{\Times Response}），即用户发给系统响应，系统通过调用后台的{\Times Java}类，计算出相应的结果，然后返回给用户一个响应。要实现这样的机制，可以采用一些现成的框架，比如{\Times DWR}、{\Times Struts2}。
+	
+	{\Times DWR}（{\Times Direct Web Remoting}）是一个便于实现{\Times web}页面与{\Times Java}类交互的远程服务器端{\Times Ajax}开源框架，通过把{\Times Java}类虚拟映射成为{\Times JavaScript}程序，在浏览器中就可以方便地调用{\Times Java}类。在系统搭建过程中，我们也尝试了采用这种框架，但是{\Times ExtJS}与它的兼容性问题一直没有得到解决。
+	
+	{\Times Struts2}也可以通过拦截器机制实现类似功能，但是它配置较为复杂。相对于本系统较为简单的逻辑关系，就不采用这种架构，而直接用一个{\Times JSP}来处理用户发送的请求，事实上，这种处理方式也是模仿了{\Times Struts2}的流程，但是由于自定义的{\Times JSP}针对性更强，所以大大减少了功能实现的时间和空间成本。于是得出了搜索引擎传统{\Times Web}服务模式，如图\ref{fig:搜索引擎传统Web服务模式}。
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=3in]{fig/SearchStructure.png} 
+	\caption{\wuhao 搜索引擎传统{\Times Web}服务模式}\label{fig:搜索引擎传统Web服务模式} 
+	\end{figure} 
+	
+	通过这样的流程，把用户的查询词条封装在请求中，通过一个充当{\Times Servlet}的{\Times JSP} 网页，解析这个请求，把查询词条作为{\Times Java}搜索类的参数，进行搜索，获得相应的文件号，再将其封装成响应，返回到客户端，客户端的前端将其解析，并显示出来，从而实现了系统的搜索逻辑。
+	
+	编写网页前端的方法包括最基本的{\Times HTML}和{\Times CSS}，以及{\Times JavaScript}。按照一般的方法，{\Times HTML}主要负责定义元素，{\Times CSS}进行网页风格的设计，{\Times JavaScript}实现效果和交互。在{\Times JavaScript}进行效果和交互的环节可以采用{\Times jQuery}，它是{\Times JavaScript}框架，能够方便地处理{\Times HTML}元素，实现动画效果。{\Times ExtJS}是{\Times jQuery}更高层的封装，系统采用{\Times ExtJS}来编写用户界面。
+		
+	{\Times ExtJS}是一种基本摆脱了后台技术的前端{\Times ajax}框架，主要用于创建前端用户界面。它的界面风格简约而美观，强大的表格控件为它吸引了大批使用者，因而产生了相当丰富的参考学习资料。{\Times ExtJS}为编程者提供了极为丰富的组件，下面只介绍本系统使用到的一些组件。
+	
+	在{\Times JavaScript}中，当{\Times DOM} 结构准备完毕、图片和影片等资源下载之前，浏览器会触发一个{\Times load}事件。{\Times ExtJS}需要一个执行的起点，保证在{\Times load}事件触发时被调用，这就是：
+\lstset{language=C,frame=lines,basicstyle=\Times, commentstyle=\SimSun,texcl=true}
+\begin{lstlisting}
+Ext.ready(function(){
+//程序体
+});
+\end{lstlisting}	
+
+	下面的各种组件，都将被嵌在上述结构中。
+\begin{enumerate}[(1)]
+\item
+{\Times Viewport}容器:
+
+	为了界面美观整洁，将页面进行区域划分，不同的区域安放不同的控件。在系统的用户界面中，上方为搜索栏，左侧为扩展词表/文件列表，中间为搜索结果摘要，右侧为文本全为显示，下方为搜索系统说明。{\Times Viewport}就提供了这样的功能，它首先占据整个页面，再将页面分成5大区域：{\Times north}, {\Times west}, {\Times center}, {\Times east}, {\Times south}，以此对应上、左、中、右、下。利用{\Times Viewport}这个容器，其他的{\Times Panel}等控件放在相对应的位置，保证了页面的结构。
+	
+\item
+{\Times Panel}容器：
+
+	{\Times Panel}容器是一个面板，用以装载各种组件，在系统中，为了保证系统的美观，用{\Times Panel}容器来进行{\Times HTML}的直接显示，这样的好处在于，可以直接使用{\Times CSS}方式标记的高亮部分得以顺利地显示。
+	
+\item 
+{\Times GridPanel}:
+
+	{\Times GridPanel}以{\Times MVC}的模式进行设计，将数据的模型、显示、控制分开处理。{\Times Column}元素定义了表格中数据的模型，然后用{\Times Store}来进行数据的读取和存储，把{\Times Store}读取到的数据转换成{\Times Record}数组，与{\Times Column}定义的模型进行映射，每条{\Times Record}都包含{\Times Column}模型中的各字段。
+
+\item
+{\Times FormPanel}表单容器：
+
+	{\Times FormPanel}的功能在于，除了可作为容器装载组件以外，还可以在原有的{\Times DOM}结构后加上{\Times <form/>}标记。即{\Times FormPanel}可以被分作两个部分，一个部分就像普通{\Times Panel}那样装载组件，另一个部分是实现了数据的存储和表单的提交。
+	
+\end{enumerate}
+
+	与普通{\Times HTML}相对应的，{\Times ExtJS}提供了文本框，按钮等基本组件。通过对它们的合理安排，编写出一个{\Times ExtJS}风格的用户界面。但是到目前为止，用户界面徒有其表，并不具备处理工作的能力。下面，对对应的组件添加相应的事件。目前系统需要处理两个事件，一个是在文本框中输入了关键词，点击搜索之后，要能进行搜索操作；另一个是在文件列表中点击了某一个文件后，要在全文窗口显示出该文本的内容。
+	
+	针对第一个问题，将文本框和按钮放在一个表单容器{\Times FormPanel}中，当在文本框中输入了查询词条，点击搜索之后，将会把文本框中的内容包在一个请求（{\Times Request}）中发到服务器上的{\Times Servlet}（{\Times JSP}实现）中，{\Times Servlet}通过调用相关的{\Times Java}类，获得{\Times Json}格式的搜索结果，其中包括扩展词汇和扩展词汇与中心词汇的关系，带有高亮标签的查询结果{\Times HTML}文本，以及查询结果文本的{\Times ID}号，然后把这个{\Times Json}格式的结果再打包成一个响应，返回到发送请求的页面，页面解析响应中的搜索结果，分别存储以上三种结果，然后在相对就的控件中，显示这些结果。
+	
+	针对第二个问题，把文件名列表的{\Times GridPanel}增加一个监听器（{\Times Listener}），负责监听项目点击（{\Times itemclick}）操作，当用户点击了某个项目，就会利用{\Times ExtJS}的{\Times Ajax}包中的{\Times Request}组件，把之前获得的搜索结果文件{\Times ID}号打包成响应，发送到另一个用{\Times JSP}实现的{\Times Servlet}，它会从根据{\Times ID}号，从数据库中得到相对应的文档内容，再打包在响应中，返回响应页面，加载到文本全文的容器中。
+	
+	这样就可以实现前端页面，以及前端页面和后台{\Times Java}类的交互。	
+
+	通过以上组件的组合，就获得了如下的用户界面，如图\ref{fig:用户界面}。
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=6in]{fig/GUI.png} 
+	\caption{\wuhao 用户界面}\label{fig:用户界面} 
+	\end{figure} 
+		
+	在{\Times input query}表单中输入查询词条，点击{\Times Search}，在{\Times Extend Word}中就会显示出相应的扩展词汇，以及查询词条与这些词之间的关系。在{\Times result}中将会显示搜索结果的摘要文本，并且能够高亮显示用户输入的查询词条，更直观地显示出查询结果的相关度。打开“手风琴”效果的{\Times file}面板，就可以看到查询结果对应的文件名列表，点击其中任一个文件，在{\Times fileContent}面板中，就能够显示相应的文本全文。
+	
+	
+	\subsection{实施与部署}
+	
+	\subsubsection{数据库建立}
+	所谓数据库（{\Times Database}）是按照一定的数据结构来组织、存储和管理数据的仓库。面对现代的信息爆炸，数据管理已经不仅仅是简单的存储和管理数据，从最简单的填有各种数据的表格到企业内部具有复杂关系的海量数据，如果我们的生活已经变得充满了数据，那么数据库作为这些数据的载体，自然也是无所不在的了。
+	
+	一个字面上相似的概念是数据库系统（{\Times Database Systems}），数据库系统是用于对数据进行组织和存取操作的管理系统，它是一个更广义的概念，包含了数据库及其管理软件，是存储介质、处理对象和管理系统的集合体。其中有一个重要的组织部分——数据库管理系统（{\Times Database Management System}，{\Times DBMS}），它用于对数据库中的数据进行管理、组织和维护，它覆盖了从较低层的内外存储空间的分配，到较高层的语法定义和读写创删的方法。是与数据库的数据打交道的重要手段。
+	
+	{\Times MySQL}是目前最为流行的开源数据库之一，它是完全网络化的、支持跨平台的关系型数据库系统，具有较快的运行速度，本系统采用{\Times MySQL}作为数据库。
+			
+	文档库建立
+	
+	利用爬虫程序，从维基百科上获得了5000余篇机械领域相关词条的文章，以此来模拟文档库。随着运用的深入，这些文章的内容和数量都可以得到很大的扩展。但是解决问题的方式是极相似的。该搜索系统本来就要求具有较强的扩展性和可移植性。在系统体系结构中，功能集部分了包含了数据库建立与维护部分。下面介绍如何利用{\Times Java}自带的数据库操作的相关包，来完成文档库建立的工作。
+	
+	本系统采用{\Times MySQL}数据库。首先，分析爬虫程序获得的模拟语料库，确定数据库结构，系统存储的信息并没有复杂的联系，用一张数据表就可以完成，它包含了以下几个字段：
+	\begin{itemize}
+		\item
+	{\Times id}：文件{\Times ID}，用来对文本进行编号，这也是索引、数据库、网页前端交流数据库信息的主要参数，{\Times id}是数据库的主键，同时也是一个自增字段。
+		\item
+	{\Times filename}:文件名，用来保存文本的名称。
+		\item
+	{\Times contents}:内容，用来保存文本的具体内容。
+		\item
+	{\Times fullpath}:完整路径，保存文本所在的绝对路径。在搜索结果中，这个字段是不必要的。在前文用{\Times Lucene}建立索引的阶段，也并没有建立对应的{\Times fullpath}域。此处的考虑是，索引域并不是与数据库的字段有完全的对应关系。这个字段的加入，表明在数据库中，我们可以再存储大量的没有被建立索引的数据，索引为搜索服务，搜索获得的文件{\Times ID}号，将会引导到数据库中获得信息。所以索引应该只是一把钥匙，数据库才是数据的仓库。
+	\end{itemize}
+	
+	建立数据表有两种方式，一种是直接用{\Times SQL}语言进行操作，另一种是利用{\Times MySQL}自带的工作台{\Times WorkBench}进行可视化的操作。采用通用性更强的第一种方法建立了数据库、数据表、字段及字段类型，再用{\Times WorkBench}进行必要的修改，获得数据库如图\ref{fig:数据库结构}。
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[scale=0.5]{fig/stuffdb.png} 
+	\caption{\wuhao 数据库结构}\label{fig:数据库结构} 
+	\end{figure}
+	
+\newpage	
+	完成了数据库结构的设计，下一步就要用具体的内容来填充它。此处数据库的操作较为简单，采用{\Times Java}自带的{\Times JDBC}进行文档数据库的添加新数据的操作。大致流程如图\ref{fig:数据库信息写入流程}。
+	
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=4in]{fig/createdb.png} 
+	\caption{\wuhao 数据库信息写入流程}\label{fig:数据库信息写入流程} 
+	\end{figure}
+	
+	{\Times JDBC}为访问数据库提供了方便的接口。
+	\lstset{language=Java,frame=lines,basicstyle=\Times, commentstyle=\SimSun,texcl=true}
+	\begin{lstlisting}
+import java.sql.*;
+Connection con = DriverManager.getConnection(url, usr, pwd);
+	\end{lstlisting}	
+
+	通过引用{\Times java.sql}包下的相关类，实例化出一个{\Times Connection}类的对象，以数据库的{\Times URL}、用户名、密码为参数，调用{\Times DriverManager}类的静态方法{\Times getConnection}，就实现与数据库的连接。接下来要向数据库中添加信息。用{\Times JDBC}来操作数据库的核心之一，就是在{\Times Java}中执行{\Times SQL}语言。在使用之前，先对{\Times SQL}语言进行一定的介绍。
+	
+	{\Times SQL}（结构化查询语言，{\Times Structured Query Language}），是用来对数据库进行读写添删等操作的计算机语言，用户不用考虑数据的具体存储方式，只需在高层数据结构上进行操作。{\Times SQL}的操纵对象是记录项目（{\Times records}）的集合，所以{\Times SQL}接受记录项目集为输入，又输出记录项目集，这样一来，{\Times SQL}语句能够嵌套，从而使他具有极大的灵活性。{\Times SQL}的一个语句就可以描述相当复杂的查询要求，而要用其他编程语言实现相同的功能，可能需要一段不短的代码。
+	
+	{\Times SQL}语句大致被分为两个部分：数据操作语言（{\Times DML}，{\Times Data Manipulation Language}）和数据定义语言（{\Times DDL}，{\Times Data Definition Language}）。由于篇幅的限制，此处就只介绍本系统中使用到的语言。
+	
+	数据定义语言是用于实现数据库结构上的操作，比如新建、删除数据表，定义键、字段，规定表格之间的联系等。本系统建立过程中用到的数据定义语言指令有：
+\begin{itemize}
+	\item
+	{\Times create database}:用于新建数据库
+	\item
+	{\Times create table}:用于新建数据表
+\end{itemize}		
+	
+	采用{\Times SQL}语言建立本系统所需要的数据表，大致代码如下：
+	
+	\lstset{language=SQL,frame=lines,basicstyle=\Times, commentstyle=\SimSun,texcl=true}
+	\begin{lstlisting}
+create database mechanicaldesigndb; --创建数据库
+use mechanicaldesigndb; --以该数据库为操作对象
+create table stuff; --创建数据表
+(
+	id int AUTO_INCREMENT, --新建整型的id字段，它具有自增的属性
+	filename varchar(128), --新建长度为128字节的字符串型filename字段
+
+	--用类似的方法新建fullpath， content字段
+	
+	primary key(id) --定义id字段为主键
+)
+	\end{lstlisting}	
+	
+	这样就完成了数据库及数据表结构上的设计与实现，这种建立方法是基本不依赖于数据库软件的，尽管现在系统采用的是{\Times MySQL}数据库，但是这种方法可以很容易地移植到其他数据库上。下面介绍在数据表内容上的操作方法。
+	
+	{\Times SQL}是用于查询数据库的语言，它需要完成插入、删除、更新记录等操作。这些就是由数据操作语言部分来完成，常用的操作指令有：
+	
+	\begin{itemize}
+		\item
+	{\Times SELECT}:用于从数据表中获得数据。
+		\item
+	{\Times INSERT}:用于向数据表中添加数据。
+	\end{itemize}
+	
+	在将文档集写进数据库的操作中，{\Times id}字段并不是文档集中的文档自带的，在数据库中，我们建立了自增的{\Times id}号，数据库中它可以自行获得，但是如前文所述，这个{\Times id}将会要作为一个关键参数沟通数据库、索引和网页前端，这就要求从数据库中获得{\Times id}号，然后把它编入索引当中。这恰就是一个最简单的查询范例。
+	
+	\lstset{language=SQL,frame=lines}
+	\begin{lstlisting}
+select max(id)+1 from stuff
+	\end{lstlisting}	
+	
+	{\Times select}语句的语法结构为：{\Times SELECT }列名称 {\Times FROM }表名称。（{\Times SQL}语言对大小写不敏感，也就是{\Times select}和{\Times SELECT}是完全等效的）。通过这个语句获得某个表中的某一列或者几列的数据。列名称所在的位置很灵活，使用通配符“*”来获得所有的列数据，也可以像上面代码这样，在列名称的位置写{\Times SQL}的内建函数。{\Times max()}就是{\Times SQL}的内建函数，用来获得某一列的最大值。通过这个语句就可以获得当前数据库数据条目的数目，再加1，作为下一个条目的{\Times id}，编进索引的{\Times id}域中。
+	
+	完成{\Times id}字段的操作，下面需要把文档中的内容导入到数据库中，{\Times SQL}提供了增加记录项目的语句{\Times insert}，其语法结构为：{\Times INSERT INTO }表名称 {\Times VALUES }(值1, 值2,....)	或 {\Times INSERT INTO table\_{}name} (列1, 列2,...) {\Times VALUES }(值1, 值2,....),可以实现相应的功能。
+	
+	下面通过{\Times JDBC}，在{\Times Java}中执行{\Times SQL}语句。通过上面获得最大{\Times id}的语句，在{\Times java}中需要是这样实现的：
+	\lstset{language=Java,frame=lines}
+	\begin{lstlisting}
+Statement pstmt=null; //定义一个Statement类的对象
+pstmt = con.prepareStatement("select max(id)+1 from stuff");
+//把SQL语句作为一个参数传给Connection类对象的prepareStatement()方法
+pstmt.execute(); //执行这个Statement类的对象
+	\end{lstlisting}	
+	
+	{\Times Statement}类是用来执行静态的{\Times SQL}语句，并返回{\Times SQL}语句产生的结果。通常情况下，一个{\Times Statement}类的对象只能获得一个结果集，对于不同的结果集，必须要建立不同的{\Times Statement}类对象。
+	
+	由于在进行{\Times SQL}查询时，可能会需要输入不同的参量，{\Times Statement}类提供了{\Times setString}方法，以给定的{\Times Java}字符串来设置{\Times SQL}语句的参数，驱动器会把{\Times Java}字符串转换成规模对应的{\Times SQL}串。举个例子：
+		\lstset{language=Java,frame=lines}
+	\begin{lstlisting}
+//...
+String expr =
+"insert into stuff (filename, fullpath, contents) values (?,?,?)";
+
+pstmt = con.prepareStatement(expr);
+pstmt.setString(1, filename);
+//...
+	\end{lstlisting}	
+	
+	这样就实现了以之前定的字符串{\Times filename}作为第一个参数，代替掉第一行最后括号中的第一个问号。通过这样的方法，分别获取文件名、文件内容、完整路径信息，并把它们写进数据库。从而实现了建立文档数据库的功能。
+	
+
+	数据库的读取
+	
+	上面介绍了用{\Times JDBC}来实现数据库建立的方法，而对于数据库的操作，还有一个鼎鼎大名的包——{\Times Hibernate}，也就是最常用的{\Times Java Web}应用开发架构组合{\Times SSH}中的那个{\Times H}（另外两个分别为{\Times Spring}和{\Times Struts 2}）。{\Times Hibernate}是基于{\Times JDBC}的，它封装了访问数据库的底层细节，因此{\Times JDBC}具有较强的灵活性，而{\Times Hibernate}具用较强的易用性和易学性。考虑到搭建这个系统的另一个目的是要熟悉Web应用开发的流程及各种组件，所以在数据库读取操作中，系统采用了{\Times Hibernate}而非{\Times JDBC}。
+	
+	“目前流行的编程语言，{\Times Java}、{\Times C++}等都是面向对象的，但是主流的数据库产品又还是关系数据库”\cite{li2008}。这两者发展由于理念上的差异，造成发展不协调，也就催生了{\Times ORM}（{\Times Object/Relation Mapping}）框架来沟通连接这两者，通过{\Times ORM}框架，应用程序就不用直接访问底层数据库。{\Times Hibernate}就是{\Times ORM}框架中较为常用的一种。{\Times Hibernate}是由{\Times JBOSS}提供的一套开源的对象关系映射框架，通过对{\Times JDBC}进行封装，其最大的特点就是把数据库当作一个对象，因此可以用面向对象的思维来操纵数据库，这些对数据库的操作将会被{\Times ORM}解析成{\Times SQL}操作，从而避开了一些有时冗长艰涩的SQL语言，数据结果也从数据表的表现形式变成了对象的形式，这对于那些采用面向对象的业务模性和商业逻辑的应用是有利的。
+	
+	对于{\Times ORM}框架，有一个非常重要的媒介——{\Times PO}（持久化对象，{\Times Persistent Object}）。正是通过{\Times PO}才能完成持久化操作，也就是前面所说的以面向对象的方式来操纵数据库。在{\Times Hibernate}中{\Times PO}是很简单的：
+
+	$$ PO ＝ POJO ＋ 映射文件 $$
+
+	其中{\Times POJO}是指普通{\Times Java}类，由于{\Times Hibernate}的低浸入式设计，{\Times POJO}类与普通{\Times JavaBeans}是一样的，它不要求持久化类继承什么父类或是实现什么接口。{\Times Hibernate}中的映射文件以{\Times XML}的形式书写，通过映射文件，{\Times Hibernate}就可以理解持久化类和数据表之间的关系，也可以理解持久化类属性与数据表列之间的关系。以本搜索系统的使用为例：
+	
+\lstset{language=XML,frame=lines}
+\begin{lstlisting}
+<hibernate-mapping package="myPackage">
+ <class name="SearchResult" table="stuff">
+  <id name="id">
+   <generator class="identity"/>
+  </id>
+  <property name="contents"/>
+  <property name="filename"/>
+  <property name="fullpath"/>
+ </class>
+</hibernate-mapping>
+\end{lstlisting}	
+
+	上面的映射文件中定义的{\Times property}的{\Times name}与{\Times POJO}类中一一对应。这样就实现了持久化对象。接下来通过{\Times Hibernate}配置文件{\Times hibernate.cfg.xml}，配置出数据库的类型、{\Times URL}、用户名、密码，以及映射文件的路径，就完成了{\Times Hibernate}的前期配置工作。可以开始利用{\Times Hibernate}来操作数据库了。
+	
+	回顾搜索系统工作流程，系统接受用户的查询请求，通过语义扩展生成了新的请求，以它在索引中搜索，获得了结果文本的{\Times ID}号，然后通过这个{\Times ID}号获得搜索结果的具体内容。现在需要利用Hibernate，通过{\Times ID}号在数据库中找到该{\Times ID}号对应项的其他字段的信息。根据{\Times Hibernate}的框架规范，建立一个包含{\Times id}、 {\Times contents}、 {\Times filename}、 {\Times fullpath}的{\Times POJO}类{\Times SearchResult}，其形式是{\Times JavaBean}。按照上面的映射文件，进行映射配置。接下来建立通过{\Times ID}查内容的方法：
+	
+\lstset{language=Java,frame=lines}
+\begin{lstlisting}
+public static SearchResult findStuffById(String id){
+ Session sess = HibernateUtil.currentSession();
+ //开始事务
+ Transaction tx = sess.beginTransaction();
+ //创建消息实例
+ List pl =sess.
+  createQuery("select stuff from SearchResult as stuff where id = :id")
+  .setString("id", id).list();
+ //通过id号获得数据库中该id号对应的记录
+ Iterator pit = pl.iterator();
+ //用迭代器来获得List类里的信息
+ SearchResult s = (SearchResult)pit.next();
+ //以SearchResult类保存查询结果，
+ tx.commit();
+ //提交事务
+ HibernateUtil.closeSession();
+ //关闭事务
+ return s;
+}
+\end{lstlisting}	
+
+	用{\Times id}号获得的数据库中的记录就变成了一个{\Times SearchResult}类的对象，这样能过“{\Times findStuffByID("1").getfilename}”就获得{\Times id}号为1的记录中文件名信息。这对于之后网页前端的显示来说是极为方便的。
+	
+	\subsubsection{服务器架设}
+	
+	在系统设计之初，本文就把它定位成能够跨平台的搜索系统。一个Web应用程序能轻量化地实现这样的功能。
+	
+	所谓{\Times Web}应用程序是一种可以通过{\Times Web}访问的应用程序，其优势在于用户不需要安装其他软件，只需在浏览器中即可访问应用程序。
+	
+	传统的应用程序是被完全部署在一台计算机上的，就像早期的单机游戏，只要通过光盘安装在了本地的计算机，你不需要与其他电脑产生任何联系，就可以完美地运行。但是随着互联网的迅速发展，人们已经不在满足于局限在一台计算机上的资源，而希望使用其他计算机的信息和资源，这就催生了Web应用程序。
+	
+	与传统的应用程序不同，现在的很多应用程序可能并不是被部署在一台计算机上，或者说应用程序所在的计算机可能与调用该应用程序的计算机不同。这种应用程序至少与两台计算机发生了关系，所以就产生了两种不同的架构：{\Times B/S}架构，即浏览器（{\Times Browser}）／服务器（{\Times Server}）架构，与此相对应的还有{\Times C/S}架构，即客户端（{\Times Client}）/服务器（{\Times Server}）架构。两种架构都涉及了{\Times S}端，即服务器端，从字面上说，它是提供服务的机器，因为它可能需要同时给多个浏览器（或客户端）提供服务，所以要求服务器端计算机拥有较好的性能。下面再来看看两种架构的不同点，对于{\Times B/S}架构，它是从浏览器中获得服务器的服务的，这样一来，只要有一个浏览器，你就可以享受到不同服务器提供的不同服务；对于{\Times C/S}架构，需要在{\Times C}端，即客户端部署程序，这个程序可以自己完成一些任务，也可以与服务器进行信息的交互。这样我们看出，对于{\Times B/S}架构，在浏览器中几乎是只发出服务请求，而很少承担完成服务所需要的工作，比如对于一个聊天室，浏览器端完成的只是发送信息到服务器，再从服务器上获取信息这样的简单的工作；相对应的，对于{\Times C/S}架构，客户端就会承担完成服务的较多工作（相比较{\Times B/S}架构而言），这一方面是受到服务器端计算机性能的限制，另一方面也是受到网络传输的限制，所以在客户端就需要部署相应的较为复杂的程序，而这个程序不能简单地放在浏览器中来完成，比如对于一个大型网游，画面的渲染就是一个计算量颇大的任务，如果把这些工作都交给服务器来完成，可能服务器无法承担那么大的负载，可能网络传输速度的限制就让你根本无法足够迅速的传送渲染的请求并接收服务器端的渲染结果。所以这种架构其实是在平衡远程计算机和本地计算机的负载。
+	
+	针对本搜索系统，用户所需要的信息只是搜索体系的资源层中的小小一部分，把整个资源层放在本地计算机上是相当不合理的。而要完成一个搜索任务，本地计算机需要完成的工作是极其有限的，几乎所有的业务逻辑都要在服务器端来实现。所以我们采用了{\Times B/S}架构建立了一个{\Times Web}应用程序，将整个系统所依托的资源层和业务逻辑都部署在服务器端，通过通用的浏览器就可以访问搜索系统，而不用在本地安装其他软件，很容易就实现了应用的跨平台性。
+	
+	根据全国科学技术名词审定委员会定义，服务器是指一种运行管理软件以控制对网络或网络资源（磁盘驱动器、打印机等）进行访问的计算机，并能够为在网络上的计算机提供资源使其犹如工作站那样地进行操作。那么归根结底，服务器也是一种计算机，只是性能上会优于普通的个人计算机，那么它是依靠什么机制来让它成为可以提供服务的服务器而不是一般计算机的呢？是{\Times Web}服务器。需要与之前说的服务器相区分的是，之前说的服务器是硬件，是一台性能优越的计算机；而{\Times Web}服务器是程序，它可以接收浏览器发出的请求，并做出回应，给出漂亮网页作为结果，当然它不只能提供静态的{\Times HTML}网页，还可以运行程序来响应用户的请求。
+	
+	由此可见，通过{\Times Web}服务器，普通的个人电脑也可以充当服务器。之前我们提到了搜索系统采用{\Times B/S}架构，那么这种架构会涉及到两端：服务器端和浏览器端。而正是{\Times Web}服务器，将该计算机的一部分作为服务器，再用同一台计算机（当然对于其他计算机也是相同的）的浏览器访问这个服务器，获得相关服务，这样一来就让一台电脑分饰两角了。
+	
+	常用的{\Times Web}服务器软件有{\Times Tomcat}、{\Times Apache}和{\Times Microsoft}的{\Times Internet}信息服务器（{\Times Internet Information Server},{\Times IIS}）。
+
+	{\Times Tomcat}是{\Times Apache}软件基金会的一个开源项目，它是一个{\Times Web}服务器，也是一个{\Times Java servlet}容器（{\Times container}），与此同时，它还提供了{\Times Java servlet}和{\Times JSP}（{\Times JavaServer Pages}）技术。{\Times Tomcat}作为一个开源优秀的项目，吸引了众多编程高手加入其中，它使用先进的技术，性能稳定，而且免费，常被Java程序员使用。它属于轻量级服务器，被广泛用在中小型系统和并发用户不是很多的情况，是目前一种较为流行的Web服务器。结合本系统的需求，本系统采用{\Times Tomcat}作为服务器。架设{\Times Web}服务器的常见操作系统有{\Times Linux}，{\Times Windows}和{\Times Unix}，其中{\Times Linux}可以支持多个硬件平台，网络功能较为强大，是架构高效安全的{\Times Web}服务器的理想选择。我们选择{\Times Linux}的{\Times Ubuntu}版本作为{\Times Web}服务器架设平台。
+	
+	下面介绍在{\Times Linux}下的{\Times Tomcat}的配置方法：
+	
+	\begin{enumerate}[(1)]
+		\item 配置{\Times Java}编译环境：因为{\Times Tomcat}是基于{\Times Java}的，要运行{\Times Tomcat}首先需要配置{\Times Java} 编译环境，其步骤大概是从{\Times Java}官方网站上获得{\Times jdk}包，解压并安装在本地硬盘，设置环境变量，最后可以通过“{\Times java -version}”命令查询{\Times jdk}的版本从而了解{\Times Java}编译环境的配置情况。
+		\item 安装{\Times Tomcat}包：从{\Times Tomcat}官方网站上可以获得{\Times Tomcat}安装包，下载解压到本地。
+		\item 配置{\Times Tomcat}：{\Times Tomcat}的配置主要是三个方面：系统环境、{\Times server.xml}、{\Times tomcat-users.xml}。对于系统环境部分，要在环境变量中配置{\Times CATALINA\_{}HOME}  和 {\Times CATALINA\_{}BASE}的路径，这样才能保证{\Times Tomcat}在执行它的命令的时候，能知道这些命令在哪儿。通过{\Times server.xml}可以配制{\Times catalina}的端口号，默认情况是8080，但在一些罕见的情况下，这个端口号可能冲突。通过{\Times tomcat-users.xml}主要存储了{\Times tomcat}的用户设置，包括用户名、密码、用户类别等。
+		\item 运行{\Times Tomcat}：运行{\Times startup.sh}就可以运行{\Times Tomcat}，打开浏览器，访问“{\Times http://localhost:8080/}”,看到如图\ref{fig:Tomcat服务器配置成功}界面，{\Times Tomcat}配置成功。
+	\begin{figure}[htbp] 
+	\centering\includegraphics[width=4in]{fig/tomcatsuccess.png} 
+	\caption{\wuhao {\Times Tomcat}服务器配置成功页面}\label{fig:Tomcat服务器配置成功} 
+	\end{figure} 
+	\end{enumerate}
+	
+	完成了{\Times Tomcat}的配置，建立好{\Times Web}应用程序，把它部署到{\Times Tomcat}中，就能通过浏览器来访问它了。
+	
+	{\Times Tomcat}位于显示层，是沟通用户与系统后台的关键机制。它作为一个容器，装载了包括{\Times JSP}网页，实现了用户访问、发送请求、返回结果、显示结果的功能。	
+
+	\subsection{测试}
+	本文通过爬虫程序从维基百科上获得了4049份机械领域的相关文档，以它作为模拟的企业内部语料库。试想对于一个设计人员而言，他需要获得关于“{\Times Gear}”的相关文档，他不得不从复杂的文件夹结构中去查找，而且还只能看到文档的名字，而这个文档名字大部分时候是不能完整地表示文档的内容的。如果发现文档名相关，设计人员还需要用较长的时间去检验这些文本是否满足其查询要求。经历了那么复杂的一个检索流程，设计人员的设计思路很可能就被打断了。
+
+	如果使用本系统，只需打开网页，以“{\Times Gear}”为关键词进行搜索，就可以获得如图\ref{fig:Gear的搜索结果}搜索结果。它包含了与{\Times Gear}相关的概念，这样可以启发设计人员的设计思路；相应的搜索结果，通过含有高亮显示的摘要信息，设计人员可以迅速地判断出文档的相关性，并可以在网页中直接看到文档全文。
+
+	
+	\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=6in]{fig/SearchResult.png}
+	\caption{\wuhao {\Times Gear}的搜索结果}
+	\label{fig:Gear的搜索结果}
+	\end{figure}
+	
+	下面对搜索结果进行定量的分析。经过人工筛选，确定与“{\Times Gear}”相关的文档有45份，分别用基于关键词搜索和用本系统的扩展性语义搜索来进行搜索。按照前文所述的绘制{\Times P-R}图的方法，得出如图\ref{fig:基于关键词搜索的P-R图}及图\ref{fig:扩展性语义搜索P-R图}。
+
+	从图中容易看出基于{\Times Lucene}的关键词搜索和扩展性语义都可以保证较高的查准率，但在查全率上都显不足，只有40％，扩展性语义搜索稍稍领先。
+
+		
+	\begin{figure}[htbp]
+	\begin{minipage}[t]{0.5\linewidth}
+	\centering
+	\includegraphics[width=3in]{fig/KeywordBasedPR.jpg}
+	\caption{\wuhao 基于关键词搜索的{\Times P-R}图}
+	\label{fig:基于关键词搜索的P-R图}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\linewidth}
+	\centering
+	\includegraphics[width=3in]{fig/OntologyBasedPR.jpg}
+	\caption{\wuhao 扩展性语义搜索{\Times P-R}图}
+	\label{fig:扩展性语义搜索P-R图}
+	\end{minipage}
+	\end{figure}
+
+	\subsection{本章小节}
+	以软件工程的开发模式，对本系统的需求分析、概要设计、详细设计各阶段进行介绍，通过数据库数据表的设计、数据表内容的自动录入、服务器的部署，实现了{\Times B/S}架构的搜索系统。通过具体使用范例，	展现本系统的实用性，用P-R图评估本系统的搜索性能。
+
+\clearpage
+
+\section{结论}
+
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+	\subsection{总结}
+	随着企业信息化的日益深入，尤其是对于机械领域行业，产品的全生命周期意味着企业内部文档数据的爆炸性增长，对于设计人员，要能从这些海量的文档中迅速获取他们所想要的资料，不仅能够大幅缩短设计时间，同时由于在设计阶段就已经轻松搜索获得了工艺、销售、售后的知识，从而在设计阶段就能够着眼于产品的全生命周期，既缩短了研发时间，又使产品更能够适应市场的变化。本文针对这样的需求，对机械领域知识的搜索进行了研究并开发实现了相应系统：
+\begin{enumerate}[(1)]
+	\item 本体建模：本文讨论知识的表达形式，根据搜索的需求，确定本体表达知识的方式。研究了本体的建模方法，包括建模软件{\Times Prot{\'e}g{\'e}}的使用，本体描述语言{\Times OWL}，和其他的一些本体理论。
+	\item 扩展性语义搜索算法：基于本体进行语义扩展，通过参数接口，可以方便地调整搜索算法的性能。显示扩展语义，能够有效地拓展设计人员的设计思路，激发创新思维。
+	\item 机械领域知识搜索系统：基于{\Times Jena}、{\Times Lucene}、{\Times Hibernate}、{\Times JDBC}等多个{\Times Java}工具包，用{\Times Java}编写业务逻辑，采用{\Times B/S}架构，搭建本地服务器，用{\Times ExtJS}编写用户前端，实现了较为完整的搜索系统。
+	\item 编写相关工具集：编写了数据库维护器、索引器等附属工具，能够完成对数据库的增、删、改操作，这些通用性的工具，为今后的本系统的扩展应用提供了支持。
+\end{enumerate}
+	\subsection{展望}
+	囿于精力和时间，论文对机械领域知识检索系统开发还存在一些问题，需要进一步的改进和完善：
+\begin{enumerate}[(1)]
+	\item 对中文的识别：因为英文在分词技术上具有先天的优势，能够一定程度的简化系统，所以本系统的本体构建，模拟语料库都是英文表达的，这就导致了搜索仅限制在英文为关键词来搜索英文的资料。事实上Lucene也提供了相应的中文分词包，但在前期的实验中，发现效果不理想，而做分词处理也不是本论文的重点内容，所以就避开这一问题。在今后的工作中，中文搜索是必要的，需要研究相关的分词技术，进而实现至少中英双语的搜索。
+	\item 搜索内容有待进一步扩展：由于现在建立的本体规模有限，只是停留在了零部件的名称及简单的功能，并不能完全覆盖机械领域的知识，所以检索的范围就不够大。采用维基的网页作为模拟语料库，从数量和类型上，都与企业内部的技术文档有一定差异，搜索结果的优劣并不能单纯以一个PR图来判断，需要通过用户的使用、反馈才能得到合理评价。
+	\item 搜索速度有待提高：本论文只着眼在了系统的功能实现，对于效率问题考虑还不够多，搜索过程在秒级，与专业的搜索引擎毫秒级的搜索速度还有着较大的距离。
+\end{enumerate}
+\newpage	
+\renewcommand\listfigurename{图片索引}
+\renewcommand\listtablename{表格索引}
+\addcontentsline{toc}{section}{图片索引}
+\listoffigures
+
+\newpage	
+\addcontentsline{toc}{section}{表格索引}
+\listoftables
+
+\newpage
+\addcontentsline{toc}{section}{参考文献}%在目录中添加“参考文献”的标记
+\wuhao %五号
+\setlength{\baselineskip}{17pt} %设置行间距17pt
+\renewcommand\refname{参考文献}\
+
+\bibliographystyle{unsrt}  %按引用顺序排列
+\bibliography{reference.bib}	
+
+\newpage
+\section*{致\quad 谢}
+\addcontentsline{toc}{section}{致\quad \quad 谢}
+
+
+\setlength{\baselineskip}{20pt} %设置行间距20pt
+\xiaosihao
+{
+首先，谨向我的导师田凌教授致以最诚挚的谢意。田凌老师较早地将我安排进入实验室，鼓励我参加学校和实验室内部的各类学术活动，让我较早地找到自己的角色。毕业设计期间，在学习、研究、生活上给了我无微不致地关怀，耐心解答在学术层面和思想层面的各类为题。本论文的选题、研究和写作都得到了田老师的耐心的指导。田老师严谨的治学态度、开阔的学术视野、诲人不倦的高尚师德让作者如沐春风，受益匪浅。
+
+然后，要感谢实验室的马嵩华师姐、武园浩师兄、段文睿师兄、刘钡钡师兄、王占松师兄、李春光师姐等师兄、师姐。马嵩华师姐在课题的细化，切口的选择，研究思路的确定等多方面都给予了极大的帮助；武园浩师兄在课题前期为我提供了相当多的技术指导与支持，对于毕业设计项目也多次提出宝贵意见；其他师兄、师姐也在各个方面为我提供了极大的指导与帮助。
+
+最后，感谢我的班主任、我的同学、我的父母一直以来对我的支持与鼓励。
+}
+\clearpage
+
+
+
+\addcontentsline{toc}{section}{声\quad \quad 明}
+\begin{figure}[htbp]
+\centering\includegraphics[width=6in]{announcement.png} 
+
+\end{figure}
+
+
+\clearpage
+\section*{附录 A 外文资料的调研阅读报告或书面翻译}
+\addcontentsline{toc}{section}{附录 {\Times A }外文资料的调研阅读报告或书面翻译}
+\input{translation.tex}
+
+
+\newpage
+\begin{figure}
+\centering\includegraphics[width=6in]{registerTable1.jpg} 
+\end{figure}
+\thispagestyle{empty}
+
+\clearpage
+\thispagestyle{empty}
+\begin{figure}
+\centering\includegraphics[width=6in]{registerTable2.jpg} 
+\end{figure}
+
+
+\end{document}

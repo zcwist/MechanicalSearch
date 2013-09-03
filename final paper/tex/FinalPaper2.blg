@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: FinalPaper2.aux
+The style file: unsrt.bst
+Database file #1: reference.bib.bib
+Warning--empty journal in 1
+Warning--empty year in 1
+You've used 32 entries,
+            1791 wiz_defined-function locations,
+            627 strings with 8436 characters,
+and the built_in function-call counts, 8254 in all, are:
+= -- 765
+> -- 365
+< -- 9
++ -- 134
+- -- 102
+* -- 560
+:= -- 1262
+add.period$ -- 101
+call.type$ -- 32
+change.case$ -- 28
+chr.to.int$ -- 0
+cite$ -- 34
+duplicate$ -- 373
+empty$ -- 796
+format.name$ -- 102
+if$ -- 1873
+int.to.chr$ -- 0
+int.to.str$ -- 32
+missing$ -- 32
+newline$ -- 160
+num.names$ -- 32
+pop$ -- 105
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 187
+stack$ -- 0
+substring$ -- 584
+swap$ -- 105
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 85
+width$ -- 34
+write$ -- 350
+(There were 2 warnings)

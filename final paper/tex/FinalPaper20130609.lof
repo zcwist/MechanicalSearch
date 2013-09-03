@@ -1,0 +1,39 @@
+\contentsline {figure}{\numberline {1.1}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 基于关键词搜索结果\relax }}{2}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 搜索引擎基本架构\relax }}{10}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 生物分类图\relax }}{12}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 系统体系结构图\relax }}{14}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 系统工作功能框图\relax }}{15}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 搜索算法流程\relax }}{16}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont “{\Times is-a}”关系\relax }}{19}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont “{\Times part-of}”关系\relax }}{19}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 函数属性例子\relax }}{22}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 反函数属性例子\relax }}{23}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 传递性属性例子\relax }}{23}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 对称性属性例子\relax }}{24}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 搜索程序架构\relax }}{30}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont {\Times IndexSeacher}类与相关类的关系\relax }}{33}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont {\Times QueryParser}工作流程及与相关类关系\relax }}{34}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 范例{\Times P-R}图\relax }}{39}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 整体用例图\relax }}{42}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 扩展性语义搜索用例图\relax }}{42}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 索引器用例图\relax }}{43}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 数据库维护器用例图\relax }}{44}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 页面布局图\relax }}{45}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont {\Times B/S}交互时序图\relax }}{46}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 搜索时序图\relax }}{46}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 模块与接口设计图\relax }}{48}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 包图\relax }}{49}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 搜索包\relax }}{49}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 数据库和索引包中的类关系\relax }}{50}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont {\Times hibernate}包中的类\relax }}{50}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 本体包中的类\relax }}{51}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 网页包中的类\relax }}{51}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 搜索引擎传统{\Times Web}服务模式\relax }}{52}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 用户界面\relax }}{55}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 数据库结构\relax }}{57}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 数据库信息写入流程\relax }}{57}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont {\Times Tomcat}服务器配置成功页面\relax }}{64}
+\contentsline {figure}{\numberline {5.20}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont {\Times Gear}的搜索结果\relax }}{65}
+\contentsline {figure}{\numberline {5.21}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 基于关键词搜索的{\Times P-R}图\relax }}{66}
+\contentsline {figure}{\numberline {5.22}{\ignorespaces \fontsize {10.5pt}{\baselineskip }\selectfont 扩展性语义搜索{\Times P-R}图\relax }}{66}
+\contentsfinish 
